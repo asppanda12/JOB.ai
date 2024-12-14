@@ -1,0 +1,110 @@
+{
+    "job_listings": [
+        {
+            "Job Title": "Software Developer",
+            "Job Link": "https://www.naukri.com/job-listings-software-developer-hi-focus-chennai-2-to-5-years-041024023980",
+            "Company Name": "Hi-Focus\n5.0\n5 Reviews",
+            "Experience": "2-5 Yrs",
+            "Salary": "Not disclosed",
+            "Location": "Chennai",
+            "Job Description": "Development and productize camera firmware for Mobile. Champion API design reviews, doc...",
+            "Skills": [
+                "C++cMIPI ProtocollinuxQNXMobile MultimediaDebuggingRTOS Concepts",
+                "C++",
+                "c",
+                "MIPI Protocol",
+                "linux",
+                "QNX",
+                "Mobile Multimedia",
+                "Debugging",
+                "RTOS Concepts",
+                "Save"
+            ]
+        },
+        {
+            "Job Title": "Software Developer",
+            "Job Link": "https://www.naukri.com/job-listings-software-developer-sevvel-healthcare-management-avadi-kancheepuram-chennai-2-to-5-years-031024001990",
+            "Company Name": "Sevvel Healthcare Management",
+            "Experience": "2-5 Yrs",
+            "Salary": "1.5-3 Lacs PA",
+            "Location": "Avadi, Kancheepuram, Chennai(Mogappair West +7)",
+            "Job Description": "Able to come up with a proper design for any requirementExperience level - 2 - 7 yearsE...",
+            "Skills": [
+                "AngularjsMysql DatabaseORMPython DevelopmentSqlalchemyPython FrameworkJavascriptFlask",
+                "Angularjs",
+                "Mysql Database",
+                "ORM",
+                "Python Development",
+                "Sqlalchemy",
+                "Python Framework",
+                "Javascript",
+                "Flask",
+                "Women candidates preferred",
+                "Save"
+            ]
+        },
+        {
+            "Job Title": "Senior Software Engineer/Developer",
+            "Job Link": "https://www.naukri.com/job-listings-senior-software-engineer-developer-competitive-cart-meerut-5-to-10-years-041024929011",
+            "Company Name": "Leading Client",
+            "Experience": "5-10 Yrs",
+            "Salary": "Not disclosed",
+            "Location": "Meerut",
+            "Job Description": "Bachelors or Masters degree in Computer Science, Engineering, or a related fieldStrong ...",
+            "Skills": [
+                "software developmentC++CJavaScriptNode.jsYii-FrameworkReactCore PHP",
+                "software development",
+                "C++",
+                "C",
+                "JavaScript",
+                "Node.js",
+                "Yii-Framework",
+                "React",
+                "Core PHP",
+                "Save"
+            ]
+        },
+        {
+            "Job Title": "Data Analyst III",
+            "Job Link": "https://www.naukri.com/job-listings-data-analyst-iii-skillmine-technology-consulting-pvt-ltd-bengaluru-7-to-9-years-041024928710",
+            "Company Name": "Leading Client",
+            "Experience": "7-9 Yrs",
+            "Salary": "Not disclosed",
+            "Location": "Hybrid - Bengaluru",
+            "Job Description": "The Operations Data Analyst is responsible for analyzing large sets of complex data, de...",
+            "Skills": [
+                "Data Analysisdata qualitydashboard developmentpredictive analyticspower bidata integritydata visualizationdashboards",
+                "Data Analysis",
+                "data quality",
+                "dashboard development",
+                "predictive analytics",
+                "power bi",
+                "data integrity",
+                "data visualization",
+                "dashboards",
+                "Save"
+            ]
+        },
+        {
+            "Job Title": "Software Developer",
+            "Job Link": "https://www.naukri.com/job-listings-software-developer-skillmine-technology-consulting-pvt-ltd-bengaluru-1-to-3-years-041024928693",
+            "Company Name": "Leading Client",
+            "Experience": "1-3 Yrs",
+            "Salary": "Not disclosed",
+            "Location": "Bengaluru",
+            "Job Description": "Min one year experience in SQL ServerHaving experience in Production support is add-onG...",
+            "Skills": [
+                "SQLproduction supportsoftware developmentteam leadingapplication supportunit testingssisetl",
+                "SQL",
+                "production support",
+                "software development",
+                "team leading",
+                "application support",
+                "unit testing",
+                "ssis",
+                "etl",
+                "Save"
+            ]
+        }
+    ]
+}

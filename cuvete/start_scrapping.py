@@ -42,6 +42,7 @@ class get_remote_driver:
 try:
     val = get_remote_driver()
     header=val.data_extraction()
+    print(header[0].text)
     # OtherJobsCard_lightText__12EQI OtherJobsCard_darkText__356ok
     output_filename = 'output.txt'
     # text_content = header[0].get_attribute('outerHTML')
@@ -50,7 +51,7 @@ try:
         lst=div.text.split('\n')
         al_val=lst[:-4]
         valp.append(al_val)
-    # print(valp)
+    
 
     columns = ['Company Name', 'Job Title', 'Location', 'Skills', 'Job Type', 'Salary', 'Experience']
     final_output=[]
@@ -68,7 +69,7 @@ try:
         final_output.append(lst)
 
     filename = 'finale_jobs.csv'
-
+    
     # Write data to CSV file
     with open(filename, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
