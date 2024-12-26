@@ -1,101 +1,101 @@
 Company Name,Job Title,Location,Skills,Job Type,Salary,Experience
-Coinbase,Software Engineer,Remote,['Software Engineering'],Remote,Rs. 26.75 LPA,Year of experience - Fresher
-Amazon,"Support Engineer, Software Development",Bangalore,"['AWS', 'Software Testing']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 1 Years
+Superset,Software Developer I,Bangalore,"['Python', 'Javascript', 'MySQL']",In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 1 - 3 Years
+meesho,Software Development Engineer I (iOS),Bangalore,"['iOS Development', 'Swift']",In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - 0 - 1 Years
+MoEngage,Software Engineer (Backend),Bengaluru,['Python/Java/C++'],In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 0 - 3 Years
+Razorpay,Product Support Engineer,Bangalore,"['Python', 'MySQL']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
+Turing,Remote Fullstack Specialist,Remote,['Full Stack Development'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+Adani AI Labs,Frontend Developer,Kolkata,"['HTML', 'CSS', 'Javascript']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
+PayU,Associate Software Engineer,Gurgaon,"['Python', 'HTML', 'CSS', 'JavaScript', 'SQL']",Hybrid,Rs. 6 LPA - 8 LPA,Year of experience - 0 - 2 Years
+American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",Hybrid,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+ZS,Software Engineer - .Net,Pune,"['.Net', 'Software Engineering']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 3 Years
+NetApp,Software Engineer,Bengaluru,"['Python/Java/C++', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Freshers
+Lenskart,Software Engineer - Full Stack,Bangalore,['Full Stack Development'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 3 Years
+PayU,Software Engineer,Bangalore,['Python/Java/C/C++'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Freshers
+Sprinklr,Technical Supoort Engineer,"Gurgaon, Bangalore","['JavaScript/Python/Java', 'SQL']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - 0 - 3 Years
+Oracle,Software Engineer,Hyderabad,"['Javascript', 'HTML', 'CSS']",In-Office,Rs. 7 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
+Conduent,Technical Business Analysis Engineer I,Noida,['Software Engineering'],In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - Fresher
+GAP Inc.,Software Engineer,Hyderabad,['Python/Java/C/C++'],In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
+Qualcomm,Associate Engineer,Hyderabad,"['C', 'C++', 'Java', 'Python', 'SQL']",In-Office,Rs. 11 LPA - Rs. 15 LPA,Year of experience - 0 - 1 Years
+Amazon,IT Application Engineer,Hyderabad,['SQL'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - Fresher
+Optum,Software Engineer,Hyderabad,"['Javascript', 'Python']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Freshers
+Capegemini,Android Developer,Coimbatore,['Android Development'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
+PayU,Integration Engineer,Bangalore,"['Python', 'Java', 'SQL']",Hybrid,Rs. 7 LPA - Rs. 12 LPA,Year of experience - Freshers
+Google,Cloud Web Application Engineer,Gurgaon,"['Java/Python/JavaScript', 'Google Cloud']",In-Office,Rs. 18 LPA - Rs. 24 LPA,Year of experience - https://www.google.com/about/careers/applications/jobs/results/73604838461448902-cloud-web-application-engineer/
+Qualcomm,Engineer-APT,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years
+Volvo,Software Engineer,Bangalore,"['.Net', 'SQL', 'C#']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - 0 - 2 Years
+Adobe,Computer Scientist,Bangalore,"['AWS', 'Google Cloud']",In-Office,Rs. 25 LPA - Rs. 40 LPA,Year of experience - 0 - 2 Years
+NVIDIA,System Software Engineer,"Pune, Hyderabad, Bangalore",['C/C++'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years
+Tower Research Capital,Software Engineer I,Gurgaon,"['Python', 'Java', 'MySQL']",In-Office,Rs. 20 LPA - Rs. 30 LPA,Year of experience - 0 - 3 Years
+American Express GBT,Software Development Engineer I,Gurgaon,"['HTML/CSS/JavaScript', 'Java']",In-Office,Rs. 8 LPA - Rs. 14 LPA,Year of experience - 0 - 1 Years
+NatWest Group,Software Engineer,Bangalore,"['Python/Java/C/C++', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 1 Years
+Amazon,Software Development Engineer 1,Bangalore,['Software Development'],In-Office,Rs. 18 LPA - Rs. 25 LPA,Year of experience - 0 - 1 Years
+Goldman Sachs,Software Engineering - Analyst,Bengaluru,"['SQL', 'AWS']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years
+Capegemini,Software Engineer,Hyderabad,['Software Development'],In-Office,Rs. 3.5 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
+ServiceNow,Software Engineer,Hyderabad,"['Java', 'JavaScript']",Hybrid,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
+Adobe,Software Development Engineer,Noida,['Java/C/C++'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years
+Capegemini,Software Engineer,Bangalore,['Software Development'],In-Office,Rs. 3.5 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
+Qualys,Software Engineer,Pune,"['Java', 'SQL', 'Backend Development']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 4 Years
+American Express,Associate - Digital Product Management,Gurgaon,"['Product Management', 'SQL']",In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years
 IBM,Software Engineer,Hyderabad,"['Java', 'Node.js']",In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - 0 - 1 Years
+Cognizant,Programmer Analyst,Chennai,"['Python', 'Java', 'C++']",Hybrid,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - 0 - 2 Years
+Birlasoft,Technical Specialist-App Development,Hyderabad,['Application Development'],In-Office,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - Freshers
+Capegemini,Software Engineer,Hyderabad,['Python/Java/C++'],In-Office,Rs. 3.5 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
+BlackRock,"Associate, Automation Engineer",Gurgaon,['Microsoft Azure'],In-Office,"Rs. 8 LPA - Rs, 12 LPA",Year of experience - 0 - 2 Years
+Oracle,Software Engineering Analyst,Bengaluru,"['Java', 'SQL']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 1 Years
+Volvo,Software Engineer,Bangalore,"['.Net', 'SQL', 'C#']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - 0 - 2 Years
+Servicenow,Associate Audio Visual Engineer,Hyderabad,['Audio Visual Design'],In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
+Amazon,Software Development Engineer 1,Gurugram,"['Java/C/C++', 'JavaScript']",In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - 0 - 1 Years
+ServiceNow,Software Engineer,Hyderabad,"['Javascript', 'Python', 'SQL']",Flexible or Remote,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years
+PayPal,Associate Engineer,"Bangalore, Chennai","['Java', 'Python', 'SQL']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
+Qualcomm,Engineer-APT,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years
+GE Digital,Software Engineer (Full Stack),Bengaluru,['Full Stack Development'],In-Office,Rs. 6.5 LPA - Rs. 10 LPA,Year of experience - Fresher
+Google,Cloud Web Application Engineer,Gurgaon,"['Java/Python/JavaScript', 'Google Cloud']",In-Office,Rs. 18 LPA - Rs. 24 LPA,Year of experience - 0 - 3 Years
+GAP Inc.,Software Engineer,Hyderabad,['Python/Java/C/C++'],In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
+United Airlines,Associate Engineer (.Net + Go Lang),Gurugram,"['Go Lang', '.Net']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
+PayU,Integration Engineer,Bangalore,"['Python', 'Java', 'SQL']",Hybrid,Rs. 7 LPA - Rs. 12 LPA,Year of experience - Freshers
+Razorpay,Software Development Engineer,Bangalore,['PHP/Python/Django/Golang/Java/C++'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1Years
+Capegemini,Android Developer,Coimbatore,['Android Development'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
+Birlasoft,Technical Specialist-App Development,Hyderabad,['Application Development'],In-Office,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - Freshers
+Cognizant,Programmer Analyst,Chennai,"['Python', 'Java', 'C++']",Hybrid,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - 0 - 2 Years
+Razorpay,Junior Associate - Customer Success Partner,Bangalore,['Project Management'],In-Office,Rs. 4.5 LPA - Rs. 7 LPA,Year of experience - Fresher
+NTT Data,Associate Engineer: Software Development,Bangalore,"['C/C++', 'Java', 'JavaScript', 'Python']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
+Capegemini,Software Engineer,Hyderabad,"['Python/Java/C/C++', 'Software Engineering']",In-Office,Rs. 3.5 LPA - Rs. 5 LPA,Year of experience - Fresher
+Conduent,Technical Business Analysis Engineer I,Noida,['Software Engineering'],In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - Fresher
+EY,Junior DevOps Engineer,Noida,['DevOps Engineering'],In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
+GAP Inc.,Software Engineer,Hyderabad,['Python/Java/C/C++'],In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
 BlackRock,Associate - Automation Engineer,Gurgaon,"['Python', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
-NTT Data,Associate Security Platform Engineer,"Hyderabad, Bangalore","['Security Technologies', 'Firewall', 'IPS', 'IDS', 'Proxy']",In-Office,Rs. 4.5 LPA - Rs. 7 LPA,Year of experience - Fresher
-Accenture,Application Tech Support Practitioner,Gurgaon,['Software Engineering'],In-Office,Rs. 4 LPA - Rs. 7 LPA,Year of experience - Fresher
-Mastercard,Reliabillity Engineer 1,Pune,['Software Engineering'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Fresher
-Conduent,IT Testing Engineer,Noida,['Software Testing'],In-Office,Rs. 3.5 LPA - Rs. 5 LPA,Year of experience - Fresher
-Boston Consulting Group,Software Engineer,New Delhi,['Java/Python/C++'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Fresher
-UPS,Intermediate Application Developer,Chennai,"['Javascript', 'SQL']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
-NTT Data,Cloud Managed Services Engineer,Mumbai,['Cloud Computing'],In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-Turing,Remote Fullstack Specialist,Remote,['Fullstack Development'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-Adobe,Software Development Engineer in Test (Java),Noida,['Java'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
-Nike,Software Engineer,Bengaluru,"['Java/Python/Javascript', 'AWS']",In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Fresher
-Hitachi,Associate Project Engineer - Software/AI ML,Chennai,"['Python', 'R Programming']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+IBM,Software Engineer,Hyderabad,"['Java', 'Node.js']",In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - 0 - 1 Years
+EY,UI Engineer,Noida,['UI UX Design'],In-Office,Rs. 6 LPA - Rs. 8 LPA,Year of experience - Fresher
+Optum,Software Engineer,Hyderabad,"['Javascript', 'Python']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Freshers
+EY,Software Engineer,Hyderabad,['Python/Java/C/C++'],In-Office,Rs. 4.5 LPA - Rs. 7 LPA,Year of experience - Fresher
+NetApp,Software Engineer,Bengaluru,['C/C++'],In-Office,Rs. 10 LPA - Rs. 14 LPA,Year of experience - 0 - 2 Years
+Dyson,Junior Frontend QA Engineer,Bangalore,"['Python', 'Javascript']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+MasterCard,BizOps Engineer,Pune,['DevOps Engineering'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
+Amazon,IT Application Engineer,Hyderabad,['SQL'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - Fresher
+Google,Cloud Web Application Engineer,Gurgaon,"['Java/Python/JavaScript', 'Google Cloud']",In-Office,Rs. 18 LPA - Rs. 24 LPA,Year of experience - 0 - 3 Years
+Qualcomm,Associate Engineer,Hyderabad,"['C', 'C++', 'Java', 'Python', 'SQL']",In-Office,Rs. 11 LPA - Rs. 15 LPA,Year of experience - 0 - 1 Years
+PayPal,Associate Engineer- Backend (Java),Bangalore,"['Java/Python', 'SQL']",In-Office,Rs. 13 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
+Amazon,Systems Development Engineer,Hyderabad,['Python/Java/C++'],In-Office,Rs. 15 LPA - Rs. 25 LPA,Year of experience - Freshers
+American Express,Associate -Digital Product Management,Gurgaon,"['Product Management', 'SQL']",In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years
+GE Digital,Software Engineer,Hyderabad,"['Java/C++/Python', 'SQL']",In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 0 - 3 Years
+Google,Customer and Partner Solutions Engineer,Hyderabad,"['Java/C++/Python', 'SQL']",In-Office,Rs. 18 LPA - Rs. 28 LPA,Year of experience - Fresher
+Google,Technical Solutions Consultant,Hyderabad,"['Python', 'SQL']",In-Office,Rs. 20 LPA - Rs. 30 LPA,Year of experience - Fresher
+GE Digital,Software Engineer (Full Stack),Bengaluru,['Full Stack Development'],In-Office,Rs. 6.5 LPA - Rs. 10 LPA,Year of experience - Fresher
+Barclays,Software Engineer,Pune,"['Python', 'AWS']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
+Adidas,Junior Software Developer,Gurgaon,"['Software Development', 'AWS']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
+PayU,Associate Software Engineer,Gurgaon,"['Python', 'HTML', 'CSS', 'JavaScript', 'SQL']",Hybrid,Rs. 6 LPA - 8 LPA,Year of experience - 0 - 2 Years
+GE Vernova,Software Engineer,Hyderabad,"['Javascript', 'HTML', 'CSS', 'SQL']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
+Sprinklr,Technical Supoort Engineer,"Gurgaon, Bangalore","['JavaScript/Python/Java', 'SQL']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - 0 - 3 Years
+American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+Oracle,Software Engineer,Hyderabad,"['Javascript', 'HTML', 'CSS']",In-Office,Rs. 7 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
+Qualcomm,Associate Engineer,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
+Wells Fargo,Software Engineer,Bengaluru,"['Python', 'SQL']",In-Office,Rs. 8 LPA - Rs. 14 LPA,Year of experience - Fresher
+Amazon,Systems Development Engineer,Hyderabad,['Python/Java/C++'],In-Office,Rs. 15 LPA - Rs. 25 LPA,Year of experience - Fresher
+Capegemini,Software Engineer,Bengaluru,['Software Engineering'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
+Qualcomm,Engineer-APT,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years
+MoEngage,Software Engineer (Backend),Bangalore,"['Java', 'Python', 'AWS']",In-Office,Rs. 10 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years
 Goldman Sachs,Risk Analyst - Software Engineering,Bengaluru,"['Python', 'SQL']",In-Office,Rs. 10 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
-NTT Data,Associate Software Development Engineer,Chennai,"['C++/Java/Python', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Adani AI Labs,Frontend Developer,Kolkata,"['HTML', 'CSS', 'Javascript']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-PhonePe,System Delivery Engineer,Bangalore,['MySQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 3 Years
-Barclays,Product Developer,"Chennai, Pune",['SQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
-KPMG,Technology Consulting - Assistant Manager (React Native),Gurgaon,"['React Native', 'Javascript']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
-Turing,Remote Fullstack Programmer,Remote,"['Python', 'Javascript']",Remote,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
-Accenture,Data Engineer,Mumbai,"['AWS', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Adani Power,Machine Learning Engineer,Remote,"['Machine Learning', 'Python', 'Java', 'R']",Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-Google,Software Engineer,Bengaluru,['C/C++/Python/Java'],In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - Fresher
-Turing,Python Programmer,Remote,['Python'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-JPMorgan Chase,Analyst - Python Developer,Mumbai,"['Python', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
-UPS,Software Quality Engineer,Chennai,"['Software Testing', 'Project Management']",In-Office,Rs. 5 LPA - Rs. 9 LPA,Year of experience - Fresher
-Motorola Solutions,Software Developer,Bangalore,['Software Development'],Hybrid,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Freshers
-Tower Research Capital,Software Engineer 1,Gurgaon,"['Python', 'SQL']",In-Office,Rs. 15 LPA - Rs. 25 LPA,Year of experience - 0 - 3 Years
-Hitachi Energy,Associate Project Engineer,Chennai,"['Python', 'R Programming', 'Project Management']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 2 Years
-Rubrik,Software Engineer,Bangalore,"['Python/C++/Java', 'AWS']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years
-Cognizant,Angulaar Developer,Pune,"['Angular', 'Software Testing']",Hybrid,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-NetApp,Software Engineer,Bengaluru,"['C/C++/Python', 'AWS', 'SQL']",In-Office,Rs. 7 LPA - Rs. 12 LPA,Year of experience - Fresher
-Honeywell,Application Engineer,Pune,"['Software Development', 'Project Management']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-NTT Data,Cloud Managed Services Engineer,Mumbai,['Cloud Computing'],In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
+Barclays,Product Developer,"Chennai, Pune","['Python', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
 Turing,Remote Fullstack Specialist,Remote,['Fullstack Development'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-Accenture,Web Developer Associate,Mumbai,['Web Development'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-PhonePe,System Delivery Engineer,Bangalore,['MySQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 3 Years
-NTT Data,Associate Software Development Engineer,Chennai,"['C++/Java/Python', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Accenture,Application Developer,Bengaluru,['Software Development'],In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Turing,Remote Fullstack Programmer,Remote,"['Python', 'Javascript']",Remote,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
-dentsu,.Net Developer,Bengaluru,['.Net'],In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Novartis,Data Engineer,Hyderabad,"['Python', 'SQL']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
-Accenture,Data Engineer,Mumbai,"['AWS', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Adani Power,Backend Developer,Mumbai,"['Java/Python', 'Javascript', 'HTML CSS']",In-Office,Rs. 4 LPA - Rs. 7 LPA,Year of experience - Fresher
-American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-Adani,Backend Developer,Gurgaon,"['Python', 'MySQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
-NTT Data,Associate Software Development Engineer,Chennai,"['C++/Java/Python', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-ZS,Advanced Data Science Associate,Bengaluru,['Java/Python/R'],In-Office,Rs. 6 LPA - 8 LPA,Year of experience - Fresher
-KPMG,Technology Consulting - Assistant Manager (React Native),Gurgaon,"['React Native', 'Javascript']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years
-Honeywell,Application Engineer,Pune,['System Architecture'],In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
-Turing,Remote Python Developer,Remote,['Python'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-NTT Data,Software Development Engineer,Chennai,"['Python/C++/Java', 'Javascript', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Barclays,Product Developer,"Chennai, Pune",['SQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
-Google,Software Engineer,Bengaluru,['C/C++/Java/Python'],In-Office,Rs. 18 LPA - Rs. 30 LPA,Year of experience - Fresher
-Cognizant,Angular Developer,Pune,['Angular'],Hybrid,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Turing,Remote Fullstack Programmer,Remote,"['Python', 'Javascript']",Remote,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher
 Adani AI Labs,Frontend Developer,Kolkata,"['HTML', 'CSS', 'Javascript']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Turing,Remote Swift Developer,Remote,['Application Development'],Remote,Rs. 6 LPA - Rs. 8 LPA,Year of experience - Fresher
-UPS,Intermediate Application Developer,Chennai,"['Javascript', 'SQL']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Fresher
-Accenture,Application Developer,Bengaluru,['Software Development'],In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-EY,Project Analyst,Gurugram,['Project Management'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Cognizant,Associate,Bangalore,"['Java', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Capegemini,Software Engineer,Hyderabad,"['Javascript', 'HTML', 'C++']",In-Office,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - 0 - 3 Years
-ZS,Advanced Data Science Associate,Bengaluru,['Java/Python/R'],In-Office,Rs. 6 LPA - 8 LPA,Year of experience - Fresher
-ZS,Cloud Administrator (AWS Operations),Pune,"['AWS', 'SQL']",In-Office,Rs. 6 LPA - Rs. 8 LPA,Year of experience - Fresher
-NTT Data,Associate Software Development Engineer,Chennai,"['C++/Java/Python', 'SQL']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-UPS,Intermediate Applications Developer,Chennai,"['Java', 'Apigee']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-Honeywell,Advanced Software Engineer,Bangalore,['Software Development'],In-Office,Rs. 9 LPA - Rs. 12 LPA,Year of experience - Fresher
-Adani,Backend Developer,Gurgaon,"['Python', 'MySQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Fresher
-American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher
-NTT Data,Cloud Managed Services Engineer,Mumbai,['Cloud Computing'],In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-Wipro,Google Data Scientist,Hyderabad,['Software Testing'],In-Office,Rs. 7 LPA - Rs. 10 LPA,Year of experience - Fresher
-PhonePe,System Delivery Engineer,Bangalore,['MySQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 3 Years
-Boston Consulting Group,Software Engineer,New Delhi,['Java/Python/C++'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Fresher
-NTT Data,Junior Full Stack Developer,"Hyderabad, Bangalore","['Java', 'HTML', 'CSS']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Siemens,System Engineer,Gurugram,['Project Management'],In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher
-Boston Consulting Group,Software Engineer,New Delhi,['Java/Python/C++'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Freshers
-Adobe,Computer Scientist,Bangalore,"['MySQL', 'AWS']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - Fresher
-American Express,Business Logic Developer,Gurugram,"['Java', 'SQL', 'Javascript']",In-Office,Rs. 7 LPA - Rs. 10 LPA,Year of experience - Fresher
-United Airlines,Associate Engineer,Gurgaon,"['.net', 'C#']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - 0 - 3 Years
-ServiceNow,Software Engineer,Hyderabad,['Java'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years
-UPS,Associate Application Developer,Chennai,['Software Development'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
-Goldman Sachs,Software Engineer - Productivity Solutions,Bengaluru,['Java'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years
-dentsu,Test Engineer,Bengaluru,['Python/Java/Javascript'],In-Office,Rs. 3 LPA - Rs. 5 LPA,Year of experience - 0 - 3 Years
-Hitachi,Angular Frontend Developer,Chennai,"['Angular', 'SQL', 'Javascript']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years
-Turing,Swift Developer - AI Tools,Remote,['Swift'],Remote,Rs. 6 LPA - Rs. 12 LPA,Year of experience - Fresher
-Freecharge,Software Development Engineer,Gurgaon,"['Java', 'MySQL']",Hybrid,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 1 Years
-Honeywell,Application Engineer,Pune,['Project Management'],In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher
-Accenture,Web Developer Associate,Mumbai,"['HTML', 'Javascript']",In Office,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - 0 - 3 Years
-dentsu,Integration Engineer,Bangalore,"['Javascript', 'SQL']",In-Office,Rs. 4.5 LPA - Rs. 7 LPA,Year of experience - 0 - 2 Years
-PayU,Associate Software Engineer - PHP Developer,Gurgaon,['PHP'],Hybrid,Rs. 6 LPA - Rs. 8 LPA,Year of experience - 0 - 2 Years
-Razorpay,Software Development Engineer,Bangalore,['Python/Java/C++'],In-Office,Rs. 10 LPA - Rs. 14 LPA,Year of experience - 0 - 1 Years
-Turing,Python Engineer,Remote,['Python'],Remote,Rs. 7 LPA - Rs. 10 LPA,Year of experience - Fresher
-Thomson Reuters,Junior FinOps Cloud Engineer,Bengaluru,"['Python', 'Azure']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - 0 - 1 Years
-NTT Data,Data Engineer,Hyderabad,['Python'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher
-Razorpay,Security Engineer,Bangalore,"['Python', 'AWS']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - 0 - 3 Years
+Rubrik,Software Engineer - Cloud Native VM,Bangalore,"['Java', 'C/C++', 'Scala', 'Python']",In-Office,Rs. 12 LPA - Rs. 22 LPA,Year of experience - 0 - 2 Years

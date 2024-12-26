@@ -1,0 +1,48 @@
+[
+    {
+        "job_listings": [
+            {
+                "job_title": "Software Engineer",
+                "job_link": "https://example.com/job1",
+                "company_name": "ABC Corporation",
+                "experience": "5-7 years",
+                "salary": "$120,000 - $150,000",
+                "location": "New York, NY",
+                "job_description": "Design, develop, and test software applications",
+                "skills": [
+                    "Java",
+                    "Python",
+                    "C++"
+                ]
+            },
+            {
+                "job_title": "Data Scientist",
+                "job_link": "https://example.com/job2",
+                "company_name": "DEF Startups",
+                "experience": "3-5 years",
+                "salary": "$100,000 - $130,000",
+                "location": "San Francisco, CA",
+                "job_description": "Analyze and interpret complex data sets",
+                "skills": [
+                    "Machine Learning",
+                    "Data Visualization",
+                    "Statistics"
+                ]
+            },
+            {
+                "job_title": "Product Manager",
+                "job_link": "https://example.com/job3",
+                "company_name": "GHI Enterprises",
+                "experience": "5-10 years",
+                "salary": "$150,000 - $200,000",
+                "location": "Chicago, IL",
+                "job_description": "Develop and launch new products",
+                "skills": [
+                    "Product Development",
+                    "Marketing",
+                    "Leadership"
+                ]
+            }
+        ]
+    }
+]

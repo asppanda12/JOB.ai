@@ -1,27 +1,116 @@
+import os
+import zipfile
+import random
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException
-import json
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from bs4 import BeautifulSoup
 import time
+import json
+import urllib.parse
 import logging
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+def load_proxies(file_path):
+    proxies = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            parts = line.strip().split(':')
+            if len(parts) == 4:
+                proxies.append({
+                    'ip': parts[0],
+                    'port': parts[1],
+                    'username': parts[2],
+                    'password': parts[3]
+                })
+    return proxies
 
-def wait_for_element(driver, by, value, timeout=30):
-    return WebDriverWait(driver, timeout).until(
-        EC.presence_of_element_located((by, value))
-    )
+def get_random_proxy(proxies):
+    return random.choice(proxies)
 
-def wait_for_clickable(driver, by, value, timeout=30):
-    return WebDriverWait(driver, timeout).until(
-        EC.element_to_be_clickable((by, value))
-    )
+def create_proxy_extension(proxy):
+    manifest_json = """
+    {
+        "version": "1.0.0",
+        "manifest_version": 2,
+        "name": "Chrome Proxy",
+        "permissions": [
+            "proxy",
+            "tabs",
+            "unlimitedStorage",
+            "storage",
+            "<all_urls>",
+            "webRequest",
+            "webRequestBlocking"
+        ],
+        "background": {
+            "scripts": ["background.js"]
+        },
+        "minimum_chrome_version":"22.0.0"
+    }
+    """
 
+    background_js = """
+    var config = {
+            mode: "fixed_servers",
+            rules: {
+              singleProxy: {
+                scheme: "http",
+                host: "%s",
+                port: parseInt(%s)
+              },
+              bypassList: ["localhost"]
+            }
+          };
+
+    chrome.proxy.settings.set({value: config, scope: "regular"}, function() {});
+
+    function callbackFn(details) {
+        return {
+            authCredentials: {
+                username: "%s",
+                password: "%s"
+            }
+        };
+    }
+
+    chrome.webRequest.onAuthRequired.addListener(
+                callbackFn,
+                {urls: ["<all_urls>"]},
+                ['blocking']
+    );
+    """ % (proxy['ip'], proxy['port'], proxy['username'], proxy['password'])
+
+    extension = 'proxy_auth.zip'
+    with zipfile.ZipFile(extension, 'w') as zp:
+        zp.writestr("manifest.json", manifest_json)
+        zp.writestr("background.js", background_js)
+    
+    return extension
+
+def setup_driver(proxy):
+    extension = create_proxy_extension(proxy)
+    
+    options = webdriver.ChromeOptions()
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-notifications')
+    options.add_argument('--disable-popup-blocking')
+    options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
+    options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_extension(extension)
+    
+    driver = webdriver.Chrome(options=options)
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    
+    return driver
 def scrape_page(driver):
     job_listings = []
     possible_job_classes = ["jobTuple", "cust-job-tuple", "job-tuple"]
@@ -39,7 +128,9 @@ def scrape_page(driver):
 
     for job in job_tuples:
         try:
-            title_element = job.find_element(By.CSS_SELECTOR, "[class*='title']")
+            title_element = WebDriverWait(job, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "[class*='title']"))
+            )
             title = title_element.text
             link = title_element.get_attribute('href')
             company = job.find_element(By.CSS_SELECTOR, "[class*='comp']").text
@@ -72,67 +163,34 @@ def scrape_page(driver):
             logger.error(f"Error scraping job: {str(e)}")
 
     return job_listings
-
-def scrape_naukri():
-    options = webdriver.ChromeOptions()
-    # options.add_argument('--headless')  # Uncomment this line if you want to run in headless mode
-    options.add_argument('--start-maximized')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
-
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-
-    base_url = "https://www.naukri.com/software-development-software-engineering-software-engineer-data-analyst-data-scientist-ml-data-associate-ml-engineer-jobs"
-
-    all_job_listings = []
+def scrape_naukri(link):
+    proxies = load_proxies('proxy.txt')
+    jobs = []
+    
+    # Load existing job listings from the JSON file
+    try:
+        with open('naukri_job_listings.json', 'r', encoding='utf-8') as f:
+            existing_data = json.load(f)
+            all_job_listings = existing_data.get("job_listings", [])  # Get existing listings or empty list
+    except FileNotFoundError:
+        all_job_listings = []  # If the file doesn't exist, start with an empty list
 
     try:
-        for page in range(1, 11):  # Scrape 10 pages
-            url = f"{base_url}-{page}" if page > 1 else base_url
-            driver.get(url)
-            logger.info(f"Page {page} loaded")
-
-            wait_for_element(driver, By.TAG_NAME, "body")
-            logger.info("Body found")
-
-            # Click on the sort dropdown
-            try:
-                sort_button = wait_for_clickable(driver, By.ID, "filter-sort")
-                sort_button.click()
-                logger.info("Clicked sort dropdown")
-                time.sleep(2)  # Wait for dropdown to appear
-
-                # Click on the "Date" option
-                date_option = wait_for_clickable(driver, By.CSS_SELECTOR, "li[title='Date'] a")
-                date_option.click()
-                logger.info("Selected 'Date' sorting option")
-                time.sleep(5)  # Wait for page to reload with new sorting
-            except (NoSuchElementException, ElementClickInterceptedException) as e:
-                logger.error(f"Failed to sort by date: {str(e)}")
-                driver.save_screenshot(f"sort_error_page_{page}.png")
-                logger.info(f"Screenshot saved as 'sort_error_page_{page}.png'")
-
-            # Scroll to load more jobs
-            for i in range(3):
-                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                logger.info(f"Scrolled {i+1} times")
-                time.sleep(2)
-
-            page_job_listings = scrape_page(driver)
-            all_job_listings.extend(page_job_listings)
-
-            logger.info(f"Scraped {len(page_job_listings)} jobs from page {page}")
-
-        # Create the final structure
+        base_url = link
+        proxy = get_random_proxy(proxies)
+        driver = setup_driver(proxy)
+        try:
+            print(f"Using proxy: {proxy['ip']}:{proxy['port']}")
+            driver.get(base_url)
+            time.sleep(5)  # Wait for the page to load completely
+            logger.info("Page source loaded.")
+            logger.debug(driver.page_source)  # Log the page source for debugging
+            all_job_listings.extend(scrape_page(driver))  # Append new listings to existing data
+        except (NoSuchElementException, StaleElementReferenceException) as e:
+            logger.error(f"Error scraping job: {str(e)}")
         output = {"job_listings": all_job_listings}
-
-        # Write to JSON file
         with open('naukri_job_listings.json', 'w', encoding='utf-8') as f:
             json.dump(output, f, ensure_ascii=False, indent=4)
-
         logger.info(f"Scraped a total of {len(all_job_listings)} job listings. Data saved to 'naukri_job_listings.json'")
 
     except TimeoutException:
@@ -145,6 +203,9 @@ def scrape_naukri():
         logger.info("Screenshot saved as 'error.png'")
     finally:
         driver.quit()
-
 if __name__ == "__main__":
-    scrape_naukri()
+    base_url = "https://www.naukri.com/software-development-software-engineering-software-engineer-data-analyst-data-scientist-ml-data-associate-ml-engineer-jobs"
+
+    for page in range(1, 11):  # Scrape 10 pages
+            url = f"{base_url}-{page}" if page > 1 else base_url
+            scrape_naukri(url)
