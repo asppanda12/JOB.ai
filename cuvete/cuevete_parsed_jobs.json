@@ -1,0 +1,1340 @@
+[
+    {
+        "job_title": "Software Developer I",
+        "job_link": null,
+        "company_name": "Superset",
+        "experience": "1 - 3 Years",
+        "salary": "Rs. 8 LPA - Rs. 15 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Javascript",
+            "MySQL"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer I (iOS)",
+        "job_link": null,
+        "company_name": "meesho",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 15 LPA - Rs. 30 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "iOS Development",
+            "Swift"
+        ]
+    },
+    {
+        "job_title": "Software Engineer (Backend)",
+        "job_link": null,
+        "company_name": "MoEngage",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 8 LPA - Rs. 15 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Product Support Engineer",
+        "job_link": null,
+        "company_name": "Razorpay",
+        "experience": "Fresher",
+        "salary": "Rs. 5 LPA - Rs. 8 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "MySQL"
+        ]
+    },
+    {
+        "job_title": "Remote Fullstack Specialist",
+        "job_link": null,
+        "company_name": "Turing",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Remote",
+        "job_description": null,
+        "skills": [
+            "Full Stack Development"
+        ]
+    },
+    {
+        "job_title": "Frontend Developer",
+        "job_link": null,
+        "company_name": "Adani AI Labs",
+        "experience": "Fresher",
+        "salary": "Rs. 4 LPA - Rs. 6.5 LPA",
+        "location": "Kolkata",
+        "job_description": null,
+        "skills": [
+            "HTML",
+            "CSS",
+            "Javascript"
+        ]
+    },
+    {
+        "job_title": "Associate Software Engineer",
+        "job_link": null,
+        "company_name": "PayU",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 6 LPA - 8 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Engineer",
+        "job_link": null,
+        "company_name": "American Express",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "job_title": "Software Engineer - .Net",
+        "job_link": null,
+        "company_name": "ZS",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Pune",
+        "job_description": null,
+        "skills": [
+            ".Net",
+            "Software Engineering"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "NetApp",
+        "experience": "Freshers",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Python/Java/C++",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer - Full Stack",
+        "job_link": null,
+        "company_name": "Lenskart",
+        "experience": "1 - 3 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Full Stack Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "PayU",
+        "experience": "Freshers",
+        "salary": "Rs. 10 LPA - Rs. 15 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Technical Supoort Engineer",
+        "job_link": null,
+        "company_name": "Sprinklr",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Gurgaon, Bangalore",
+        "job_description": null,
+        "skills": [
+            "JavaScript/Python/Java",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Oracle",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 7 LPA - Rs. 12 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "job_title": "Technical Business Analysis Engineer I",
+        "job_link": null,
+        "company_name": "Conduent",
+        "experience": "Fresher",
+        "salary": "Rs. 4.5 LPA - Rs. 6.5 LPA",
+        "location": "Noida",
+        "job_description": null,
+        "skills": [
+            "Software Engineering"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "GAP Inc.",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 11 LPA - Rs. 15 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "IT Application Engineer",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "Fresher",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Optum",
+        "experience": "Freshers",
+        "salary": "Rs. 5 LPA - Rs. 8 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Android Developer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 4 LPA - Rs. 6 LPA",
+        "location": "Coimbatore",
+        "job_description": null,
+        "skills": [
+            "Android Development"
+        ]
+    },
+    {
+        "job_title": "Integration Engineer",
+        "job_link": null,
+        "company_name": "PayU",
+        "experience": "Freshers",
+        "salary": "Rs. 7 LPA - Rs. 12 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Cloud Web Application Engineer",
+        "job_link": "https://www.google.com/about/careers/applications/jobs/results/73604838461448902-cloud-web-application-engineer/",
+        "company_name": "Google",
+        "experience": "Year of experience",
+        "salary": "Rs. 18 LPA - Rs. 24 LPA",
+        "location": "Gurgaon",
+        "job_description": "",
+        "skills": [
+            "Java/Python/JavaScript",
+            "Google Cloud"
+        ]
+    },
+    {
+        "job_title": "Engineer-APT",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Volvo",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 5 LPA - Rs. 8 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            " .Net",
+            " SQL",
+            " C#"
+        ]
+    },
+    {
+        "job_title": "Computer Scientist",
+        "job_link": null,
+        "company_name": "Adobe",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 25 LPA - Rs. 40 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "AWS",
+            "Google Cloud"
+        ]
+    },
+    {
+        "job_title": "System Software Engineer",
+        "job_link": null,
+        "company_name": "NVIDIA",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 20 LPA",
+        "location": "Pune, Hyderabad, Bangalore",
+        "job_description": null,
+        "skills": [
+            "C/C++"
+        ]
+    },
+    {
+        "job_title": "Software Engineer I",
+        "job_link": null,
+        "company_name": "Tower Research Capital",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 20 LPA - Rs. 30 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "MySQL"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer I",
+        "job_link": null,
+        "company_name": "American Express GBT",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 8 LPA - Rs. 14 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "HTML/CSS/JavaScript",
+            "Java"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "NatWest Group",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python/Java/C/C++",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer 1",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 18 LPA - Rs. 25 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Software Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineering - Analyst",
+        "job_link": null,
+        "company_name": "Goldman Sachs",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "SQL",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 3.5 LPA - Rs. 6 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Software Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "ServiceNow",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "JavaScript"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer",
+        "job_link": null,
+        "company_name": "Adobe",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 20 LPA",
+        "location": "Noida",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 3.5 LPA - Rs. 6 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Software Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Qualys",
+        "experience": "0 - 4 Years",
+        "salary": "Rs. 6 LPA - Rs. 12 LPA",
+        "location": "Pune",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "SQL",
+            "Backend Development"
+        ]
+    },
+    {
+        "job_title": "Associate - Digital Product Management",
+        "job_link": null,
+        "company_name": "American Express",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 10 LPA - Rs. 15 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Product Management",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "IBM",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 4.5 LPA - Rs. 6.5 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "Node.js"
+        ]
+    },
+    {
+        "job_title": "Programmer Analyst",
+        "job_link": null,
+        "company_name": "Cognizant",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 3.5 LPA - Rs. 5.5 LPA",
+        "location": "Chennai",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Technical Specialist-App Development",
+        "job_link": null,
+        "company_name": "Birlasoft",
+        "experience": "Freshers",
+        "salary": "Rs. 3.5 LPA - Rs. 5.5 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Application Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 3.5 LPA - Rs. 6 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Associate, Automation Engineer",
+        "job_link": null,
+        "company_name": "BlackRock",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Microsoft Azure"
+        ]
+    },
+    {
+        "job_title": "Software Engineering Analyst",
+        "job_link": null,
+        "company_name": "Oracle",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Volvo",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 5 LPA - Rs. 8 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            " .Net",
+            " SQL",
+            " C#"
+        ]
+    },
+    {
+        "job_title": "Associate Audio Visual Engineer",
+        "job_link": null,
+        "company_name": "Servicenow",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 6 LPA - Rs. 12 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Audio Visual Design"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer 1",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 15 LPA - Rs. 30 LPA",
+        "location": "Gurugram",
+        "job_description": null,
+        "skills": [
+            "Java/C/C++",
+            "JavaScript"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "ServiceNow",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 20 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer",
+        "job_link": null,
+        "company_name": "PayPal",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Bangalore, Chennai",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Engineer-APT",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer (Full Stack)",
+        "job_link": null,
+        "company_name": "GE Digital",
+        "experience": "Fresher",
+        "salary": "Rs. 6.5 LPA - Rs. 10 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Full Stack Development"
+        ]
+    },
+    {
+        "job_title": "Cloud Web Application Engineer",
+        "job_link": null,
+        "company_name": "Google",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 18 LPA - Rs. 24 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Java/Python/JavaScript",
+            "Google Cloud"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "GAP Inc.",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer (.Net + Go Lang)",
+        "job_link": null,
+        "company_name": "United Airlines",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Gurugram",
+        "job_description": null,
+        "skills": [
+            "Go Lang",
+            ".Net"
+        ]
+    },
+    {
+        "job_title": "Integration Engineer",
+        "job_link": null,
+        "company_name": "PayU",
+        "experience": "Freshers",
+        "salary": "Rs. 7 LPA - Rs. 12 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Development Engineer",
+        "job_link": null,
+        "company_name": "Razorpay",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "PHP",
+            "Python",
+            "Django",
+            "Golang",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Android Developer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 4 LPA - Rs. 6 LPA",
+        "location": "Coimbatore",
+        "job_description": null,
+        "skills": [
+            "Android Development"
+        ]
+    },
+    {
+        "job_title": "Technical Specialist-App Development",
+        "job_link": null,
+        "company_name": "Birlasoft",
+        "experience": "Freshers",
+        "salary": "Rs. 3.5 LPA - Rs. 5.5 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Application Development"
+        ]
+    },
+    {
+        "job_title": "Programmer Analyst",
+        "job_link": null,
+        "company_name": "Cognizant",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 3.5 LPA - Rs. 5.5 LPA",
+        "location": "Chennai",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Junior Associate - Customer Success Partner",
+        "job_link": null,
+        "company_name": "Razorpay",
+        "experience": "Fresher",
+        "salary": "Rs. 4.5 LPA - Rs. 7 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Project Management"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer: Software Development",
+        "job_link": null,
+        "company_name": "NTT Data",
+        "experience": "Fresher",
+        "salary": "Rs. 4 LPA - Rs. 6 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "C/C++",
+            "Java",
+            "JavaScript",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "Fresher",
+        "salary": "Rs. 3.5 LPA - Rs. 5 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python/Java/C/C++",
+            "Software Engineering"
+        ]
+    },
+    {
+        "job_title": "Technical Business Analysis Engineer I",
+        "job_link": null,
+        "company_name": "Conduent",
+        "experience": "Fresher",
+        "salary": "Rs. 4.5 LPA - Rs. 6.5 LPA",
+        "location": "Noida",
+        "job_description": null,
+        "skills": [
+            "Software Engineering"
+        ]
+    },
+    {
+        "job_title": "Junior DevOps Engineer",
+        "job_link": null,
+        "company_name": "EY",
+        "experience": "Fresher",
+        "salary": "Rs. 5 LPA - Rs. 7 LPA",
+        "location": "Noida",
+        "job_description": null,
+        "skills": [
+            "DevOps Engineering"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "GAP Inc.",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Associate - Automation Engineer",
+        "job_link": null,
+        "company_name": "BlackRock",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "IBM",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 4.5 LPA - Rs. 6.5 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "Node.js"
+        ]
+    },
+    {
+        "job_title": "UI Engineer",
+        "job_link": null,
+        "company_name": "EY",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 8 LPA",
+        "location": "Noida",
+        "job_description": null,
+        "skills": [
+            "UI UX Design"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Optum",
+        "experience": "Freshers",
+        "salary": "Rs. 5 LPA - Rs. 8 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "EY",
+        "experience": "Fresher",
+        "salary": "Rs. 4.5 LPA - Rs. 7 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "NetApp",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 10 LPA - Rs. 14 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "C/C++"
+        ]
+    },
+    {
+        "job_title": "Junior Frontend QA Engineer",
+        "job_link": null,
+        "company_name": "Dyson",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Javascript"
+        ]
+    },
+    {
+        "job_title": "BizOps Engineer",
+        "job_link": null,
+        "company_name": "MasterCard",
+        "experience": "Fresher",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Pune",
+        "job_description": null,
+        "skills": [
+            "DevOps Engineering"
+        ]
+    },
+    {
+        "job_title": "IT Application Engineer",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "Fresher",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Cloud Web Application Engineer",
+        "job_link": null,
+        "company_name": "Google",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 18 LPA - Rs. 24 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Java/Python/JavaScript",
+            "Google Cloud"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 11 LPA - Rs. 15 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer- Backend (Java)",
+        "job_link": null,
+        "company_name": "PayPal",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 13 LPA - Rs. 18 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Java/Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Systems Development Engineer",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "Freshers",
+        "salary": "Rs. 15 LPA - Rs. 25 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Associate -Digital Product Management",
+        "job_link": null,
+        "company_name": "American Express",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 10 LPA - Rs. 15 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Product Management",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "GE Digital",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 8 LPA - Rs. 15 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Java/C++/Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Customer and Partner Solutions Engineer",
+        "job_link": null,
+        "company_name": "Google",
+        "experience": "Fresher",
+        "salary": "Rs. 18 LPA - Rs. 28 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Java/C++/Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Technical Solutions Consultant",
+        "job_link": null,
+        "company_name": "Google",
+        "experience": "Fresher",
+        "salary": "Rs. 20 LPA - Rs. 30 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer (Full Stack)",
+        "job_link": null,
+        "company_name": "GE Digital",
+        "experience": "Fresher",
+        "salary": "Rs. 6.5 LPA - Rs. 10 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Full Stack Development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Barclays",
+        "experience": "Fresher",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Pune",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "Junior Software Developer",
+        "job_link": null,
+        "company_name": "Adidas",
+        "experience": "Fresher",
+        "salary": "Rs. 5 LPA - Rs. 7 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Software Development",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "Associate Software Engineer",
+        "job_link": null,
+        "company_name": "PayU",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 6 LPA - 8 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "GE Vernova",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "HTML",
+            "CSS",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Technical Supoort Engineer",
+        "job_link": null,
+        "company_name": "Sprinklr",
+        "experience": "0 - 3 Years",
+        "salary": "Rs. 6 LPA - Rs. 9 LPA",
+        "location": "Gurgaon, Bangalore",
+        "job_description": null,
+        "skills": [
+            "JavaScript/Python/Java",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Engineer",
+        "job_link": null,
+        "company_name": "American Express",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Gurgaon",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Oracle",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 7 LPA - Rs. 12 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Javascript",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "job_title": "Associate Engineer",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Wells Fargo",
+        "experience": "Fresher",
+        "salary": "Rs. 8 LPA - Rs. 14 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Systems Development Engineer",
+        "job_link": null,
+        "company_name": "Amazon",
+        "experience": "Fresher",
+        "salary": "Rs. 15 LPA - Rs. 25 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "Java",
+            "C++"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": null,
+        "company_name": "Capegemini",
+        "experience": "Fresher",
+        "salary": "Rs. 4 LPA - Rs. 6 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Software Engineering"
+        ]
+    },
+    {
+        "job_title": "Engineer-APT",
+        "job_link": null,
+        "company_name": "Qualcomm",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 12 LPA - Rs. 18 LPA",
+        "location": "Hyderabad",
+        "job_description": null,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Software Engineer (Backend)",
+        "job_link": null,
+        "company_name": "MoEngage",
+        "experience": "0 - 1 Years",
+        "salary": "Rs. 10 LPA - Rs. 18 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "Python",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "Risk Analyst - Software Engineering",
+        "job_link": null,
+        "company_name": "Goldman Sachs",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 10 LPA - Rs. 18 LPA",
+        "location": "Bengaluru",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Product Developer",
+        "job_link": null,
+        "company_name": "Barclays",
+        "experience": "Fresher",
+        "salary": "Rs. 8 LPA - Rs. 12 LPA",
+        "location": "Chennai, Pune",
+        "job_description": null,
+        "skills": [
+            "Python",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Remote Fullstack Specialist",
+        "job_link": null,
+        "company_name": "Turing",
+        "experience": "Fresher",
+        "salary": "Rs. 6 LPA - Rs. 10 LPA",
+        "location": "Remote",
+        "job_description": null,
+        "skills": [
+            "Fullstack Development"
+        ]
+    },
+    {
+        "job_title": "Frontend Developer",
+        "job_link": null,
+        "company_name": "Adani AI Labs",
+        "experience": "Fresher",
+        "salary": "Rs. 4 LPA - Rs. 6.5 LPA",
+        "location": "Kolkata",
+        "job_description": null,
+        "skills": [
+            "HTML",
+            "CSS",
+            "Javascript"
+        ]
+    },
+    {
+        "job_title": "Software Engineer - Cloud Native VM",
+        "job_link": null,
+        "company_name": "Rubrik",
+        "experience": "0 - 2 Years",
+        "salary": "Rs. 12 LPA - Rs. 22 LPA",
+        "location": "Bangalore",
+        "job_description": null,
+        "skills": [
+            "Java",
+            "C/C++",
+            "Scala",
+            "Python"
+        ]
+    }
+]

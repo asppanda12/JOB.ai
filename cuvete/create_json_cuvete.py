@@ -30,7 +30,7 @@ except pd.errors.EmptyDataError:
 except Exception as e:
     print(f"An error occurred: {e}") 
 
-
+print(job_data_from_csv)
 output_data = []  
 for job in job_data:
     json1_llama = parse_job_data_llama(job,API)  # Parse with llama

@@ -1,48 +1,3359 @@
 [
     {
-        "job_listings": [
-            {
-                "job_title": "Software Engineer",
-                "job_link": "https://example.com/job1",
-                "company_name": "ABC Corporation",
-                "experience": "5-7 years",
-                "salary": "$120,000 - $150,000",
-                "location": "New York, NY",
-                "job_description": "Design, develop, and test software applications",
-                "skills": [
-                    "Java",
-                    "Python",
-                    "C++"
-                ]
-            },
-            {
-                "job_title": "Data Scientist",
-                "job_link": "https://example.com/job2",
-                "company_name": "DEF Startups",
-                "experience": "3-5 years",
-                "salary": "$100,000 - $130,000",
-                "location": "San Francisco, CA",
-                "job_description": "Analyze and interpret complex data sets",
-                "skills": [
-                    "Machine Learning",
-                    "Data Visualization",
-                    "Statistics"
-                ]
-            },
-            {
-                "job_title": "Product Manager",
-                "job_link": "https://example.com/job3",
-                "company_name": "GHI Enterprises",
-                "experience": "5-10 years",
-                "salary": "$150,000 - $200,000",
-                "location": "Chicago, IL",
-                "job_description": "Develop and launch new products",
-                "skills": [
-                    "Product Development",
-                    "Marketing",
-                    "Leadership"
-                ]
-            }
+        "job_title": "Data Scientist & Experimentation Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-experimentation-analyst-encora-bengaluru-0-to-5-years-241224504875",
+        "company_name": "Encora",
+        "experience": "0-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Experience with data visualization platforms (e.g., Tableau, Power BI, Matplotlib, or S...)",
+        "skills": [
+            "Data analysis",
+            "Statistical modeling",
+            "Cloud Services",
+            "Machine learning",
+            "Quality engineering",
+            "Data analytics",
+            "Product engineering"
+        ]
+    },
+    {
+        "job_title": "Data Scientist/Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-data-analyst-turing-remote-3-to-5-years-231224500221",
+        "company_name": "Turing",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Bachelor s / Master s degree in Engineering, Computer Science (or equivalent experience...",
+        "skills": [
+            "Data analysis",
+            "Data science",
+            "Time management",
+            "Debugging",
+            "Production",
+            "Data Analyst",
+            "Data analytics",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-pune-8-to-12-years-191224916209",
+        "company_name": "IBM",
+        "experience": "8-12 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Required Technical and Professional Expertise Resource should have 8-12 years of experi...",
+        "skills": [
+            "python",
+            "data analytics",
+            "artificial intelligence",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": "https://www.naukri.com/job-listings-software-engineer-m-s-success-alliance-infotech-mumbai-mumbai-suburban-mumbai-all-areas-2-to-7-years-241224016627",
+        "company_name": "Financial Firm",
+        "experience": "2-7 Yrs",
+        "salary": "12-22 Lacs PA",
+        "location": "Mumbai, Mumbai Suburban, Mumbai (All Areas)",
+        "job_description": "Had at least 3 months of internship experience in college Minimum experience of 2 years...",
+        "skills": [
+            "Data Engineering",
+            "Software Engineering",
+            "Data Science",
+            "Project",
+            "Javascript",
+            "Big Data",
+            "Full Stack",
+            "GPT"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-alp-consulting-limited-pune-3-to-7-years-241224911168",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Must Have Technical expertiseStrong Experience with SQL, Python, Machine Learning and o...",
+        "skills": [
+            "python",
+            "dbms",
+            "machine learning",
+            "sql",
+            "data extraction",
+            "data analysis",
+            "data analytics",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "ML Engineer / Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-ml-engineer-data-scientist-spotflock-technologies-pvt-ltd-rangareddy-2-to-4-years-170724502600",
+        "company_name": "Spotflock Technologies",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Rangareddy",
+        "job_description": "Spotflock Technologies Pvt. Ltd. is looking for ML Engineer / Data Scientist to join ou...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "MLOps Engineer",
+        "job_link": "https://www.naukri.com/job-listings-mlops-engineer-ave-promagne-business-solutions-hyderabad-chennai-bengaluru-4-to-9-years-171224920638",
+        "company_name": "Leading Client",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad, Chennai, Bengaluru",
+        "job_description": "Good knowledge of DS concepts and professional experience in developing and enhancing a...",
+        "skills": [
+            "machine learning operations",
+            "data analytics",
+            "Linux",
+            "GCP",
+            "PySpark",
+            "CI/CD",
+            "software engineering",
+            "Spark"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-bm2k-global-noida-5-to-8-years-161024018105",
+        "company_name": "Bm2k Global",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Noida",
+        "job_description": "Education: Bachelors degree in Data Science, Statistics, Mathematics, Computer Science,...",
+        "skills": [
+            "Power Bi",
+            "SQL Database",
+            "Data Analytics",
+            "Yardi",
+            "MRI",
+            "Data Extraction",
+            "Data Cleansing",
+            "property management tools"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-wow-jobs-wow-softech-pvt-ltd-gurugram-5-to-8-years-171224917883",
+        "company_name": "Leading Client",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Category: Information Technology -4+ years of total experience with 2+ years of exper...",
+        "skills": [
+            "python",
+            "natural language processing",
+            "power bi",
+            "sql",
+            "data bricks",
+            "data analysis",
+            "data analytics",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-upl-limited-bengaluru-2-to-6-years-221224001582",
+        "company_name": "UPL Limited",
+        "experience": "2-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Practical experience of developing advanced statistical and machine learning models Exp...",
+        "skills": [
+            "python",
+            "data analysis",
+            "access",
+            "data analytics",
+            "analytical",
+            "scala",
+            "mathematics",
+            "data processing"
+        ]
+    },
+    {
+        "job_title": "Python LLM Data Scientist/Analyst",
+        "job_link": "https://www.naukri.com/job-listings-python-llm-data-scientist-analyst-turing-remote-2-to-5-years-231224500192",
+        "company_name": "Turing",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Excellent communication abilities to work with stakeholders and researchers successfull...",
+        "skills": [
+            "Analytical skills",
+            "Data analysis",
+            "Data science",
+            "Artificial Intelligence",
+            "Programming",
+            "Data analytics",
+            "SQL",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Python Data Scientist/Analyst",
+        "job_link": "https://www.naukri.com/job-listings-python-data-scientist-analyst-turing-remote-3-to-5-years-231224500188",
+        "company_name": "Turing",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Bachelor s / Master s degree in Engineering, Computer Science (or equivalent experience...",
+        "skills": [
+            "Data analysis",
+            "Debugging",
+            "Programming",
+            "Data Analyst",
+            "Data analytics",
+            "data visualization",
+            "SQL",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-8-to-12-years-191224916178",
+        "company_name": "IBM",
+        "experience": "8-12 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "8-12 years of experience in Python and ML services; strong data analytics skills; famil...",
+        "skills": [
+            "python",
+            "data analytics",
+            "artificial intelligence",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-5-to-7-years-151224902257",
+        "company_name": "IBM",
+        "experience": "5-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Required Technical and Professional Expertise Resource should have 5-7 years of experie...",
+        "skills": [
+            "python",
+            "data analytics",
+            "artificial intelligence",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-turing-remote-5-to-8-years-231224500135",
+        "company_name": "Turing",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Bachelors Degree in Computer Science, Mathematics, Statistics, or related field. 5+ ...",
+        "skills": [
+            "Data analysis",
+            "Analytical",
+            "Javascript",
+            "Data quality",
+            "Data analytics",
+            "Data visualization",
+            "Business intelligence",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "INTEGRITY DATA ENGINEER",
+        "job_link": "https://www.naukri.com/job-listings-integrity-data-engineer-alp-consulting-limited-bengaluru-3-to-7-years-241224911711",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Hands on experience on any other CMMS and IDMS software . Strong knowledge on SQL and ...",
+        "skills": [
+            "ms access",
+            "presentation skills",
+            "sql",
+            "data modeling",
+            "cmms",
+            "hive",
+            "python",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Senior AI/ML Software Developer",
+        "job_link": "https://www.naukri.com/job-listings-senior-ai-ml-software-developer-gforce-consulting-solutions-remote-8-to-12-years-210922500708",
+        "company_name": "Gforce Consulting Solutions",
+        "experience": "8-12 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "8 - 12 yrsPreferred Skills: Python and C coding AI / ML model creation (CNN) Data set t...",
+        "skills": [
+            "Python",
+            "C",
+            "AI",
+            "ML",
+            "CNN",
+            "Computer science",
+            "Embedded systems",
+            "Coding",
+            "Neural networks",
+            "Artificial Intelligence",
+            "Machine learning",
+            "Algorithm development",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-8-to-12-years-291124917893",
+        "company_name": "IBM",
+        "experience": "8-12 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "8-12 years of experience in Python and ML services, strong data analytics skills|Build ...",
+        "skills": [
+            "python",
+            "data analytics",
+            "cloud technologies",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-8-to-12-years-031224916750",
+        "company_name": "IBM",
+        "experience": "8-12 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Required Technical and Professional Expertise Resource should have 8-12 years of experi...",
+        "skills": [
+            "python",
+            "data analytics",
+            "artificial intelligence",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Scientist: Artificial Intelligence",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-artificial-intelligence-ibm-india-pvt-limited-bengaluru-4-to-5-years-031224916553",
+        "company_name": "IBM",
+        "experience": "4-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Required Technical and Professional Expertise Resource should have 3-5 years of experie...",
+        "skills": [
+            "python",
+            "data analytics",
+            "artificial intelligence",
+            "tableau",
+            "ml",
+            "hive",
+            "algorithms",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Software Engineer",
+        "job_link": "https://www.naukri.com/job-listings-software-engineer-kla-tencor-software-india-pvt-ltd-chennai-3-to-6-years-131224502946",
+        "company_name": "Kla Tencor",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "Developing and directing software system validation and testing methods. Directing ...",
+        "skills": [
+            "C++",
+            "Simulation",
+            "Manufacturing process",
+            "Chip design",
+            "RDBMS",
+            "Process control",
+            "Packaging",
+            "Application development"
+        ]
+    },
+    {
+        "job_title": "Software Engineer- AB Initio",
+        "job_link": "https://www.naukri.com/job-listings-software-engineer-ab-initio-randstad-mumbai-all-areas-5-to-10-years-021224007126",
+        "company_name": "Banking Domain",
+        "experience": "5-10 Yrs",
+        "salary": "16-27.5 Lacs PA",
+        "location": "Hybrid - Mumbai (All Areas)",
+        "job_description": "Analytical thinking and problem-solving skills. Bachelors degree required. . Skilled in...",
+        "skills": [
+            "Data Analytics",
+            "Pyspark",
+            "Data Engineering",
+            "Agile",
+            "Ab Initio",
+            "Informatica",
+            "ETL Tool",
+            "Product role"
+        ]
+    },
+    {
+        "job_title": "Fresher - Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-fresher-data-analyst-codenera-pune-mumbai-all-areas-0-to-1-years-231224010501",
+        "company_name": "Codenera",
+        "experience": "0-1 Yrs",
+        "salary": "3-6 Lacs PA",
+        "location": "Hybrid - Pune, Mumbai (All Areas)",
+        "job_description": "- Managing data, including creation, updation and deletion. - Validate data sanctity, p...",
+        "skills": [
+            "Python",
+            "R",
+            "SQL Development",
+            "Data Management",
+            "Data Analysis",
+            "SQL Database",
+            "Data Mining",
+            "Data Extraction"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-aim-future-consulting-new-delhi-saket-2-to-7-years-201224905515",
+        "company_name": "Education / Study Abroad",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi, Saket",
+        "job_description": "Working days (Mon Sat) Day shift (10 am 7 pm)Minimum Experience: 2+ Year as Data Analys...",
+        "skills": [
+            "Data analytics",
+            "Python",
+            "Pandas",
+            "Database design development",
+            "Power BI",
+            "Database management",
+            "Data visualization",
+            "Data mining"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-syncpoint360-coimbatore-6-to-10-years-201224004836",
+        "company_name": "Syncpoint360",
+        "experience": "6-10 Yrs",
+        "salary": "15-25 Lacs PA",
+        "location": "Remote",
+        "job_description": "Data Warehouses: Proficiency in Snowflake, BigQuery, Azure Synapse Analytics, or AWS Re...",
+        "skills": [
+            "Power Bi",
+            "Data Pipeline",
+            "Snowflake",
+            "Python",
+            "Predictive Analytics",
+            "Tensorflow",
+            "Etl Pipelines",
+            "Data Studio"
+        ]
+    },
+    {
+        "job_title": "Hiring For Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-hiring-for-data-analyst-randstad-mumbai-all-areas-4-to-9-years-191224003428",
+        "company_name": "Product Company",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai (All Areas)",
+        "job_description": "power BI other visualization with Tableau.strong communication, team skills metoring sk...",
+        "skills": [
+            "Power BI",
+            "Data Analytics",
+            "SQL",
+            "Python",
+            "sales budget",
+            "sales analyst",
+            "Data Pricing",
+            "SAS"
+        ]
+    },
+    {
+        "job_title": "Data Analyst - ABDM, NHA",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-abdm-nha-national-institute-for-smart-government-nisg-new-delhi-5-to-10-years-181224011856",
+        "company_name": "National Institute for Smart Government (NISG)",
+        "experience": "5-10 Yrs",
+        "salary": "12-18 Lacs PA",
+        "location": "New Delhi",
+        "job_description": "Experience on AWS Glue, Redshift, EMR preferred BE / B.TECH OR MCA from a reputed colle...",
+        "skills": [
+            "Data Analytics",
+            "Visualization Technologies",
+            "Interpretation",
+            "Data analysis",
+            "Data Visualization"
+        ]
+    },
+    {
+        "job_title": "Data Analyst - Jewelry Industry",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-jewelry-industry-malabar-gold-diamonds-mumbai-all-areas-5-to-7-years-171224019087",
+        "company_name": "MALABAR GOLD & DIAMONDS",
+        "experience": "5-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai (All Areas)",
+        "job_description": "MBA/BSC or MSC in Statistics with 7-8 years of experience in FMCG, Retail, or Gems & Je...",
+        "skills": [
+            "Data Analytics",
+            "Data Analysis",
+            "Advanced Excel",
+            "Inventory Analysis",
+            "MIS Reporting",
+            "MIS",
+            "Reporting",
+            "Analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst - Department of Agriculture & Farmers Welfare",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-department-of-agriculture-farmers-welfare-national-institute-for-smart-government-nisg-new-delhi-6-to-10-years-120824001715",
+        "company_name": "National Institute for Smart Government (NISG)",
+        "experience": "6-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "Experience - M Tech / MCA/ BE / B Tech / MBA with relevant experience in data analysis,...",
+        "skills": [
+            "Data Analytics",
+            "Report Generation",
+            "Machine Learning",
+            "Agriculture",
+            "Data analysis",
+            "Welfare"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-241224901046",
+        "company_name": "Accenture",
+        "experience": "3-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "B Tech with 3+ years of experience in SAP CPI for Data Services and strong understandin...",
+        "skills": [
+            "business analysis",
+            "mule esb",
+            "data visualization",
+            "statistics",
+            "data munging",
+            "python",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Cloud Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-cloud-data-analyst-ibm-india-pvt-limited-bengaluru-5-to-10-years-261124922266",
+        "company_name": "IBM",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Assisting with other data analysis tasks as required across development teams Required ...",
+        "skills": [
+            "python",
+            "data analytics",
+            "consumables",
+            "team leadership",
+            "rest api development",
+            "data analysis",
+            "data processing"
+        ]
+    },
+    {
+        "job_title": "Data Engineer/Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-scientist-applanix-chennai-2-to-6-years-101024500367",
+        "company_name": "Trimble Applanix",
+        "experience": "2-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "Design, develop, and program methods, processes, and systems to analyze and consoli...",
+        "skills": [
+            "Computer science",
+            "Data analysis",
+            "Data science",
+            "Product service",
+            "Cloud Services",
+            "Data analytics",
+            "Big data",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-sigma-allied-services-private-limited-maharashtra-maharashtra-3-to-7-years-061224903980",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Maharashtra, Maharashtra",
+        "job_description": "Proficient in Python, SQL, and data visualization tools like Tableau; experience in mac...",
+        "skills": [
+            "algorithms",
+            "predictive",
+            "data collection",
+            "product development",
+            "data visualization",
+            "python",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-sigma-allied-services-private-limited-port-blair-3-to-7-years-051224918677",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Port Blair",
+        "job_description": "Proficient in Python, SQL, and data visualization tools like Tableau; experience in mac...",
+        "skills": [
+            "algorithms",
+            "predictive",
+            "data collection",
+            "product development",
+            "data visualization",
+            "python",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-codenera-pune-mumbai-all-areas-0-to-1-years-231224010599",
+        "company_name": "Codenera",
+        "experience": "0-1 Yrs",
+        "salary": "3-6 Lacs PA",
+        "location": "Hybrid - Pune, Mumbai (All Areas)",
+        "job_description": "- Managing data, including creation, updation and deletion. - Validate data sanctity, p...",
+        "skills": [
+            "Python",
+            "R",
+            "SQL Development",
+            "Data Management",
+            "Data Analysis",
+            "SQL Database",
+            "Data Mining",
+            "Data Extraction"
+        ]
+    },
+    {
+        "job_title": "Celonis Data Engineer/Consultant",
+        "job_link": "https://www.naukri.com/job-listings-celonis-data-engineer-consultant-infosys-limited-bengaluru-3-to-5-years-201224916633",
+        "company_name": "Infosys",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Celonis Data Engineer / Implementation Professional certification will be an advantage",
+        "skills": [
+            "bpmn",
+            "business process modeling",
+            "sap",
+            "sql",
+            "data modeling",
+            "python",
+            "rpa",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "Python Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-python-data-analyst-adglobal360-gurugram-2-to-4-years-231224004011",
+        "company_name": "Adglobal360",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Selenium **: Experience automating browsers for scraping dynamic content and handling o...",
+        "skills": [
+            "Data Scraping",
+            "Selenium",
+            "Data Analytics",
+            "Web Scraping",
+            "Python",
+            "Web Crawling",
+            "Python Data",
+            "Web technologies"
+        ]
+    },
+    {
+        "job_title": "Software engineer",
+        "job_link": "https://www.naukri.com/job-listings-software-engineer-ipropal-allps-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-090424501029",
+        "company_name": "Ipropal",
+        "experience": "3-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Requirements Analysis: Collaborate with stakeholders to gather and analyze requiremen...",
+        "skills": [
+            "Product quality",
+            "Software testing",
+            "big data analytics",
+            "Banking",
+            "Testing",
+            "Software",
+            "Analytics",
+            "Quality"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-billigence-bengaluru-1-to-4-years-301024501097",
+        "company_name": "Billigence",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Who are we. Billigence is a boutique Data Analytics consultancy with a global presence...",
+        "skills": [
+            "snowflake",
+            "continuous integration",
+            "cd",
+            "python",
+            "data analytics",
+            "data warehousing",
+            "data pipeline",
+            "elt"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-pune-3-to-8-years-291124918032",
+        "company_name": "Accenture",
+        "experience": "3-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Must have skills : Databricks Unified Data Analytics Platform. Good to have skills : NA...",
+        "skills": [
+            "data analytics",
+            "data warehousing",
+            "data modeling",
+            "software engineering",
+            "etl process",
+            "hive",
+            "python",
+            "big data technologies"
+        ]
+    },
+    {
+        "job_title": "Data Engineer/ Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-data-analyst-chryselys-hyderabad-chennai-2-to-7-years-260224000441",
+        "company_name": "Chryselys",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hybrid - Hyderabad, Chennai",
+        "job_description": "Extensive experience in Data lake architecture, building data pipelines using AWSservic...",
+        "skills": [
+            "Data Engineering",
+            "sql",
+            "pharma",
+            "Payer",
+            "python",
+            "Claims",
+            "CRM data",
+            "pyspark"
+        ]
+    },
+    {
+        "job_title": "Data Engineer/Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-analyst-sledding-technologies-pvt-ltd-remote-1-to-3-years-150424500193",
+        "company_name": "Sledding Technologies",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Experience 5+ . Timeline Immediate",
+        "skills": [
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "scikit-learn",
+            "linear regression",
+            "numpy",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-ridhi-enterprises-australia-canada-united-kingdom-uk-2-to-4-years-201224017065",
+        "company_name": "Ridhi Enterprises",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Australia, Canada, United Kingdom (UK)",
+        "job_description": "As a Data Analyst, you will play a crucial role in uncovering valuable insights from ou...",
+        "skills": [
+            "Data Analysis",
+            "Data Management",
+            "Data Cleansing",
+            "Data Analytics",
+            "Data Reporting",
+            "Analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-workfreaks-business-services-chennai-0-to-0-years-201224011998",
+        "company_name": "Workfreaks",
+        "experience": "0 years",
+        "salary": "2-3.5 Lacs PA",
+        "location": "Chennai",
+        "job_description": "The Students can apply only If you're Interested to work as a Data Analyst along with y...",
+        "skills": [
+            "Data Analysis",
+            "Data Analytics",
+            "Analytics",
+            "Analysis",
+            "Excel"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-imaginators-try-going-beyond-gurugram-6-to-8-years-201224008517",
+        "company_name": "Imaginators Try Going Beyond",
+        "experience": "6-8 Yrs",
+        "salary": "3-6.5 Lacs PA",
+        "location": "Gurugram",
+        "job_description": "Drop your CV at rashibimaginators@gmail.com Looking for- Data Analyst role for a MNC co...",
+        "skills": [
+            "Data Analysis",
+            "Data Visualization",
+            "Data Mining",
+            "Tableau",
+            "Data Analytics",
+            "Data Reporting",
+            "SQL",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-deltek-bengaluru-7-to-10-years-161224008744",
+        "company_name": "Deltek",
+        "experience": "7-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Experience - Minimum 7 Years to 11 Years",
+        "skills": [
+            "Data Analytics",
+            "Python",
+            "R Program",
+            "Analytics",
+            "Data analysis"
+        ]
+    },
+    {
+        "job_title": "Manager (Visualizer) / Data Visualizer and Analyst",
+        "job_link": "https://www.naukri.com/job-listings-manager-visualizer-data-visualizer-and-analyst-sbc-exports-new-delhi-1-to-5-years-141224006866",
+        "company_name": "Sbc Exports",
+        "experience": "1-5 Yrs",
+        "salary": "4.5-6 Lacs PA",
+        "location": "New Delhi(Ajmeri gate)",
+        "job_description": "Qualifications: Graduation degreeCertification in: Digital MarketingExperience Requirem...",
+        "skills": [
+            "Data Analytics",
+            "Data Analysis",
+            "Data Visualization",
+            "Data Modeling",
+            "Analysis",
+            "Modeling"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sbc-exports-panaji-6-to-11-years-141224006377",
+        "company_name": "Sbc Exports",
+        "experience": "6-11 Yrs",
+        "salary": "4-6 Lacs PA",
+        "location": "Remote",
+        "job_description": "MS in Software Systems or Masters in EngineeringSpecialized Experience: Minimum 5 years...",
+        "skills": [
+            "Data Analytics",
+            "Data Manipulation",
+            "Data Management",
+            "Data Analysis",
+            "Data Mining",
+            "Management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst - SCM",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-scm-aragen-life-sciences-private-limited-hyderabad-1-to-3-years-141224005902",
+        "company_name": "Aragen Life Sciences Private limited",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Strong Excel skills and knowledge of data analytics|Manage material codes, analyze supp...",
+        "skills": [
+            "Data Analysis",
+            "Material Management",
+            "Data Manipulation",
+            "MDM",
+            "Master Data Management",
+            "Data Cleansing",
+            "Data Extraction",
+            "Data Visualization"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sutara-learning-foundation-bengaluru-0-to-1-years-141224005355",
+        "company_name": "Sutara Learning Foundation",
+        "experience": "0-1 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru(Bannerghatta Road)",
+        "job_description": "Qualifications and Skills: . Educational Background: Bachelors degree in Data Science, ...",
+        "skills": [
+            "Data Analyst",
+            "Data Science",
+            "Data Analysis",
+            "Data Analytics",
+            "Analysis",
+            "Analytics",
+            "Data",
+            "Science"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-clarity-consulting-services-pune-bengaluru-delhi-ncr-1-to-2-years-141224005311",
+        "company_name": "Clarity Consulting",
+        "experience": "1-2 Yrs",
+        "salary": "2-6 Lacs PA",
+        "location": "Pune, Bengaluru, Delhi / NCR",
+        "job_description": "Bachelors or masters degree required in any discipline with strong record ofUp to 3 yea...",
+        "skills": [
+            "Power Bi",
+            "Python",
+            "SQL",
+            "R",
+            "Data Analysis",
+            "Tableau",
+            "Data Analytics",
+            "Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-alp-consulting-limited-india-3-to-7-years-131224913256",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "India",
+        "job_description": "Experience:6 - 10 YearsAdvanced pattern recognition and analytics experienceExperience ...",
+        "skills": [
+            "sql queries",
+            "data warehousing",
+            "power bi",
+            "qlikview",
+            "data visualization",
+            "python",
+            "oracle",
+            "data analysis"
+        ]
+    },
+    {
+        "job_title": "ML Ops Engineer",
+        "job_link": "https://www.naukri.com/job-listings-ml-ops-engineer-ave-promagne-business-solutions-bengaluru-4-to-9-years-131224907156",
+        "company_name": "Leading Client",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Minimum 3 years experience in AWS/Azure with strong skills in Java and Python; familiar...",
+        "skills": [
+            "ML Ops",
+            "Java",
+            "Azure",
+            "git",
+            "data analytics",
+            "Docker",
+            "Power BI",
+            "CI/CD"
+        ]
+    },
+    {
+        "job_title": "ML Engineer ( Python )",
+        "job_link": "https://www.naukri.com/job-listings-ml-engineer-python-ave-promagne-business-solutions-bengaluru-4-to-9-years-121224920106",
+        "company_name": "Leading Client",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "4+ years of experience in ML projects with strong statistical understanding and Python ...",
+        "skills": [
+            "ML Engineering",
+            "predictive modelling",
+            "python",
+            "database programming",
+            "data analytics",
+            "data mining",
+            "data processing",
+            "data structures"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-ventra-health-chennai-2-to-7-years-121224014339",
+        "company_name": "Ventra Health",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hybrid - Chennai",
+        "job_description": "Requirement Gathering: Collaborate with stakeholders to gather, document, and prioritiz...",
+        "skills": [
+            "Advanced Excel",
+            "Python",
+            "SQL",
+            "Power Bi",
+            "Data Analysis",
+            "Dax",
+            "Data Analytics",
+            "TSQL"
+        ]
+    },
+    {
+        "job_title": "Data Verification Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-verification-analyst-foundation-ai-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-5-years-101224501433",
+        "company_name": "Foundation Ai",
+        "experience": "0-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Foundation AI is looking for Data Verification Analyst to join our dynamic team and emb...",
+        "skills": [
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Data Analyst- Bangalore",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-bangalore-vserve-digital-solutions-bengaluru-2-to-4-years-101224010453",
+        "company_name": "Vserve Digital Solutions",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Market and Competitor Analysis : Monitor e-commerce trends, competitor pricing strategi...",
+        "skills": [
+            "Google Analytics",
+            "E commerce",
+            "Data Analytics",
+            "Ab Testing",
+            "Adobe Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-gravity-bath-ghaziabad-2-to-7-years-091224912200",
+        "company_name": "Gravity Bath",
+        "experience": "2-7 Yrs",
+        "salary": "3-6 Lacs PA",
+        "location": "Ghaziabad",
+        "job_description": "Work Experience requirement Mini 2 years experience in Data Management",
+        "skills": [
+            "MIS Reporting",
+            "Pivot Table",
+            "Dashboard Creation",
+            "VLOOKUP",
+            "Data Analytics",
+            "Data Validation",
+            "Google Sheets",
+            "Data Management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sigma-allied-services-private-limited-port-blair-2-to-5-years-051224918674",
+        "company_name": "Leading Client",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Port Blair",
+        "job_description": "Managing master data, including creation, updates, and deletion.Managing users and user...",
+        "skills": [
+            "data analysis",
+            "data mining",
+            "data integrity",
+            "dashboards",
+            "data cleansing",
+            "metadata",
+            "python",
+            "data management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sigma-allied-services-private-limited-bengaluru-2-to-5-years-051224915849",
+        "company_name": "Leading Client",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Experience in data management and analytics with skills in SQL, Python, and Tableau|Man...",
+        "skills": [
+            "data analysis",
+            "data mining",
+            "data integrity",
+            "dashboards",
+            "data cleansing",
+            "metadata",
+            "python",
+            "data management"
+        ]
+    },
+    {
+        "job_title": "Analyst",
+        "job_link": "https://www.naukri.com/job-listings-analyst-crisil-limited-mumbai-0-to-1-years-091224009468",
+        "company_name": "Crisil",
+        "experience": "0-1 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Assist the Team Leader on consulting projects for Banks, NBFCs, AMCs, Insurance compan...",
+        "skills": [
+            "profitability",
+            "financial analysis",
+            "data analytics",
+            "data analysis",
+            "analytical",
+            "team management",
+            "consulting",
+            "investment banking"
+        ]
+    },
+    {
+        "job_title": "Life Sciences Analytics Manager, Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-life-sciences-analytics-manager-data-engineer-headstrong-genpact-bengaluru-2-to-5-years-191224501131",
+        "company_name": "Genpact",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Deliver business solution on analytics platform through end-to-end implementation t...",
+        "skills": [
+            "Data analysis",
+            "Data modeling",
+            "RDBMS",
+            "Data security",
+            "Agile",
+            "PLSQL",
+            "Data quality",
+            "Business intelligence"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-wow-jobs-wow-softech-pvt-ltd-mumbai-2-to-6-years-171224918030",
+        "company_name": "Leading Client",
+        "experience": "2-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Category: Banking and Financial services Understand the objectives and create test ca...",
+        "skills": [
+            "gap analysis",
+            "business analysis",
+            "financial services",
+            "brd",
+            "frd",
+            "project management",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-accenture-solutions-pvt-ltd-pune-5-to-10-years-171224912369",
+        "company_name": "Accenture",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Must have skills : Computer System Validation (CSV). Good to have skills : Test Data Ma...",
+        "skills": [
+            "advanced analytics",
+            "business solutions",
+            "business analysis",
+            "process improvement",
+            "computer system validation",
+            "project management",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Scientist-Immediate Joiners",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-immediate-joiners-firstcall-hresource-gurugram-7-to-12-years-191224019566",
+        "company_name": "Service based Top B2C/B2B MNC in Analytics Domain",
+        "experience": "7-12 Yrs",
+        "salary": "20-35 Lacs PA",
+        "location": "Gurugram",
+        "job_description": "Additional knowledge involving multi variate time series model is preferredExperience i...",
+        "skills": [
+            "Natural Language Processing",
+            "Machine Learning",
+            "Python",
+            "Data Science",
+            "Data Analytics",
+            "Languages",
+            "Data"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-cognitensor-technology-bengaluru-5-to-7-years-191224007820",
+        "company_name": "Cognitensor Technology",
+        "experience": "5-7 years",
+        "salary": "10-20 Lacs PA",
+        "location": "Bengaluru(Yemalur)",
+        "job_description": "Hiring: Job Title: Senior Data Scientist [5-7 years] Location: Yemalur, Bengaluru Job Role...",
+        "skills": [
+            "Machine Learning",
+            "Gcp Cloud",
+            "Python",
+            "Data Science",
+            "Predictive Modeling",
+            "Bigquery",
+            "Natural Language Processing",
+            "Aiml"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-rsquaresoft-technologies-pune-2-to-6-years-171224009612",
+        "company_name": "Rsquaresoft Technologies",
+        "experience": "2-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "We are seeking a dynamic Data Scientist / Machine Learning Engineer with 2-6 years of experience...",
+        "skills": [
+            "Data Analytics",
+            "Machine Learning",
+            "Data Science",
+            "Aws Sagemaker",
+            "Jupyter Notebook",
+            "Python",
+            "Science",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "ADL - Developer",
+        "job_link": "https://www.naukri.com/job-listings-adl-developer-wipro-limited-bengaluru-3-to-5-years-291124906597",
+        "company_name": "Wipro",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Expert in software development with strong knowledge of Azure Data Lake Analytics and C...",
+        "skills": [
+            "Azure Data Lake Analytics",
+            "software development",
+            "software design",
+            "MIS",
+            "CI/CD",
+            "Troubleshooting",
+            "Design",
+            "Development"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-photon-infotech-p-ltd-bengaluru-6-to-9-years-191124505965",
+        "company_name": "Photon",
+        "experience": "6-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Bachelors degree in a quantitative / technical field such as Engineering, Economics, St...",
+        "skills": [
+            "Business Analyst",
+            "Finance",
+            "Consulting",
+            "Software development life cycle",
+            "Data analytics",
+            "data visualization",
+            "Statistics"
+        ]
+    },
+    {
+        "job_title": "Lead Data Scientist - Marketing Analytics",
+        "job_link": "https://www.naukri.com/job-listings-lead-data-scientist-marketing-analytics-indusind-bank-gurugram-6-to-10-years-190624006354",
+        "company_name": "Indusind Bank",
+        "experience": "6-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "(b) transform existing lines of businesses and . (c) build new digital only or banking ...",
+        "skills": [
+            "Data Science",
+            "Campaign Analytics",
+            "Statistical Data Analysis",
+            "Marketing Analytics",
+            "Model Development",
+            "Banking Analytics",
+            "Customer Analytics",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-praudyo-solutions-private-limited-new-delhi-3-to-7-years-190224502238",
+        "company_name": "Praudyo Solutions Private Limited.",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "Praudyo Solutions Private Limited. is looking for Data Scientist to join our dynamic...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "data mining",
+            "predictive"
+        ]
+    },
+    {
+        "job_title": "Senior Data Scientist, Marketing Analytics",
+        "job_link": "https://www.naukri.com/job-listings-senior-data-scientist-marketing-analytics-udemy-chennai-4-to-7-years-171024500732",
+        "company_name": "Udemy",
+        "experience": "4-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "Bachelor s degree or higher in Statistics, Mathematics, Computer Science, Economics, or...",
+        "skills": [
+            "Automation",
+            "Data analysis",
+            "Analytical",
+            "Product design",
+            "Business intelligence",
+            "Forecasting",
+            "SQL",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-headstrait-mumbai-5-to-8-years-130824502293",
+        "company_name": "Headstrait",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Headstrait is looking for Data Scientist to join our dynamic team and embark on a rewar...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-digital-dogs-content-and-media-mumbai-5-to-8-years-120724501394",
+        "company_name": "Digital Dogs Content And Media",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Digital Dogs Content and Media is looking for Data Scientist to join our dynamic team a...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-sroniyan-jhansi-5-to-10-years-110724502775",
+        "company_name": "Sroniyan",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Jhansi",
+        "job_description": "Sroniyan is looking for Data Scientist to join our dynamic team and embark on a rewardi...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-preceptors-it-and-business-solutions-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-110724502488",
+        "company_name": "Preceptors IT and Business Solutions",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Preceptors IT and Business Solutions is looking for Data Scientist to join our dynamic ...",
+        "skills": [
+            "algorithms",
+            "python",
+            "project management",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "preventive maintenance",
+            "business solutions"
+        ]
+    },
+    {
+        "job_title": "Group Audit - Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-group-audit-data-scientist-dws-group-mumbai-0-to-1-years-100924500764",
+        "company_name": "DWS Group",
+        "experience": "0-1 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Master s degree (or equivalent) from an accredited college or university (or equivalent...",
+        "skills": [
+            "python",
+            "data analytics",
+            "confluence",
+            "data analysis",
+            "natural language processing",
+            "scikit-learn",
+            "openshift",
+            "jupyter notebook"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-patanjali-research-foundation-haridwar-new-delhi-2-to-5-years-071124503407",
+        "company_name": "Patanjali Research Foundation",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Haridwar, New Delhi",
+        "job_description": "Patanjali Research Foundation is looking for Data Scientist to join our dynamic team an...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-patanjali-research-foundation-haridwar-new-delhi-3-to-6-years-071124503391",
+        "company_name": "Patanjali Research Foundation",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Haridwar, New Delhi",
+        "job_description": "Patanjali Research Foundation is looking for Data Scientist to join our dynamic team an...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-capgemini-technology-services-india-limited-pune-4-to-9-years-061224911566",
+        "company_name": "Capgemini",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Experienced Data Scientist with expertise in machine learning, deep learning, and natur...",
+        "skills": [
+            "algorithms",
+            "natural language processing",
+            "machine learning",
+            "deep learning",
+            "data privacy",
+            "python",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-pragya-health-technologies-bengaluru-2-to-6-years-040624501636",
+        "company_name": "Pragya Health Technologies",
+        "experience": "2-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Pragya Health Technologies is looking for Data Scientist to join our dynamic team and e...",
+        "skills": [
+            "algorithms",
+            "python",
+            "modeling",
+            "data analysis",
+            "data analytics",
+            "natural language processing",
+            "predictive",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "INTEGRITY DATA ENGINEER",
+        "job_link": "https://www.naukri.com/job-listings-integrity-data-engineer-alp-consulting-limited-vadodara-3-to-7-years-131224913590",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Vadodara",
+        "job_description": "Technically capable in Database management Should able to read and understand engineeri...",
+        "skills": [
+            "python",
+            "data analysis",
+            "data engineering",
+            "sql",
+            "database management",
+            "hive",
+            "data analytics",
+            "data warehousing"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-computer-age-management-services-cams-chennai-5-to-7-years-161224005818",
+        "company_name": "Computer Age Management Services (CAMS)",
+        "experience": "5-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "The ideal candidate for the Business Analyst role possesses a Masters degree in Compute...",
+        "skills": [
+            "Communication Skills",
+            "Data Visualization",
+            "Data Analytics",
+            "Business Analysis",
+            "Stakeholder Management",
+            "Project Management Process"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-options-india-group-new-delhi-3-to-5-years-291124921807",
+        "company_name": "Leading Client",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "MBA/M.Tech/MS/B.Tech from Tier-1 institution with 3+ years in data analytics, strong Ex...",
+        "skills": [
+            "data analysis",
+            "core data",
+            "exploratory data analysis",
+            "data analytics",
+            "advanced excel",
+            "power bi",
+            "strategic management",
+            "dashboards"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-alp-consulting-limited-bengaluru-3-to-7-years-291124914730",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Primary skills :(Change in Skillset)Data Analyst with Tableau/Power BIData Analysis and...",
+        "skills": [
+            "data analysis",
+            "natural language processing",
+            "power bi",
+            "machine learning",
+            "java",
+            "algorithms",
+            "python",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-alp-consulting-limited-bengaluru-3-to-7-years-281124918732",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Minimum Requirements: . 4+ years of experience in Sales / Marketing OperationsEffective...",
+        "skills": [
+            "Power BI",
+            "Sales",
+            "VBA",
+            "Advanced Excel",
+            "Marketing Operations",
+            "Macros",
+            "Python",
+            "SAP"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-alp-consulting-limited-bengaluru-3-to-7-years-281124918523",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Engineering degree with 5-10 years of experience in supply chain data analysis, profici...",
+        "skills": [
+            "python",
+            "supply chain",
+            "power bi",
+            "sql",
+            "inventory management",
+            "data analysis",
+            "data interpretation",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Claims Analyst (Data)",
+        "job_link": "https://www.naukri.com/job-listings-claims-analyst-data-axa-xl-new-delhi-gurugram-delhi-ncr-0-to-2-years-281124011578",
+        "company_name": "Axa Xl",
+        "experience": "0-2 Yrs",
+        "salary": "1-5 Lacs PA",
+        "location": "Hybrid - New Delhi, Gurugram, Delhi / NCR",
+        "job_description": "Graduate / Post-Graduate with commerce background with 50% and above aggregate in the h...",
+        "skills": [
+            "Claims",
+            "Data Analytics",
+            "Excel",
+            "Data Analysis",
+            "Claims Handling",
+            "Claims Processing"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sp-staffing-hyderabad-12-to-16-years-271124018715",
+        "company_name": "Leading MNC Company",
+        "experience": "12-16 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hybrid - Hyderabad",
+        "job_description": "12 to 16 years of experience in Power BI and SQL|Analyze data and create visualizations...",
+        "skills": [
+            "Power Bi",
+            "Data Analyst",
+            "SQL",
+            "Data Analysis",
+            "Data Visualization",
+            "Data Modeling",
+            "Data Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-wipro-limited-gurugram-2-to-5-years-231124906974",
+        "company_name": "Wipro",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Design and carry out surveys and analyze survey data as per the customer requirement De...",
+        "skills": [
+            "Data Analysis",
+            "matlab",
+            "excel",
+            "python",
+            "project management",
+            "data analytics",
+            "process excellence",
+            "vba"
+        ]
+    },
+    {
+        "job_title": "Data Analyst (Deployment)",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-deployment-legistify-gurugram-0-to-2-years-221124503740",
+        "company_name": "Legistify",
+        "experience": "0-2 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Legistify is looking for Data Analyst (Deployment) to join our dynamic team and embark ...",
+        "skills": [
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-legistify-gurugram-0-to-1-years-221124503733",
+        "company_name": "Legistify",
+        "experience": "0-1 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Legistify is looking for Data Analyst to join our dynamic team and embark on a rewardin...",
+        "skills": [
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-talent-carriage-new-delhi-0-to-5-years-211124505955",
+        "company_name": "Talent Carriage",
+        "experience": "0-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "Bachelors in Data Sciences or equivalent with 0-5 years experiencePrevious data analyti...",
+        "skills": [
+            "Data analytics",
+            "Data Analyst",
+            "HR",
+            "Management",
+            "CSAT",
+            "SLAS",
+            "Records management",
+            "Transition"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-spg-corporate-new-delhi-3-to-5-years-211024503886",
+        "company_name": "SPG Corporate",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "SPG Corporate is looking for Data Analyst to join our dynamic team and embark on a rewa...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-brand-threat-analytics-bengaluru-2-to-3-years-200924013047",
+        "company_name": "Brand Threat Analytics",
+        "experience": "2-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru(Bellandur)",
+        "job_description": "In addition to technical skills, the successful candidate will have experience in craft...",
+        "skills": [
+            "Power Bi",
+            "Data Analytics",
+            "SQL",
+            "Presentation Skills",
+            "English Language Skills",
+            "Data Management",
+            "Data Extraction",
+            "Detail-Oriented"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-e-solution-point-chennai-1-to-3-years-171024502320",
+        "company_name": "E-solution Point",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "E-SOLUTION POINT is looking for Data Analyst to join our dynamic team and embark on a r...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-sheer-analytics-and-insights-private-limited-kolkata-2-to-5-years-171024502040",
+        "company_name": "Sheer Analytics and Insights Private Limited",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata",
+        "job_description": "As a Data Analyst, you will be responsible for collecting, analyzing, and interpreting...",
+        "skills": [
+            "python",
+            "data analysis",
+            "data analytics",
+            "data mining",
+            "predictive analytics",
+            "business analysis",
+            "market research",
+            "machine learning"
+        ]
+    },
+    {
+        "job_title": "DATA ANALYST",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-nsight-consulting-gurugram-2-to-7-years-151024501873",
+        "company_name": "Nsight Consulting",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Bachelors degree in a Computer Science, Mathematics or Scientific discipline . 2+ years...",
+        "skills": [
+            "Computer science",
+            "Analytical skills",
+            "MIS reporting",
+            "Data validation",
+            "PDF",
+            "Excel",
+            "Advanced Excel",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "DATA ANALYST ( with Python skills )",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-with-python-skills-nsight-consulting-gurugram-2-to-7-years-151024501872",
+        "company_name": "Nsight Consulting",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Bachelors degree in a Computer Science, Mathematics or Scientific discipline . 2+ years...",
+        "skills": [
+            "Computer science",
+            "Analytical skills",
+            "MIS reporting",
+            "Data validation",
+            "PDF",
+            "Excel",
+            "Advanced Excel",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-nits-solutions-new-delhi-gurugram-delhi-ncr-3-to-7-years-121224016141",
+        "company_name": "Nits Solutions",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hybrid - New Delhi, Gurugram, Delhi / NCR",
+        "job_description": "Strong working experience in data visualization tool Power BI. Need to be vigilant in t...",
+        "skills": [
+            "Power Bi",
+            "Data Analysis",
+            "Data Manipulation",
+            "Data Extraction",
+            "Data Cleansing",
+            "Data Analytics",
+            "Data Reporting",
+            "sql"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-dtechnogenics-pune-0-to-3-years-101224022076",
+        "company_name": "Dtechnogenics",
+        "experience": "0-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune(Karve Nagar)",
+        "job_description": "Data Analyst, Required Fresher - 3 yrs experience. Data Analyst Certification is mandat...",
+        "skills": [
+            "Data Analysis",
+            "Data Analyst",
+            "Data Analytics",
+            "Data Analytics Trainer",
+            "Analytics",
+            "Training",
+            "Analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-alliances-galore-private-limited-new-delhi-1-to-3-years-091224505281",
+        "company_name": "Alliances Galore",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "ALLIANCES GALORE PRIVATE LIMITED is looking for Data Analyst to join our dynamic team a...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-innovate-mr-gurugram-2-to-7-years-091024502588",
+        "company_name": "Innovate Mr",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "The ideal candidate for this role will be a creative, collaborative professional with e...",
+        "skills": [
+            "Data analysis",
+            "Costing",
+            "Data collection",
+            "Market research",
+            "Content generation",
+            "Data analytics",
+            "Quality tools"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-aakansha-tailor-freelancer-delhi-ncr-3-to-5-years-051224019981",
+        "company_name": "Aakansha Tailor Freelancer",
+        "experience": "3-5 Yrs",
+        "salary": "12-16 Lacs PA",
+        "location": "Delhi / NCR",
+        "job_description": "Bachelor's degree in Data Science or related field; strong expertise in Google Analytic...",
+        "skills": [
+            "Google Analytics",
+            "Google Tag Manager",
+            "Amplitude",
+            "Data Analytics",
+            "Mixpanel",
+            "SQL",
+            "CRM",
+            "Data"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-shell-infotech-mumbai-all-areas-10-to-17-years-031224019391",
+        "company_name": "shell info technologies",
+        "experience": "10-17 Yrs",
+        "salary": "6-15 Lacs PA",
+        "location": "Mumbai (All Areas)",
+        "job_description": "as per requirement Minimum of 8+ years of relevant work experience on Business Intellig...",
+        "skills": [
+            "Data Analytics",
+            "SQL",
+            "Ui/Ux",
+            "Business Intelligence",
+            "Data Analysis",
+            "ETL",
+            "Intelligence",
+            "Government Projects"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-klene-paks-bengaluru-3-to-8-years-021224011691",
+        "company_name": "Klene Paks",
+        "experience": "3-8 Yrs",
+        "salary": "3.75-6 Lacs PA",
+        "location": "Bengaluru(Bannerghatta Road)",
+        "job_description": "Experience in creating and managing sales and production reportsBachelors degree in Dat...",
+        "skills": [
+            "HLOOKUP",
+            "Pivot Table",
+            "VLOOKUP",
+            "Excel Macros",
+            "Data Research",
+            "Excel Dashboards",
+            "Data Management",
+            "Formulas"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-vixplor-analytics-kolkata-1-to-5-years-301219501920",
+        "company_name": "Vixplor Analytics",
+        "experience": "1-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata",
+        "job_description": "Ability to analyse large datasets . Ability to write comprehensive reports . Strong ver...",
+        "skills": [
+            "Analytical",
+            "Computer science",
+            "Data Analyst",
+            "Data analytics",
+            "Data collection",
+            "Information technology",
+            "Mathematics",
+            "Packaging"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-ascendion-vadodara-3-to-5-years-290423500097",
+        "company_name": "Ascendion",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Vadodara",
+        "job_description": "Should be able to develop tabular and multidimensional models that are compatible with ...",
+        "skills": [
+            "Excel",
+            "Analytical",
+            "Programming",
+            "power bi",
+            "Application security",
+            "Data analytics",
+            "Business intelligence",
+            "Data warehousing"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-telecmi-viluppuram-1-to-3-years-270924502794",
+        "company_name": "Telecmi",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Viluppuram",
+        "job_description": "TeleCMI is looking for Data Analyst to join our dynamic team and embark on a rewarding ...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-saven-technologies-limited-hyderabad-3-to-5-years-270824501177",
+        "company_name": "Saven Technologies",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "We are looking for a Data Analyst with a minimum of 2 years of experience in data anal...",
+        "skills": [
+            "Root cause analysis",
+            "Analytical",
+            "Social media",
+            "Data analytics",
+            "Data visualization",
+            "Analytics",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-hashtag-infosystem-surat-3-to-6-years-270224500754",
+        "company_name": "Hashtag Infosystem",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Surat",
+        "job_description": "Fluent In English Speaking (Mandatory) . Good Grip On Ms Word & Excel. Very good commun...",
+        "skills": [
+            "data analysis",
+            "data analytics",
+            "forecasting",
+            "bi",
+            "strong analytical skills",
+            "power bi",
+            "pivot table",
+            "business analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-naghavi-fintech-bengaluru-5-to-9-years-260724502918",
+        "company_name": "Naghavi Fintech",
+        "experience": "5-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Naghavi fintech is looking for Data Analyst to join our dynamic team and embark on a re...",
+        "skills": [
+            "SAS",
+            "Cognos",
+            "TIBCO",
+            "power bi",
+            "Data analytics",
+            "Data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst (VBA)",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-vba-egon-zehnder-pvt-ltd-gurugram-1-to-5-years-260724501681",
+        "company_name": "Egon Zehnder",
+        "experience": "1-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "The Analyst will be responsible for work on day-to-day Power BI requests. He/She shoul...",
+        "skills": [
+            "Automation",
+            "power bi",
+            "Data Analyst",
+            "Data analytics",
+            "Data quality",
+            "Manager Quality Control",
+            "Business intelligence",
+            "Macros"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-coders-brain-pvt-ltd-mumbai-4-to-9-years-250823502697",
+        "company_name": "Coders Brain Pvt Ltd",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Must be a coach / player - can lead a team and roll . up his / her sleevesExperience wi...",
+        "skills": [
+            "SAS",
+            "Business analytics",
+            "Programming",
+            "Data processing",
+            "Data analytics",
+            "QlikView",
+            "Data visualization",
+            "Stakeholder management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-fleetx-gurugram-1-to-2-years-240624502785",
+        "company_name": "Fleetx",
+        "experience": "1-2 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Fleetx is looking for Data Analyst to join our dynamic team and embark on a rewarding c...",
+        "skills": [
+            "database maintenance",
+            "python",
+            "data analytics",
+            "data analysis",
+            "data mining",
+            "predictive analytics",
+            "business analysis",
+            "power bi"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-freshtohome-bengaluru-1-to-3-years-230724502384",
+        "company_name": "Freshtohome",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Pulling data required from different data sources to conduct a business analysis, build...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Publishing",
+            "Business analysis",
+            "Marketing campaigns",
+            "Conceptualization",
+            "Data analytics",
+            "Monitoring"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-facts-n-data-noida-3-to-6-years-230424501594",
+        "company_name": "Facts N Data",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Noida",
+        "job_description": "Facts N Data is looking for Data Analyst to join our dynamic team and embark on a rewar...",
+        "skills": [
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-ipropal-allps-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-220424500677",
+        "company_name": "Ipropal",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Machine learning is a branch of artificial intelligence that allows computer systems to...",
+        "skills": [
+            "Data analysis",
+            "Artificial Intelligence",
+            "Machine learning",
+            "Mechanical",
+            "Data analytics",
+            "Data Analyst",
+            "Intelligence"
+        ]
+    },
+    {
+        "job_title": "ML Ops Engineer",
+        "job_link": "https://www.naukri.com/job-listings-ml-ops-engineer-encora-chennai-6-to-7-years-201124502590",
+        "company_name": "Encora",
+        "experience": "6-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "Design the data pipelines and engineering infrastructure to support our clients enter...",
+        "skills": [
+            "Automation",
+            "Product engineering",
+            "github",
+            "data security",
+            "Cloud Services",
+            "Machine learning",
+            "Quality engineering",
+            "model development"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-adani-group-ahmedabad-2-to-7-years-201124500862",
+        "company_name": "Adani Group",
+        "experience": "2-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Ahmedabad",
+        "job_description": "Bachelor s degree in Computer Science, Information Systems, or related field. . 4-7 yea...",
+        "skills": [
+            "Data validation",
+            "query optimization",
+            "GCP",
+            "Business analytics",
+            "Analytical",
+            "data governance",
+            "Data quality",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst(English Required)",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-english-required-peroptyx-delhi-ncr-0-to-5-years-200524003834",
+        "company_name": "Peroptyx",
+        "experience": "0-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Fluent in English with excellent research skills and local knowledge of India|Review an...",
+        "skills": [
+            "Data Analysis",
+            "English",
+            "Data Analytics",
+            "Data Mapping",
+            "Mapping",
+            "Analytics",
+            "Analysis",
+            "Data"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-crazywebdev-technologies-jhansi-1-to-3-years-190724501421",
+        "company_name": "Crazywebdev Technologies",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Jhansi",
+        "job_description": "CrazyWebDev Technologies is looking for Data Analyst to join our dynamic team and embar...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-observance-solutions-private-limited-lucknow-1-to-4-years-170724501236",
+        "company_name": "Observance Solutions",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Lucknow",
+        "job_description": "Observance Solutions Private Limited is looking for Data Analyst to join our dynamic team...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-energytech-ventures-kolkata-2-to-5-years-170120500029",
+        "company_name": "Energytech Ventures",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata",
+        "job_description": "Should have hands on knowledge on Python",
+        "skills": [
+            "Excel",
+            "Process improvement",
+            "Data collection",
+            "HTTP",
+            "Data analytics",
+            "Powerpoint",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "data analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-disha-consultant-pune-chennai-jaipur-bengaluru-2-to-4-years-140621501222",
+        "company_name": "Disha Consultant",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune, Chennai, Jaipur, Bengaluru",
+        "job_description": "Key skills and Experience: Minimum 2 years of Data Analysis experience and SQL query wr...",
+        "skills": [
+            "Data analysis",
+            "Data validation",
+            "Data management",
+            "Data analytics",
+            "Advanced Excel",
+            "Data Analyst",
+            "data visualization",
+            "Management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-response-informatics-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-10-years-140324500139",
+        "company_name": "Response Informatics",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Response Informatics is looking for Data Analyst to join our dynamic team and embark on...",
+        "skills": [
+            "Microstrategy",
+            "RDBMS",
+            "Data analytics",
+            "Data Analyst",
+            "Data visualization",
+            "SQL",
+            "Analytics",
+            "Data"
+        ]
+    },
+    {
+        "job_title": "Data analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-ipropal-allps-remote-1-to-3-years-130624502504",
+        "company_name": "Ipropal",
+        "experience": "1-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "iProPal (ALLPS) is looking for Data analyst to join our dynamic team and embark on a re...",
+        "skills": [
+            "Data analytics",
+            "Data Analyst",
+            "Internship",
+            "Data analysis",
+            "Data",
+            "Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-tic-fiber-chennai-3-to-6-years-110724502789",
+        "company_name": "TIC Fiber",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "TIC Fiber is looking for Data Analyst to join our dynamic team and embark on a rewardin...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-cindrebay-school-of-fashion-interior-design-hyderabad-coimbatore-thodupuzha-thiruvananthapuram-kochi-kolkata-kannur-indore-nagpur-pune-lucknow-kozhikode-bengaluru-1-to-4-years-101221500466",
+        "company_name": "Cindrebay School Of Fashion & Interior Design",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad, Coimbatore, Thodupuzha, Thiruvananthapuram, Kochi, Kolkata, Kannur, Indore, Nagpur, Pune, Lucknow, Kozhikode, Bengaluru",
+        "job_description": "Overview . We are looking to hire experienced & certified Data Analysts to join our dat...",
+        "skills": [
+            "Secondary Data",
+            "Database Design Development",
+            "Business Data Analyst",
+            "Data Collection Systems",
+            "Data Analysis",
+            "Data Mining",
+            "Information Management",
+            "Data Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-magic-infomedia-new-delhi-0-to-2-years-100524500198",
+        "company_name": "Magic Infomedia",
+        "experience": "0-2 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "Magic Infomedia is looking for Data Analyst to join our dynamic team and embark on a re...",
+        "skills": [
+            "master data",
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-diverse-lynx-bengaluru-1-to-5-years-100523502936",
+        "company_name": "Diverse Lynx",
+        "experience": "1-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Managing master data, including creation, updates, and deletion. Managing users and...",
+        "skills": [
+            "Data analysis",
+            "Statistical analysis",
+            "SAS",
+            "Data Analyst",
+            "Data analytics",
+            "Regression analysis",
+            "Data mining",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-infobahn-softworld-inc-bengaluru-4-to-6-years-090924501938",
+        "company_name": "Infobahn Softworld",
+        "experience": "4-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Strong experience in working on mobile / web analytics tools - Adobe Analytics preferre...",
+        "skills": [
+            "Adobe Analytics",
+            "Web analytics",
+            "Debugging",
+            "Javascript",
+            "Data collection",
+            "Data analytics",
+            "C"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-infobahn-softworld-inc-bengaluru-6-to-8-years-090924501937",
+        "company_name": "Infobahn Softworld",
+        "experience": "6-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Strong experience in working on mobile / web analytics tools - Adobe Analytics preferre...",
+        "skills": [
+            "Adobe Analytics",
+            "Web analytics",
+            "Debugging",
+            "Javascript",
+            "Data analytics",
+            "SQL",
+            "Production"
+        ]
+    },
+    {
+        "job_title": "Carbon Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-carbon-data-analyst-terrascope-bengaluru-2-to-5-years-071124500207",
+        "company_name": "Terrascope",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Collaborate with our Customer Success Managers and interface with the client to define ...",
+        "skills": [
+            "SQL queries",
+            "Data management",
+            "Manufacturing technology",
+            "Accounting",
+            "Data processing",
+            "Data Analyst",
+            "Data analytics",
+            "Management"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-fusion-plus-solutions-inc-hyderabad-8-to-10-years-071024500615",
+        "company_name": "Fusion Plus Solutions",
+        "experience": "8-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Good hands-on experience in SQL, Data Analytics. Should be able to drive the program,...",
+        "skills": [
+            "SQL queries",
+            "query optimization",
+            "Compliance",
+            "Data analytics",
+            "Data Analyst",
+            "Continuous improvement",
+            "SQL Server dba",
+            "Performance tuning"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-caliche-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-061124503717",
+        "company_name": "Caliche",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Caliche is looking for Data Analyst to join our dynamic team and embark on a rewarding ...",
+        "skills": [
+            "metadata",
+            "python",
+            "data analysis",
+            "data management",
+            "data analytics",
+            "data validation",
+            "configuration",
+            "data mining"
+        ]
+    },
+    {
+        "job_title": "Cloud cost optimization - Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-cloud-cost-optimization-data-analyst-voco-technologies-pune-7-to-15-years-060924501550",
+        "company_name": "Voco Technologies",
+        "experience": "7-15 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Qualifications and Requirements Required . Very Proficient in Data AnalyticsVery Profic...",
+        "skills": [
+            "Data analysis",
+            "GCP",
+            "Cloud",
+            "Power BI",
+            "Data analytics",
+            "Data Analyst",
+            "AWS"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-voco-technologies-pune-7-to-9-years-060924501544",
+        "company_name": "Voco Technologies",
+        "experience": "7-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Analysing trends across various reports Knowledge of Predictive analysis Preparing f...",
+        "skills": [
+            "Data analysis",
+            "Usage",
+            "GCP",
+            "Cloud",
+            "Infrastructure",
+            "power bi",
+            "Data Analyst",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-inteligenai-gurugram-2-to-4-years-060924500836",
+        "company_name": "Inteligenai",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Gurugram",
+        "job_description": "Bachelor s degree in Data Science, Statistics, Computer Science, or a related field Exp...",
+        "skills": [
+            "Computer science",
+            "Data modeling",
+            "MIS",
+            "Machine learning",
+            "Data analytics",
+            "Data Analyst",
+            "Data visualization",
+            "Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-chemanalyst-noida-3-to-5-years-101224004733",
+        "company_name": "ChemAnalyst",
+        "experience": "3-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Noida",
+        "job_description": "Job Location: Noida. Job Role: AI / ML Specialist/ Data Scientist . Overview: . An AI /...",
+        "skills": [
+            "Data Science",
+            "Artificial Intelligence",
+            "Ai Algorithms",
+            "Aiml",
+            "Data Visualization",
+            "Machine Learning Algorithms",
+            "Data Analytics",
+            "Machine Learning"
+        ]
+    },
+    {
+        "job_title": "Data Scientist",
+        "job_link": "https://www.naukri.com/job-listings-data-scientist-hansa-cequity-mumbai-mumbai-suburban-navi-mumbai-8-to-13-years-101224003789",
+        "company_name": "Hansa Cequity",
+        "experience": "8-13 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai, Mumbai Suburban, Navi Mumbai",
+        "job_description": "Bachelors/Masters in Computer Science or related field; 8+ years experience in data sci...",
+        "skills": [
+            "Machine Learning",
+            "Advanced Analytics",
+            "Customer Analytics",
+            "Model Building",
+            "Data Analytics"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-virtusa-consulting-services-pvt-ltd-hyderabad-2-to-5-years-201224504845",
+        "company_name": "Virtusa",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Skill Data Engineer Role T3, T2 Key responsibility At...",
+        "skills": [
+            "Architecture",
+            "Shell scripting",
+            "Infrastructure",
+            "Data analytics",
+            "Data warehousing",
+            "SQL development",
+            "AWS",
+            "Python"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-ahmedabad-3-to-8-years-191224912965",
+        "company_name": "Accenture",
+        "experience": "3-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Ahmedabad",
+        "job_description": "Minimum 3 year(s) of experience is required. Educational Qualification : 15 years full...",
+        "skills": [
+            "pyspark",
+            "data bricks",
+            "machine learning algorithms",
+            "statistics",
+            "data munging",
+            "data analytics",
+            "linear regression",
+            "power bi"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-outsourced-well-kolkata-1-to-4-years-191224503378",
+        "company_name": "Outsourced Well",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata",
+        "job_description": "Team Player and Problem Solver. . Value an empathic and kind team. . 5+ years professio...",
+        "skills": [
+            "excel",
+            "python",
+            "tableau",
+            "data analytics",
+            "data pipeline",
+            "data engineering",
+            "statistics"
+        ]
+    },
+    {
+        "job_title": "MLOps Engineer",
+        "job_link": "https://www.naukri.com/job-listings-mlops-engineer-encora-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-181224505625",
+        "company_name": "Encora",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru",
+        "job_description": "Proficient in using Databricks, Apace Spark, ML Flow, Unity Catalog, and feature stores...",
+        "skills": [
+            "Product engineering",
+            "GIT",
+            "Cloud Services",
+            "Quality engineering",
+            "Data processing",
+            "Data analytics",
+            "big data",
+            "Performance monitoring"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-fusion-plus-solutions-inc-hyderabad-5-to-8-years-201224502611",
+        "company_name": "Fusion Plus Solutions",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Data Engineer- Advanced. No of years experience Detailed job description - Skill Set:...",
+        "skills": [
+            "Analytical skills",
+            "Root cause analysis",
+            "Query optimization",
+            "Orchestration",
+            "Scheduling",
+            "Data analytics",
+            "Apache",
+            "Troubleshooting"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-fusion-plus-solutions-inc-hyderabad-2-to-4-years-201224502610",
+        "company_name": "Fusion Plus Solutions",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Data: 5+ years of experience with data analytics and warehousing . ELT: Good underst...",
+        "skills": [
+            "Analytical skills",
+            "Root cause analysis",
+            "Query optimization",
+            "Scheduling",
+            "Data analytics",
+            "Troubleshooting",
+            "Apache",
+            "SQL"
+        ]
+    },
+    {
+        "job_title": "data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-fusion-plus-solutions-inc-hyderabad-5-to-8-years-181224501202",
+        "company_name": "Fusion Plus Solutions",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Detailed job description - Skill Set: . Data: 5+ years of expe...",
+        "skills": [
+            "Analytical skills",
+            "Root cause analysis",
+            "Query optimization",
+            "Workflow",
+            "Scheduling",
+            "Data analytics",
+            "Troubleshooting",
+            "Apache"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-new-delhi-3-to-6-years-181024503546",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "New Delhi",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-mumbai-3-to-6-years-181024503545",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-kolkata-3-to-6-years-181024503544",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kolkata",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-chennai-3-to-6-years-181024503543",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Chennai",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-bengaluru-3-to-6-years-181024503542",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-hyderabad-3-to-6-years-181024503541",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-pune-3-to-6-years-181024503540",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-ahmedabad-3-to-6-years-181024503539",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Ahmedabad",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-weitglobal-w-it-g-consulting-ab-remote-3-to-6-years-081024501869",
+        "company_name": "Weitglobal",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Experience with DBT for data transformation and modeling. Requirements . Proficient in ...",
+        "skills": [
+            "Data analysis",
+            "Automation",
+            "Infrastructure management",
+            "GCP",
+            "Data manipulation",
+            "Cloud",
+            "Data processing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-bengaluru-5-to-7-years-061224913581",
+        "company_name": "Accenture",
+        "experience": "5-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Minimum 5 year(s) of experience is required. Educational Qualification : 15 years full ...",
+        "skills": [
+            "architecting",
+            "snowflake",
+            "data warehousing",
+            "dbms",
+            "warehouse",
+            "hive",
+            "python",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-fusion-plus-solutions-inc-hyderabad-2-to-4-years-301024500058",
+        "company_name": "Fusion Plus Solutions",
+        "experience": "2-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Experience in collecting business requirements to develop and implement SSIS packages f...",
+        "skills": [
+            "python",
+            "data analysis",
+            "data analytics",
+            "data warehousing",
+            "power bi",
+            "microsoft azure",
+            "data migration",
+            "data mapping"
+        ]
+    },
+    {
+        "job_title": "Data Engineer - Python",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-python-busigence-technologies-remote-0-to-3-years-291123502525",
+        "company_name": "Busigence Technologies",
+        "experience": "0-3 Yrs",
+        "salary": "Not disclosed",
+        "location": "Remote",
+        "job_description": "Relevant Exp: 0-3 Years Requirements This is an immediate requirement. We shall ...",
+        "skills": [
+            "deep learning",
+            "Data analysis",
+            "data science",
+            "Machine learning",
+            "HTTP",
+            "Natural language processing",
+            "Data analytics",
+            "Business intelligence"
+        ]
+    },
+    {
+        "job_title": "Tableau Developer/Data Engineer",
+        "job_link": "https://www.naukri.com/job-listings-tableau-developer-data-engineer-nublogics-hyderabad-2-to-5-years-251024501643",
+        "company_name": "Nublogics",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "NubLogics is looking for Tableau Developer/Data Engineer to join our dynamic team and e...",
+        "skills": [
+            "hive",
+            "cloudera",
+            "python",
+            "data analysis",
+            "scala",
+            "big data analytics",
+            "data warehousing",
+            "pyspark"
+        ]
+    },
+    {
+        "job_title": "Data Engineer - Pentaho",
+        "job_link": "https://www.naukri.com/job-listings-data-engineer-pentaho-helical-it-solutions-pvt-ltd-hyderabad-3-to-4-years-160724500726",
+        "company_name": "Helical IT Solutions Pvt. Ltd.",
+        "experience": "3-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Bachelor s degree in Computer Science, Engineering, Mathematics, or related field . 3-4...",
+        "skills": [
+            "Computer science",
+            "Data analysis",
+            "Data management",
+            "Data integrity",
+            "Data analytics",
+            "Data visualization",
+            "Big data",
+            "Pentaho"
+        ]
+    },
+    {
+        "job_title": "Analyst",
+        "job_link": "https://www.naukri.com/job-listings-analyst-sg-analytics-pune-india-1-to-4-years-121224018210",
+        "company_name": "SG Analytics",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Pune, India",
+        "job_description": "MBA or equivalent in Finance/CFA/CA with 2+ years in research; strong creative writing ...",
+        "skills": [
+            "financial analysis",
+            "investment research",
+            "data analytics",
+            "analytical",
+            "investment banking",
+            "interpersonal skills",
+            "investment"
+        ]
+    },
+    {
+        "job_title": "Corp Dev Analyst",
+        "job_link": "https://www.naukri.com/job-listings-corp-dev-analyst-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-111224921711",
+        "company_name": "Accenture",
+        "experience": "2-5 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Preferred skills . Long-term, you may have the opportunity to gain experience in adjace...",
+        "skills": [
+            "financial analysis",
+            "python",
+            "market research",
+            "microsoft office suite",
+            "sql",
+            "capital iq",
+            "data analytics",
+            "factiva"
+        ]
+    },
+    {
+        "job_title": "MIS Executive",
+        "job_link": "https://www.naukri.com/job-listings-mis-executive-lk-consultants-mumbai-3-to-6-years-191224908851",
+        "company_name": "LK Consultants",
+        "experience": "3-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "1)Has worked on LMS HRMS systems2)Will do coordination with stakeholders for training n...",
+        "skills": [
+            "MIS",
+            "MIS Operations",
+            "L& D",
+            "HR MIS",
+            "HRMS",
+            "record management",
+            "Excel",
+            "vendor invoicing"
+        ]
+    },
+    {
+        "job_title": "Unit Economics Associate",
+        "job_link": "https://www.naukri.com/job-listings-unit-economics-associate-jpmorgan-chase-bengaluru-8-to-13-years-191224500923",
+        "company_name": "JPMorgan Chase Bank",
+        "experience": "8-13 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "A bachelor s degree or equivalent is required in accounting, finance or a related field...",
+        "skills": [
+            "Economics",
+            "Accounting",
+            "Finance",
+            "Billing",
+            "Data analytics",
+            "Continuous improvement",
+            "Operations",
+            "Cost"
+        ]
+    },
+    {
+        "job_title": "Monitoring & Evaluation - MIS Executive",
+        "job_link": "https://www.naukri.com/job-listings-monitoring-evaluation-mis-executive-gajam-new-delhi-3-to-5-years-181224009062",
+        "company_name": "Gajam",
+        "experience": "3-5 Yrs",
+        "salary": "3-4.75 Lacs PA",
+        "location": "New Delhi",
+        "job_description": "Preferred Qualification: . Bachelors degree in Data Science, Statistics, Computer Scien...",
+        "skills": [
+            "Monitoring And Evaluation",
+            "SQL Database",
+            "Data Visualization",
+            "Advanced Excel",
+            "MIS Reporting",
+            "Report Generation",
+            "Power Bi",
+            "Tableau"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-ray-business-technologies-hyderabad-5-to-8-years-171224007854",
+        "company_name": "Ray Business Technologies",
+        "experience": "5-8 Yrs",
+        "salary": "Not disclosed",
+        "location": "Hyderabad",
+        "job_description": "Bachelors degree or equivalent experience Graduation degree is a must Experience in doc...",
+        "skills": [
+            "Business Intelligence",
+            "Business Analyst",
+            "Business Analytics",
+            "Project Management",
+            "Data Analytics",
+            "Requirement Analysis",
+            "Business Analysis",
+            "Data"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-max-transtech-limited-gurugram-5-to-8-years-281124006169",
+        "company_name": "Max Transtech Limited",
+        "experience": "5-8 Yrs",
+        "salary": "5-7 Lacs PA",
+        "location": "Gurugram",
+        "job_description": "Proficient in Oracle SQL, Python, and data visualization tools|Analyze and extract data...",
+        "skills": [
+            "Data Analytics",
+            "Oracle SQL",
+            "Data Interpretation",
+            "Data Management",
+            "Data Visualization",
+            "SQL",
+            "Python",
+            "Data analysis"
+        ]
+    },
+    {
+        "job_title": "Data Analyst",
+        "job_link": "https://www.naukri.com/job-listings-data-analyst-craft-chennai-1-to-5-years-071224004706",
+        "company_name": "A Logistics Company",
+        "experience": "1-5 Yrs",
+        "salary": "3-5 Lacs PA",
+        "location": "Chennai",
+        "job_description": "1. Data Collection and Preparation 2. Data Analysis 3. Data Visualization and Reporting...",
+        "skills": [
+            "Data Analytics",
+            "Data Visualization",
+            "Data Reporting",
+            "Data analysis",
+            "Reporting"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-alp-consulting-limited-india-india-3-to-7-years-291124914352",
+        "company_name": "Leading Client",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "India, India",
+        "job_description": "Business Analyst - For ODL Integration to Delta surveillance. Exp-6-9Y CTC-15.5LBangalore",
+        "skills": [
+            "business analysis",
+            "requirements management",
+            "brd",
+            "fsd",
+            "frd",
+            "project management",
+            "data analysis",
+            "data analytics"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-sapiens-technologies-1982-india-private-limited-bengaluru-4-to-6-years-281124917439",
+        "company_name": "Sapiens",
+        "experience": "4-6 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "Bachelor's degree in business administration or related field, 5+ years of experience, ...",
+        "skills": [
+            "Business analysis",
+            "Project management",
+            "Data analysis",
+            "Data analytics",
+            "User experience design",
+            "Business analytics",
+            "User stories",
+            "Life insurance"
+        ]
+    },
+    {
+        "job_title": "Business Analyst - MALE - Thoppumpady",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-male-thoppumpady-abad-fisheries-kochi-4-to-9-years-281124016224",
+        "company_name": "Abad Fisheries",
+        "experience": "4-9 Yrs",
+        "salary": "Not disclosed",
+        "location": "Kochi(Thoppumpady )",
+        "job_description": "Gather and analyze operational data from various departments including Production, Supp...",
+        "skills": [
+            "Data Visualization",
+            "Advanced Excel",
+            "Macros",
+            "Business Analysis",
+            "Business Statistics",
+            "Business Reporting",
+            "Data Analysis"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-jsw-steel-mumbai-all-areas-5-to-10-years-200624005825",
+        "company_name": "JSW Steel",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai (All Areas)",
+        "job_description": "Role :Business AnalystPurpose of the role :To work closely with Aikyam team centrally ...",
+        "skills": [
+            "Business Analytics",
+            "Business Intelligence",
+            "Business Planning",
+            "Data Analysis",
+            "Data Analytics",
+            "Business Analysis",
+            "Intelligence",
+            "Analytics"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-almasons-consulting-mangaluru-1-to-4-years-181024502127",
+        "company_name": "Almasons Consulting",
+        "experience": "1-4 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mangaluru",
+        "job_description": "We are looking for Business Analyst to work in Mangalore, India, and various unantic...",
+        "skills": [
+            "project management",
+            "data analysis",
+            "data analytics",
+            "gap analysis",
+            "business analysis",
+            "business analytics",
+            "user stories",
+            "sql"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-061224913766",
+        "company_name": "Accenture",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bengaluru",
+        "job_description": "BE degree with 5+ years of experience in Computer System Validation (CSV) and Pharma Re...",
+        "skills": [
+            "advanced analytics",
+            "project management",
+            "tableau",
+            "data analysis",
+            "sql",
+            "data analytics",
+            "software testing",
+            "quality assurance"
+        ]
+    },
+    {
+        "job_title": "Mis Executive",
+        "job_link": "https://www.naukri.com/job-listings-mis-executive-connected-value-health-solutions-coimbatore-3-to-7-years-051224013382",
+        "company_name": "Connected Value Health Solutions",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Coimbatore",
+        "job_description": "Job Title: MIS ExecutiveJob Location: CoimbatoreJob Summary:The MIS Executive will be ...",
+        "skills": [
+            "Management Information System",
+            "Pivot Table",
+            "Visual Basic Application",
+            "Excel Dashboards",
+            "VLOOKUP",
+            "Data Analysis",
+            "Data Analytics",
+            "HLOOKUP"
+        ]
+    },
+    {
+        "job_title": "Product Scientist",
+        "job_link": "https://www.naukri.com/job-listings-product-scientist-byteiq-analytics-bhubaneswar-3-to-7-years-291024505520",
+        "company_name": "Byteiq Analytics",
+        "experience": "3-7 Yrs",
+        "salary": "Not disclosed",
+        "location": "Bhubaneswar",
+        "job_description": "The incumbent is expected to be part of an exciting team of Data Scientist andProduc...",
+        "skills": [
+            "HTML",
+            "Javascript",
+            "Data analysis",
+            "Statistical analysis",
+            "Postgresql",
+            "MySQL",
+            "Machine learning",
+            "Content writing",
+            "Data analytics"
+        ]
+    },
+    {
+        "job_title": "Business Analyst",
+        "job_link": "https://www.naukri.com/job-listings-business-analyst-find-firms-mumbai-5-to-10-years-270624501643",
+        "company_name": "Find Firms",
+        "experience": "5-10 Yrs",
+        "salary": "Not disclosed",
+        "location": "Mumbai",
+        "job_description": "Find Firms is looking for Business Analyst to join our dynamic team and embark on a rew...",
+        "skills": [
+            "project management",
+            "data analysis",
+            "data analytics",
+            "gap analysis",
+            "business solutions",
+            "project implementation",
+            "business analysis",
+            "uat"
         ]
     }
 ]

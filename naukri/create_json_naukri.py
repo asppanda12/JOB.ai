@@ -22,9 +22,8 @@ except json.JSONDecodeError:
 except FileNotFoundError:
     print(f"Error: The file {naukri} was not found.")
     job_data = []  # Set job_data to an empty list to avoid further errors
-
 output_data = []  # Change to list instead of dict
-for job in job_data:
+for job in job_data['job_listings']:
     json1_llama = parse_job_data_llama(job,API)  # Parse with llama
     output_data.append(json1_llama)
 

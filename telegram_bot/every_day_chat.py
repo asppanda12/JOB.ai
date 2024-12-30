@@ -3,11 +3,22 @@ import os
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler, CallbackQueryHandler
 from telegram import Update
 import json
+from apscheduler.schedulers.background import BackgroundScheduler
+from telegram import Bot
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, JobQueue
+import json
+from dotenv import load_dotenv
+import os
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler, CallbackQueryHandler
+
 # Load environment variables from .env file
 load_dotenv()
 
 # Access the variables
 TOKEN = os.getenv('TOKEN')
+bot = Bot(token=TOKEN)
+
 application = ApplicationBuilder().token(TOKEN).build()
 FIRST, SECOND, THIRD, FOURTH, FIFTH = range(5)
 
@@ -92,8 +103,58 @@ conv_handler = ConversationHandler(
     allow_reentry=True
 )
 print(conv_handler)
+CHAT_ID_FILE = r'E:\JOB.ai\JOB.ai\telegram_bot\chat_id.json'
+all_jobs=r'E:\JOB.ai\JOB.ai\telegram_bot\all_jobs.json'
+async def broadcast_message():
+    with open(CHAT_ID_FILE, 'r') as f:
+        chat_ids = json.load(f)
+    with open(all_jobs, 'r') as f:
+        jobs = json.load(f)
+    for chat_id in chat_ids:
+        for job in jobs:
+            keyboard = [
+                [
+                    InlineKeyboardButton("Risk", callback_data=json.dumps({"action": "risk", "job_id": job['id']})),
+                    InlineKeyboardButton("Start", callback_data=json.dumps({"action": "start", "job_id": job['id']})),
+                    InlineKeyboardButton("Mold", callback_data=json.dumps({"action": "mold", "job_id": job['id']}))
+                ]
+            ]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            message = (
+                f"**{job['job_title']}**\n"
+                f"Company: {job['company_name']}\n"
+                f"Experience: {job['experience']}\n"
+                f"Salary: {job['salary']}\n"
+                f"Location: {job['location']}\n"
+                f"Skills: {', '.join(job['skills'])}"
+            )
+            await bot.send_message(chat_id=chat_id, text=message, reply_markup=reply_markup, parse_mode="Markdown")
+async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    print(update)
+    query = update.callback_query
+    await query.answer()
+    data = json.loads(query.data)
+    chat_id=query.from_user.id
+    action = data["action"]
+    job_id = data["job_id"]
+    
+    # Mock API call
+    response = f"API '{action}' called for job: {job_id}"
+    await bot.send_message(chat_id=chat_id, text=response, parse_mode="Markdown")
 # Add the button handler to your application
+# scheduler = BackgroundScheduler()
+# scheduler.add_job(broadcast_message, 'cron', hour=10, minute=0)  # Schedule at 10:00 AM daily
+# scheduler.start()
+async def broadcast_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Trigger the broadcast message when the /broadcast command is sent
+    await broadcast_message()
+    await update.message.reply_text('Broadcast message sent to all users.')
+
+broadcast_handler = CommandHandler('update', broadcast_command)
+application.add_handler(broadcast_handler)
 application.add_handler(conv_handler)
+application.add_handler(CallbackQueryHandler(button_click))
+
 # application.add_handler(CallbackQueryHandler(button_handler))
 
 # Run the bot
