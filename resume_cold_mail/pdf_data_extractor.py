@@ -18,8 +18,8 @@ API = os.getenv('GROQ_API_KEY')
 
 def entity_search(job,API):
     prompt = (
-        "Extract relevant resume information from the following string, returning a clean and formatted JSON output containing "
-        "the following fields: area_of_expertise,Name,Phone_number,Skills,professional experience,Achievements,Education.\n\n"
+        "Extract relevant resume information from the following string, returning a clean and formatted JSON output containing the following fields: area_of_expertise, Name, Phone_number, Skills, professional_experience, Achievements, Education, and Years_of_experience (in months)."
+        # "For the field Years_of_experience, calculate the total duration in months based on the Professional Experience section.\n\n"
         "Do not include any additional text or explanation in your response. Return the output strictly as a JSON object."
         f"Input JSON:\n{job}"
     )
@@ -64,6 +64,7 @@ def extract_pdf_text(pdf_path):
         print("An error occurred:", e)
 
     # Example usage
+    print(text)
     ans=entity_search(text,API)
     output_file = "j210250.json"
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -73,4 +74,4 @@ def extract_pdf_text(pdf_path):
 if __name__ == "__main__":
     pdf_path = r'E:\JOB.ai\JOB.ai\job_resume\Sameer_Panda_M_Updated_Resume___1_.pdf'
     pdf_text_1 = extract_pdf_text(pdf_path)
-    print(pdf_text_1)
+    # print(pdf_text_1)

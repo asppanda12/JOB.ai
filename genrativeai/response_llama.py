@@ -24,9 +24,14 @@ def parse_job_data_llama(job_data, groq_api_key):
 
     # Prepare the prompt
     prompt = (
+        # "Extract relevant job information from the following JSON file, returning a clean and formatted JSON output containing "
+        # "the following fields: job title, job link, company name, experience, salary, location, job description, years of experience and skills.If some information is missing try to extract it from description or link provided.\n\n"
+        # "Do not include any additional text or explanation in your response. Return the output strictly as a JSON object."
         "Extract relevant job information from the following JSON file, returning a clean and formatted JSON output containing "
-        "the following fields: job title, job link, company name, experience, salary, location, job description, and skills.\n\n"
-        "Do not include any additional text or explanation in your response. Return the output strictly as a JSON object."
+"the following fields: job title, job link, company name, experience, salary, location, job description, years of experience, skills, and job type (software developer, front-end engineer, back-end engineer, data scientist, etc.). "
+"If some information is missing, try to extract it from the description or link provided. The job type field should categorize the role based on the job title or description. For example, 'software developer', 'front-end engineer', 'back-end engineer', or 'data scientist'.The value of the each key should be in string format.\n\n"
+"Do not include any additional text or explanation in your response. Return the output strictly as a JSON object."
+
         f"Input JSON:\n{job_data_str}"
     )
 

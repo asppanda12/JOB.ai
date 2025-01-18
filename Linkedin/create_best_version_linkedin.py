@@ -12,9 +12,8 @@ import logging
 
 # API = os.getenv('GROQ_API_KEY')
 
-linkedin = r"E:\JOB.ai\JOB.ai\Linkedin\_Software Engineer_India_linkedin_jobs.json"
-logging.basicConfig(filename='job_data_processor.log', level=logging.INFO,
-                            format='%(asctime)s - %(levelname)s - %(message)s')
+linkedin = r"E:\JOB.ai\JOB.ai\Linkedin\linkedin_parsed_jobs.json"
+logging.basicConfig(filename=r'E:\JOB.ai\JOB.ai\log_data\create_best_version_linkedin.log', level=logging.INFO)
 
 # Read and parse the JSON file
 try:
@@ -34,11 +33,16 @@ output_data = []  # Change to list instead of dict
 # job_data=job_data[0:50]
 start_time = time.time()
 for idx, job in enumerate(job_data, start=1):
-    json1_llama = parse_job_data_llama(job)  # Parse with llama
-    output_data.append(json1_llama)
-    print(f"Job {idx} processed.")
-    # Log progress
-    logging.info(f"Job {idx} processed.")
+    if('Job Description'in job and 'Skills' in job):
+        val = parse_job_data_llama(job['Job Description'])  # Parse with llama
+        val = val.replace('\n', '').split()  # This will create a list of words
+        if idx < len(job_data):
+            job_data[idx]['Skills'] = val
+        else:
+            print(f"Index {idx} is out of range for job_data with length {len(job_data)}.")
+        print(f"Job {idx} processed.")
+        # Log progress
+        logging.info(f"Job {idx} processed.")
 
 end_time = time.time()
 
@@ -49,8 +53,8 @@ print(f"Data processing completed. Total time taken: {execution_time:.2f} second
 
 print()
 # Write to JSON file
-output_file = "linkedin_parsed_jobs.json"
+output_file = r"E:\JOB.ai\JOB.ai\result_of_all_web_scraper\linkedin_parsed_jobs.json"
 with open(output_file, 'w', encoding='utf-8') as f:
-    json.dump(output_data, f, indent=4, ensure_ascii=False)
+    json.dump(job_data, f, indent=4, ensure_ascii=False)
 
 print(f"Data has been saved to {output_file}")

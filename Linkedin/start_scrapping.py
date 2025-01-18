@@ -218,10 +218,10 @@ def create_linkedin_job_search_url(company_name, job_description, location):
     return base_url + urllib.parse.urlencode(params)
 
 def main():
-    company_name = "Google"
+    company_name = ""
     job_description = "Software Engineer"
     location = "India"
-    max_jobs = 30
+    max_jobs = 500
     
     scraped_jobs = scrape_linkedin_jobs(company_name, job_description, location, max_jobs)
     

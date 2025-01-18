@@ -49,3 +49,21 @@ wheels/
 Thumbs.db
 
 .env
+
+# Specific path for web scraper results
+result_of_all_web_scraper/
+data_for_bot/
+# Model and data files
+*.gguf
+*.bin
+models/
+*.json
+*.csv
+
+# Environment and cache
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
