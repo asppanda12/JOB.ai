@@ -138,7 +138,7 @@ class get_remote_driver:
 try:
     val = get_remote_driver()
     header, job_links = val.data_extraction()
-    print(header[0].text)
+    print(header)
     
     valp = []
     for div in header:

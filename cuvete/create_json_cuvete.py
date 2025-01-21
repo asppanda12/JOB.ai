@@ -1,7 +1,7 @@
 import sys
 sys.path.append('E:/JOB.ai/JOB.ai')  # Use forward slashes for path
 # from genrativeai.response_llama import parse_job_data_llama, parse_job_data_gemini  # Note: genrative not generative
-from llama.hugging_face_main_api import parse_job_data_llama
+from genrativeai.response_llama import parse_job_data_llama
 import time
 import json
 from dotenv import load_dotenv
@@ -49,7 +49,7 @@ output_data = []  # Change to list instead of dict
 # job_data=job_data[0:50]
 start_time = time.time()
 for idx, job in enumerate(job_data, start=1):
-    json1_llama = parse_job_data_llama(job)  # Parse with llama
+    json1_llama = parse_job_data_llama(job,API)  # Parse with llama
     output_data.append(json1_llama)
     print(f"Job {idx} processed.")
     # Log progress
