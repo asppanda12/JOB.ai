@@ -57,7 +57,11 @@ def parse_job_data_llama(job_data):
 
     # Initialize the Hugging Face model endpoint
     llm = HuggingFaceEndpoint(
+<<<<<<< HEAD
         huggingfacehub_api_token="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",
+=======
+        huggingfacehub_api_token=,
+>>>>>>> cde6aa502634191a2a767bd20682f9b32243757d
         endpoint_url="https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct",
         temperature=0.5,
         max_tokens=2048
