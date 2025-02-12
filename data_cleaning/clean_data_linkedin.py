@@ -65,14 +65,19 @@ except UnicodeDecodeError:
 unique_data = job_data
 
 # Renaming keys
-for job in unique_data:
-    job = rename_key(job, 'Job Title', 'job_title')
-    job = rename_key(job, 'Company Name', 'company_name')
-    job = rename_key(job, 'Job Link', 'job_link')
-    job = rename_key(job, 'Location', 'location')
-    job = rename_key(job, 'Experience', 'experience')
-    job = rename_key(job, 'Job Description', 'job_description')
-    job = rename_key(job, 'Skills', 'skills')
+# print(job_data[0])
+for index,job in enumerate(unique_data):
+    try:
+        job = rename_key(job, 'Job Title', 'job_title')
+        job = rename_key(job, 'Company Name', 'company_name')
+        job = rename_key(job, 'Job Link', 'job_link')
+        job = rename_key(job, 'Location', 'location')
+        job = rename_key(job, 'Experience', 'experience')
+        job = rename_key(job, 'Job Description', 'job_description')
+        job = rename_key(job, 'Skills', 'skills')
+    except Exception as e:  # Catch any exception
+        print(f"Error processing job at index {index}: {e}")  # Print the error message
+        unique_data.remove(job)  # Remove the job from unique_data
 
 # Clean and add additional fields
 start_time = time.time()

@@ -25,10 +25,11 @@ def parse_job_data_llama(job_data):
 
     # Refined prompt for extracting and structuring the job data
     prompt = (
-    "Act as a highly efficient job assistant. Do not provide any additional explanation or notes. "
-    "Strictly return only a simple JSON object with all the required data. "
-    "Make sure to add all values in every key — do not leave any key empty. "
-    "The key 'Skills' should be included and should contain all the relevant skills from the job description, including technical and non-technical skills. "
+    "Act as a highly efficient job assistant who provide data in a perfect json format not leavig any commas while separating two keys. Do not provide any additional explanation or notes. "
+    "Strictly return only a simple JSON object with all the required data with all the keys in the output format. "
+    "Make sure to add all values in every key — do not leave any key empty . "
+    "Make sure you dont ignore any key ."
+    "The key 'Skills' should be included and should contain all the relevant skills from the job description, including technical and non-technical skills . "
     "The key 'Job Type' should categorize the role based on the job title or description — for example, 'Software Developer', 'Data Scientist', 'Frontend Engineer', etc.\n\n"
     "Return the output in the following format:\n\n"
     "{\n"
@@ -57,11 +58,8 @@ def parse_job_data_llama(job_data):
 
     # Initialize the Hugging Face model endpoint
     llm = HuggingFaceEndpoint(
-<<<<<<< HEAD
-        huggingfacehub_api_token="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",
-=======
-        huggingfacehub_api_token=,
->>>>>>> cde6aa502634191a2a767bd20682f9b32243757d
+
+        huggingfacehub_api_token="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",
         endpoint_url="https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct",
         temperature=0.5,
         max_tokens=2048

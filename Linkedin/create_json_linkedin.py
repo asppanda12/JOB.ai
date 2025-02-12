@@ -1,7 +1,7 @@
 import sys
 sys.path.append('E:/JOB.ai/JOB.ai')  # Use forward slashes for path
 # from genrativeai.response_llama import parse_job_data_llama, parse_job_data_gemini  # Note: genrative not generative
-from llama.huggingface_skill_extraction import parse_job_data_llama
+from llama.hugging_face_va_01 import parse_job_data_llama
 import json
 from dotenv import load_dotenv
 import os
@@ -12,7 +12,7 @@ import logging
 
 # API = os.getenv('GROQ_API_KEY')
 
-linkedin = r"E:\JOB.ai\JOB.ai\Linkedin\_Software Engineer_India_linkedin_jobs.json"
+linkedin = r"E:\JOB.ai\JOB.ai\Linkedin\cleaned_data.json"
 logging.basicConfig(filename='job_data_processor.log', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -34,11 +34,18 @@ output_data = []  # Change to list instead of dict
 # job_data=job_data[0:50]
 start_time = time.time()
 for idx, job in enumerate(job_data, start=1):
-    json1_llama = parse_job_data_llama(job)  # Parse with llama
-    output_data.append(json1_llama)
-    print(f"Job {idx} processed.")
-    # Log progress
-    logging.info(f"Job {idx} processed.")
+    try:
+        # Attempt to parse the job data with Llama
+        json1_llama = parse_job_data_llama(job)
+        output_data.append(json1_llama)
+        print(f"Job {idx} processed.")
+        # Log successful processing
+        logging.info(f"Job {idx} processed successfully.")
+    except Exception as e:
+        # Log the error and skip to the next job
+        logging.error(f"Error processing Job {idx}: {e}")
+        print(f"Error processing Job {idx}: {e}")
+        continue
 
 end_time = time.time()
 

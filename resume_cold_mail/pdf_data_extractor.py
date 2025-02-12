@@ -18,11 +18,46 @@ API = os.getenv('GROQ_API_KEY')
 
 def entity_search(job,API):
     prompt = (
-        "Extract relevant resume information from the following string, returning a clean and formatted JSON output containing the following fields: area_of_expertise, Name, Phone_number, Skills, professional_experience, Achievements, Education, and Years_of_experience (in months)."
-        # "For the field Years_of_experience, calculate the total duration in months based on the Professional Experience section.\n\n"
-        "Do not include any additional text or explanation in your response. Return the output strictly as a JSON object."
-        f"Input JSON:\n{job}"
-    )
+    "Extract and format the following resume information into a JSON object with strict adherence to this schema:\n\n"
+    "{\n"
+    '    "area_of_expertise": [list of technical specializations],\n'
+    '    "Name": "Full Name",\n'
+    '    "Phone_number": "phone string with country code",\n'
+    '    "Skills": [list of technical skills/tools],\n'
+    '    "professional_experience": [\n'
+    '        {\n'
+    '            "company": "Company Name",\n'
+    '            "position": "Job Title",\n'
+    '            "duration": "MM/YYYY - MM/YYYY or present",\n'
+    '            "achievements": [list of bullet points],\n'
+    '            "technologies": [list of technologies used]\n'
+    '        }\n'
+    '    ],\n'
+    '    "Achievements": [list of career/academic achievements],\n'
+    '    "Education": [\n'
+    '        {\n'
+    '            "institution": "School Name",\n'
+    '            "degree": "Degree Name",\n'
+    '            "duration": "MM/YYYY - MM/YYYY",\n'
+    '            "cgpa/percentage": "score"\n'
+    '        }\n'
+    '    ],\n'
+    '    "Years_of_experience": total_years\n'
+    "}\n\n"
+    "Follow these rules strictly:\n"
+    "1. Maintain exact field names and JSON structure\n"
+    "2. Convert durations to years by calculating full months worked/12\n"
+    "3. For education dates without month, use format 'Mar YYYY'\n"
+    "4. Keep skill/technology lists lowercase unless proper nouns\n"
+    "5. Include all numerical values as strings\n"
+    "6. Preserve original achievement bullet points verbatim\n"
+    "7. Format phone numbers with country code\n"
+    "8. Omit null/empty fields\n\n"
+    "Input resume text:\n"
+    f"{job}\n\n"
+    "Return ONLY the JSON object with no additional text or formatting. "
+    "If any information is missing, omit the field or use 'N/A'."
+)
 
     # Create a prompt template
     prompt_template = PromptTemplate.from_template("{prompt}")
@@ -66,12 +101,12 @@ def extract_pdf_text(pdf_path):
     # Example usage
     print(text)
     ans=entity_search(text,API)
-    output_file = "j210250.json"
+    output_file = "Ruddhis_job.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(ans, f, indent=4, ensure_ascii=False)
     return ans
 
 if __name__ == "__main__":
-    pdf_path = r'E:\JOB.ai\JOB.ai\job_resume\Sameer_Panda_M_Updated_Resume___1_.pdf'
+    pdf_path = r'E:\JOB.ai\JOB.ai\job_resume\ruddhi_7748640302.pdf'
     pdf_text_1 = extract_pdf_text(pdf_path)
     # print(pdf_text_1)

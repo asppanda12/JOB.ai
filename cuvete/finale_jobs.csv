@@ -1,101 +1,21 @@
 Company Name,Job Title,Location,Skills,Job Type,Salary,Experience,Job Link
-Goldman Sachs,Controllers - Software Engineering - Analyst,Bengaluru,['Java/C/C++/Python'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Wipro,Developer,Bengaluru,['Software Development'],In-Office,Rs. 4 LPA - Rs. 8 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Adani AI Labs,Frontend Developer,Kolkata,"['HTML', 'CSS', 'Javascript']",In-Office,Rs. 4 LPA - Rs. 6.5 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Qualys,Software Engineer,Pune,"['Java', 'SQL', 'Backend Development']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-Qualcomm,"Engineer- Gen AI,QA",Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 10 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Amazon,Software Development Engineer I,Hyderabad,['Software Development'],In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Qualcomm,Associate Engineer,Hyderabad,['Product Development'],In-Office,Rs. 7 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-PayPal,Associate Engineer – Full Stack,Bangalore,"['JavaScript', 'HTML', 'CSS']",In-Office,Rs. 10 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-American Express,Associate - Digital Product Management,Gurgaon,"['Product Management', 'SQL']",Hybrid,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Qualcomm,Associate Engineer- Wearable Automation,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Adobe,Software Development Engineer,"Bangalore, Noida",['C/C++/Java'],In-Office,Rs. 18 LPA - Rs. 28 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Nokia,Software Engineer,Bangalore,"['Python', 'AWS']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Amazon,Software Development Engineer,Bengaluru,"['Java', 'C/C++']",In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-ANZ,Software Engineer,Bengaluru,['Python/Java/C++'],In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Ericsson,Software Development Engineer I,Bangalore,"['JavaScript', 'HTML', 'CSS']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Application Support Engineer,Bengaluru,"['Java/C++/Python/Go', 'HTML/CSS/JS/React']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Conduent,Technical Business Analysis Engineer I,Noida,['Software Engineering'],In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-ClearFeed,Software Engineer,Bangalore,"['Python', 'MySQL']",In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-AON,Analyst,Gurgaon,['SQL'],In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-PhonePe,Business Intelligence Engineer,Bengaluru,"['Python', 'SQL']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Anakin,Software Development Engineer,Bangalore,"['HTML', 'CSS', 'Python/Java']",In-Office,Rs. 10 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Eightfold,Software Engineer,"Bangalore, Noida","['Python', 'ReactJS', 'MySQL']",Hybrid,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Upland,Software Engineer I,Bangalore,"['PHP', 'SQL']",In-Office,Rs. 8 LPA - Rs. 14 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Lenovo,Software Engineer,Bangalore,"['AWS', 'SQL', 'Python/Java/C++']",In-Office,7 LPA - 15 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Turing,Remote Fullstack Specialist,Remote,['Full Stack Development'],Remote,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Birlasoft,Technical Specialist-App Development,Hyderabad,['Application Development'],In-Office,Rs. 3.5 LPA - Rs. 5.5 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Qualcomm,Associate Engineer,Hyderabad,"['C', 'C++', 'Java', 'Python', 'SQL']",In-Office,Rs. 11 LPA - Rs. 15 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Oracle,Software Engineer,Hyderabad,"['Javascript', 'HTML', 'CSS']",In-Office,Rs. 7 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Gameberry Labs,Software Development Engineer I - Java/Python,Bangalore,"['Java', 'C++', 'Python']",In-Office,Rs. 15 LPA - Rs. 25 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Accenture,Web Developer Associate,Mumbai,"['HTML', 'CSS']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Clearwater Analytics,Software Development Engineer,Noida,['Python'],In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Groww,Web Developer,Bengaluru,"['ReactJS', 'Typescript', 'JavaScript', 'HTML', 'CSS']",In-Office,Rs. 16 LPA - Rs. 22 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Superset,Software Developer I,Bangalore,"['Python', 'Javascript', 'MySQL']",In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Crio.Do,Product Operations Associate,Bangalore,"['Javascript', 'Python', 'SQL']",In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-GAP Inc.,Software Engineer,Hyderabad,['Python/Java/C/C++'],In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Sprinklr,Associate Operations Engineer,Bangalore,"['AWS/Azure', 'Linux']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-GE Vernova,Software Engineer - UI Dev,Bengaluru,"['HTML', 'CSS', 'UI UX']",In-Office,Rs. 6 - 12 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Honeywell,Application Engr I,Pune,"['Software Development', 'Testing']",In-Office,Rs. 4 LPA - Rs. 7 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-ZS,Software Engineer - .Net,Pune,"['.Net', 'HTML', 'Javascript', 'CSS']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Bank of America,Software Engineer I,"Mumbai, Hyderabad","['Java', 'Python']",In-Office,Rs. 7 LPA - Rs. 10 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Zeta,Software Development Engineer I,"Mumbai, Bangalore",['Software Development'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Lenskart,Java L1 Support,"Bhiwadi, Manesar",['Java'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Swiggy,Business Associate,Bangalore,"['SQL', 'Python']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Rippling,Technical Support Engineer,Bangalore,"['SQL', 'Tableau', 'Javascript', 'Python']",Hybrid,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Software Engineer,Bangalore,"['Java', '.Net', 'PHP', 'Python', 'Java Script']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Lenskart,Software Engineer - Full Stack,Bangalore,['Full Stack Development'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-opentext,Software Engineer,Hyderabad,"['Python/Java/C++', 'MySQL']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Swiggy,Software Development Engineer in Test,Bangalore,"['Java', 'MySQL']",In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 1 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-AlphaGrep,DevOps Engineer,Bangalore,['Python'],In-Office,Rs. 15 LPA - Rs. 25 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Associate Business Analyst,Bangalore,['SQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-AppSierra,React Developer,Delhi,"['React', 'HTML', 'CSS', 'JavaScript']",In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Analyst - Risk Management,Bangalore,"['SQL', 'Microsoft Excel']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-GE HealthCare,Software Engineer,Bengaluru,"['Javascript', 'TypeScript', 'Angular']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Gameberry Labs,Software Engineer 1,Bangalore,"['C', 'C++', 'Golang', 'Java', 'MySQL']",In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 1 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Take-Two Interactive,Site Reliability Engineer I (SRE-I),Bengaluru,"['AWS', 'Azure']",In-Office,Rs. 10 LPA - Rs. 14 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-meesho,Software Development Engineer I (iOS),Bangalore,"['iOS Development', 'Swift']",In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Google,"Technical Solutions Consultant, University Graduate, 2025","Hyderabad, Bengaluru, Gurgaon","['JavaScript', 'TypeScript', 'HTML', 'Python', 'SQL']",In-Office,Rs. 20 LPA - Rs. 30 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-IBM,Software Engineer,Hyderabad,"['Java', 'Node.js']",In-Office,Rs. 4.5 LPA - Rs. 6.5 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Tower Research Capital,Software Engineer I,Gurgaon,"['Python', 'Java', 'MySQL']",In-Office,Rs. 20 LPA - Rs. 30 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-KPMG,Executive - Java Backend,Mumbai,['Java'],In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Target,Product Ops Analyst,Bangalore,['SQL'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 5 Years,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Junior Associate - SME Partnership,"Bangalore, Mumbai",['Project Management'],In-Office,Rs. 5 LPA - Rs. 7 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-PayU,Integration Engineer,Bangalore,"['Python', 'Java', 'SQL']",Hybrid,Rs. 7 LPA - Rs. 12 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Swiggy,Software Development Engineer in Test,Bangalore,"['Java', 'MySQL']",In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 1 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-Zeta,Software Development Engineer I,"Mumbai, Bangalore",['Software Development'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Lenskart,Java L1 Support,"Bhiwadi, Manesar",['Java'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-ClearFeed,Software Engineer,Bangalore,"['Python', 'MySQL']",In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - 0 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-Zeta,Implementation Analyst I,Bangalore,"['Python', 'SQL']",In-Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-NVIDIA,System Software Engineer,"Pune, Hyderabad, Bangalore",['C/C++'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Amazon,IT Application Engineer,Hyderabad,['SQL'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-MoEngage,Software Engineer (Backend),Bengaluru,['Python/Java/C++'],In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-GE HealthCare,Software Engineer,Bengaluru,"['C++', 'Linux', 'Java/Python']",In Office,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-opentext,Software Engineer,Hyderabad,"['Python/Java/C++', 'MySQL']",In-Office,Rs. 6 LPA - Rs. 12 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Swiggy,Software Development Engineer in Test,Bangalore,"['Java', 'MySQL']",In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 1 - 4 Years,https://cuvette.tech/app/dashboard/other-jobs
-meesho,Software Development Engineer I (iOS),Bangalore,"['iOS Development', 'Swift']",In-Office,Rs. 15 LPA - Rs. 30 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-MoEngage,Software Engineer (Backend),Bengaluru,['Python/Java/C++'],In-Office,Rs. 8 LPA - Rs. 15 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Razorpay,Product Support Engineer,Bangalore,"['Python', 'MySQL']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-PayU,Associate Software Engineer,Gurgaon,"['Python', 'HTML', 'CSS', 'JavaScript', 'SQL']",Hybrid,Rs. 6 LPA - 8 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-American Express,Engineer,Gurgaon,"['Python', 'HTML', 'CSS']",Hybrid,Rs. 6 LPA - Rs. 10 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-NetApp,Software Engineer,Bengaluru,"['Python/Java/C++', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Lenskart,Software Engineer - Full Stack,Bangalore,['Full Stack Development'],In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 1 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-PayU,Software Engineer,Bangalore,['Python/Java/C/C++'],In-Office,Rs. 10 LPA - Rs. 15 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Sprinklr,Technical Supoort Engineer,"Gurgaon, Bangalore","['JavaScript/Python/Java', 'SQL']",In-Office,Rs. 6 LPA - Rs. 9 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-Amazon,IT Application Engineer,Hyderabad,['SQL'],In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - Fresher,https://cuvette.tech/app/dashboard/other-jobs
-Optum,Software Engineer,Hyderabad,"['Javascript', 'Python']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Capegemini,Android Developer,Coimbatore,['Android Development'],In-Office,Rs. 4 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-PayU,Integration Engineer,Bangalore,"['Python', 'Java', 'SQL']",Hybrid,Rs. 7 LPA - Rs. 12 LPA,Year of experience - Freshers,https://cuvette.tech/app/dashboard/other-jobs
-Google,Cloud Web Application Engineer,Gurgaon,"['Java/Python/JavaScript', 'Google Cloud']",In-Office,Rs. 18 LPA - Rs. 24 LPA,Year of experience - https://www.google.com/about/careers/applications/jobs/results/73604838461448902-cloud-web-application-engineer/,https://cuvette.tech/app/dashboard/other-jobs
-Qualcomm,Engineer-APT,Hyderabad,"['C', 'C++', 'Java', 'Python']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Volvo,Software Engineer,Bangalore,"['.Net', 'SQL', 'C#']",In-Office,Rs. 5 LPA - Rs. 8 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Adobe,Computer Scientist,Bangalore,"['AWS', 'Google Cloud']",In-Office,Rs. 25 LPA - Rs. 40 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-NVIDIA,System Software Engineer,"Pune, Hyderabad, Bangalore",['C/C++'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Tower Research Capital,Software Engineer I,Gurgaon,"['Python', 'Java', 'MySQL']",In-Office,Rs. 20 LPA - Rs. 30 LPA,Year of experience - 0 - 3 Years,https://cuvette.tech/app/dashboard/other-jobs
-American Express GBT,Software Development Engineer I,Gurgaon,"['HTML/CSS/JavaScript', 'Java']",In-Office,Rs. 8 LPA - Rs. 14 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-NatWest Group,Software Engineer,Bangalore,"['Python/Java/C/C++', 'SQL']",In-Office,Rs. 8 LPA - Rs. 12 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Amazon,Software Development Engineer 1,Bangalore,['Software Development'],In-Office,Rs. 18 LPA - Rs. 25 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Goldman Sachs,Software Engineering - Analyst,Bengaluru,"['SQL', 'AWS']",In-Office,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 1 Years,https://cuvette.tech/app/dashboard/other-jobs
-Capegemini,Software Engineer,Hyderabad,['Software Development'],In-Office,Rs. 3.5 LPA - Rs. 6 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-ServiceNow,Software Engineer,Hyderabad,"['Java', 'JavaScript']",Hybrid,Rs. 12 LPA - Rs. 18 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
-Adobe,Software Development Engineer,Noida,['Java/C/C++'],In-Office,Rs. 12 LPA - Rs. 20 LPA,Year of experience - 0 - 2 Years,https://cuvette.tech/app/dashboard/other-jobs
+Software Engineer at Capegemini,Bangalore,C/C++/Java/Python,[],Software Engineering,In-Office,4 - 7 LPA,Link not available
+Software Engineer-1 at Rippling,Bangalore,Java/Python/C++,[],Java/Python/C++,In-Office,30 - 45 LPA,Link not available
+Software Development Engineer at Adobe,Noida,Java,['JavaScript'],Python,In-Office,18 - 30 LPA,Link not available
+Software Engineering Asscociate at Goldman Sachs,Bengaluru,Java,['SQL'],Software Engineering,In-Office,18 - 30 LPA,Link not available
+Software Developer 1 at Oracle,Bengaluru,Java,['SQL'],Software Engineering,In-Office,8 - 14 LPA,Link not available
+Software Engineering Associate at Goldman Sachs,Bengaluru,Java/C/C++/Python,['AWS'],SQL,In-Office,18 - 30 LPA,Link not available
+Software Development Engineer I at Amazon,Bangalore,C/C++/Java/Python,[],C/C++/Java/Python,In-Office,15 - 28 LPA,Link not available
+Software Engineer at Microsoft,Hyderabad,C/C++/Java/Python,[],JavaScript,Remote,16 - 20 LPA,Link not available
+Data Engineer at Atlassian,Bengaluru,Python,[],SQL,In-Office,18 - 30 LPA,Link not available
+Java Fullstack Developer at IBM,Bangalore,Java,"['SQL', 'Javascript', 'HTML']",CSS,Hybrid,6 - 12 LPA,Link not available
+Application Tech Support Practitioner at Accenture,Bengaluru,Quality Management,[],Support Engineering,In-Office,4 - 7 LPA,Link not available
+"Technical Solutions Consultant, AppDev at Google","Hyderabad, Gurugram",Java/C++/Python,[],Java/C++/Python,In-Office,18 - 30 LPA,Link not available
+Application Support Engineer at Accenture,Ahmedabad,Microsoft Office,[],Computer Science Engineering,In-Office,3.5 - 6 LPA,Link not available
+Infra Tech Support Practitioner at Accenture,Coimbatore,Software Testing,[],Database Management,In-Office,4 - 6 LPA,Link not available
+"Software Engineer, Front End at Google",Bengaluru,Python,"['C', 'C++', 'Java']",JavaScript,In-Office,20 -45 LPA,Link not available
+Software Dev Engineer I at Amazon,Gurugram,C/C++/Java/Python,[],C/C++/Java/Python,In-Office,15 - 30 LPA,Link not available
+Software Engineer at Visa,Bengaluru,Java,[],Java,Hybrid,15 - 25 LPA,Link not available
+"Software Engineer, Google Nest at Google",Bengaluru,Python/C/C++/Java,[],JavaScript,In-Office,30 - 50 LPA,Link not available
+Engineer- .Net Developer at Qualcomm,Hyderabad,.Net,"['JavaScript', 'CSS']",SQL,In-Office,6 - 10 LPA,Link not available
+Frontend Developer at Ericsson,Bangalore,HTML,['Javascript'],CSS,In-Office,6 - 10 LPA,Link not available
