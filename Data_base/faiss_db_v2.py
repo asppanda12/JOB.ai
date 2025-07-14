@@ -19,9 +19,10 @@ load_dotenv()
 from pymongo import MongoClient
 uri = os.getenv("MONGO_DB_URI")
 class JobSearchEngine:
-    def __init__(self, json_data=None, embeddings_model="sentence-transformers/all-mpnet-base-v2", vector_store_path=None):
-        self.embeddings = HuggingFaceEmbeddings(model_name=embeddings_model)
+    def __init__(self, json_data=None, embeddings_model="BAAI/bge-large-en-v1.5", vector_store_path=None):
+        self.embeddings = HuggingFaceEmbeddings(model_name=embeddings_model,encode_kwargs={"normalize_embeddings": True})
         
+
         if vector_store_path:
             # Load the vector store from disk if a path is provided
             self.vector_store = self._load_vector_store(vector_store_path)
@@ -66,6 +67,7 @@ class JobSearchEngine:
 
         uuids = [str(uuid4()) for _ in range(len(documents))]
         self.vector_store.add_documents(documents=documents, ids=uuids)
+        print(f"Added {len(documents)} documents to the vector store.")
 
     def save_vector_store(self, save_path):
         """Save the FAISS vector store to disk."""
@@ -83,12 +85,10 @@ class JobSearchEngine:
         yoe_mera=document['years_of_experience']
         query_data = (" ").join(resume_data['area_of_expertise']) + " " + (" ").join(resume_data['Skills']) + " " + "Hyderabad"
         results = self.vector_store.similarity_search(query=query_data, k=k)
-
         filtered_results = []
         for document in results:
             metadata = document.metadata
             yoe = metadata.get("yoe", None)
-
             if yoe:
                 try:
                     yoe_min, yoe_max = map(float, yoe.split(","))
@@ -99,6 +99,8 @@ class JobSearchEngine:
                         })
                 except ValueError:
                     print("Error in parsing 'yoe' value")
+        print(f"Found {len(filtered_results)} results for chat_id: {chat_id}")
+        print(f"Saving results for chat_id: {filtered_results[0]}")
         self.save_results_to_mongo_db(chat_id,filtered_results)
         print(f"All datas are inserted for {chat_id}")
     def delete_results_for_chat_id(self,data_base,chat_id):
@@ -127,37 +129,31 @@ if __name__ == "__main__":
     db=create_a_job_database(uri)
     data = list(db.find({}, {"_id": 0}))
     json_data = data
-
-    print(json_data[0])
+    
+    print(len(json_data))
     print("going to search for vector")
     # job_data_path = r"E:\JOB.ai\JOB.ai\combined_single_data\concatenated_jobs.json"
     # resume_data_path = r"E:\JOB.ai\JOB.ai\resume_cold_mail\Ruddhis_job.json"
     vector_store_path = r"E:\JOB.ai\JOB.ai\vector_store"  # Directory to save/load the vector store
-    if os.path.exists(vector_store_path):
-        shutil.rmtree(vector_store_path)  # Delete the directory and all its contents
-        print(f"Deleted directory: {vector_store_path}")
-    else:
-        print("Directory does not exist.")
-    if os.path.exists(vector_store_path) and os.path.isdir(vector_store_path):
-        print("Vector store path exists. Proceeding with initialization.")
-        search_engine = JobSearchEngine(json_data=json_data, vector_store_path=vector_store_path)
-    else:
-        print("Vector store path does not exist. Handle accordingly.")
-        # You can create it if needed:
+    # if os.path.exists(vector_store_path):
+    #     shutil.rmtree(vector_store_path)  # Delete the directory and all its contents
+    #     print(f"Deleted directory: {vector_store_path}")
+    # else:
+    #     print("Directory does not exist.")
+    # if os.path.exists(vector_store_path) and os.path.isdir(vector_store_path):
+    #     print("Vector store path exists. Proceeding with initialization.")
+    #     search_engine = JobSearchEngine(json_data=json_data, vector_store_path=vector_store_path)
+    # else:
+    #     print("Vector store path does not exist. Handle accordingly.")
+    #     # You can create it if needed:
         
-        search_engine = JobSearchEngine(json_data=json_data)
-    # # Initialize the search engine
+    #     search_engine = JobSearchEngine(json_data=json_data)
+    # # # Initialize the search engine
 
-    # # Save the vector store to disk (only needed once)
-    search_engine.save_vector_store(vector_store_path)
+    # # # Save the vector store to disk (only needed once)
+    # search_engine.save_vector_store(vector_store_path)
 
     # # Load the vector store from disk (for subsequent runs)
-    # search_engine = JobSearchEngine(vector_store_path=vector_store_path)
-
-    # # Query the vector store
-    # with open(resume_data_path, "r") as file:
-    #     resume_data = json.load(file)
-
-    # yoe_mera = 1.5
-    # results = search_engine.query(resume_data, yoe_mera)
-    # search_engine.save_results_to_json(results, "search_results_ruddhi.json")
+    search_engine = JobSearchEngine(vector_store_path=vector_store_path)
+    results = search_engine.query(7748640302)
+    search_engine.save_results_to_json(results, "search_results_sameer.json")

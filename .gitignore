@@ -67,3 +67,8 @@ __pycache__/
 *$py.class
 .venv/
 venv/
+
+
+
+.Job_venv/
+*.tmp

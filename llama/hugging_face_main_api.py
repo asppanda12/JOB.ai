@@ -4,7 +4,10 @@ import os
 from langchain_core.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain_core.output_parsers import JsonOutputParser
-
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI
+import os
+from dotenv import load_dotenv
 load_dotenv()
 
 API = os.getenv('HUGGINGFACE_TOKEN')
@@ -22,6 +25,38 @@ def parse_job_data_llama(job_data):
     """
     # Convert the job data to a properly formatted string
     job_data_str = json.dumps(job_data, indent=2)
+    output_example = {
+    "Job Title": "Software Engineer - Machine Learning",
+    "Job Link": "https://in.linkedin.com/jobs/view/software-engineer-machine-learning-at-linkedin-4102540455?position=4&pageNum=0&refId=W2HqTz8GkIVLZz6sKVyfVw%3D%3D&trackingId=q4%2Bz27ppZ8Iqwjjjucnmxg%3D%3D",
+    "Company Name": "LinkedIn",
+    "Experience": "2+ years",
+    "Salary": "Not specified",
+    "Location": "India",
+    "Job Description": "LinkedIn is seeking a research engineer/scientist to develop state-of-the-art NLP and vision algorithms to understand member-posted content meaningfully. Responsibilities include developing next-gen algorithms for text, image, video, and graph classification, as well as scaling models to millions of contents and members. The role involves end-to-end model development, mentoring junior engineers, and representing LinkedIn in academic and industry forums. The role is hybrid and based in India. Basic qualifications include a Master’s degree or a Bachelor’s with 2+ years of relevant experience. Preferred qualifications include hands-on experience in ML, DL, NLP, and related technologies.",
+    "Skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)",
+      "Computer Vision",
+      "Image Processing",
+      "Statistical Modeling",
+      "Data Mining",
+      "Graph Learning",
+      "Generative AI",
+      "Large Language Models (LLMs)",
+      "Geometric Deep Learning",
+      "Supervised Learning",
+      "Semi-Supervised Learning",
+      "Python Programming",
+      "Software Engineering Practices",
+      "Mentoring",
+      "Content Classification",
+      "Model Deployment",
+      "Communication",
+      "Team Collaboration"
+    ],
+    "Job Type": "Machine Learning Engineer"
+  }
 
     # Refined prompt for extracting and structuring the job data
     prompt = (
@@ -49,21 +84,20 @@ def parse_job_data_llama(job_data):
     "  \"Job Type\": \"<Job Type>\"\n"
     "}\n"
     "Do not include any additional notes or explanations. Only return the strict output JSON with no omissions or modifications.\n"
+    "Output Example:{output_example}\n\n"
     f"Input JSON:\n{job_data_str}\n\nOutput JSON:"
 )
 
 
-    # Create a prompt template
+    # # Create a prompt template
     prompt_template = PromptTemplate.from_template("{prompt}")
 
-    # Initialize the Hugging Face model endpoint
-    llm = HuggingFaceEndpoint(
 
-        huggingfacehub_api_token="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",
-        endpoint_url="https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct",
-        temperature=0.5,
-        max_tokens=2048
-    )
+    llm = ChatOpenAI(
+    model="meta-llama/llama-3.1-8b-instruct",
+    openai_api_key="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",
+    openai_api_base=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+)
 
     # Chain the prompt and LLM
     chat = prompt_template | llm
@@ -74,7 +108,7 @@ def parse_job_data_llama(job_data):
     # Ensure response is valid JSON
     json_parser = JsonOutputParser()
     
-    parsed_response = json_parser.parse(response)
+    parsed_response = json_parser.parse(response.content)
     
 
     return parsed_response

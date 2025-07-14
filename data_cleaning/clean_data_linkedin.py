@@ -1,9 +1,12 @@
+import sys
+sys.path.append('E:/JOB.ai/JOB.ai') 
 import re
 import logging
 import json
 import pandas as pd
 import time
 import os
+from llama.create_yoe import parse_job_data_llama
 from datetime import datetime
 def extract_yoe(experience_str):
     patterns = [
@@ -24,10 +27,13 @@ def extract_yoe(experience_str):
 
     
     for pattern, func in patterns:
-        match = re.search(pattern, experience_str)
-        if match:
-            return func(match)
-    
+        try:
+            match = re.search(pattern, experience_str)
+            if match:
+                return func(match)
+        except Exception as e:
+            return (0, 60)  # Return a default value in case of any error
+
     return (0,60)  # If no match is found
 
 def clean_company_name(text, company_name):
@@ -81,6 +87,7 @@ for index,job in enumerate(unique_data):
 
 # Clean and add additional fields
 start_time = time.time()
+count = 0
 for job in unique_data[:]:  # Iterate over a copy of the list to modify it while looping
     if "job_description" in job:
         job['job_title'] = clean_company_name("job_title", job['job_title'])
@@ -96,7 +103,12 @@ for job in unique_data[:]:  # Iterate over a copy of the list to modify it while
         job['id'] = f"{job['job_title']} {job['company_name']} {job['experience']} {job['location']}"
         job['text'] = f"{job['job_title']} {job['company_name']} {job['job_description']} {job['location']}"
         job['Posted_date'] = datetime.now().strftime('%Y-%m-%d')
-        job['yoe']=extract_yoe(job['experience'])
+        job['Source'] = 'linkedin'
+        # Use the parse_job_data_llama function to extract years of experience
+        experience = parse_job_data_llama(job['experience'])
+        count += 1
+        job['yoe'] = list(experience) if experience[0]!="unknown" else [0,60]
+        print(count, job['experience'], job['yoe'])
     else:
         unique_data.remove(job)  # Remove job if "job_description" is not present
 
@@ -114,6 +126,8 @@ print(f"Data has been saved to {output_file}")
 
 # Optionally, use pandas to drop duplicates
 df = pd.DataFrame(unique_data)
+for col in df.columns:
+    df[col] = df[col].apply(lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x)
 print(df.count())
 df.drop_duplicates(inplace=True)
 print(df.count())

@@ -285,10 +285,10 @@ class TelegramBot:
         """Handle 'Send More Jobs' button click."""
         query = update.callback_query
         await query.answer()
-        
         action, start_index = query.data.split(':')
         if action == 'more_jobs':
             await self.broadcast_message(query.message.chat_id, int(start_index))
+    
 
     def run(self):
         """Start the bot."""

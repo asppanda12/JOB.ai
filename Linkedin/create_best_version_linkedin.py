@@ -1,7 +1,7 @@
 import sys
 sys.path.append('E:/JOB.ai/JOB.ai')  # Use forward slashes for path
 # from genrativeai.response_llama import parse_job_data_llama, parse_job_data_gemini  # Note: genrative not generative
-from llama.huggingface_skill_extraction import parse_job_data_llama
+from llama.parse_job_data_llama import parse_job_data_llama
 import json
 from dotenv import load_dotenv
 import os

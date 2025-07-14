@@ -35,6 +35,8 @@ def create_a_job_database_specific_user(str_uri):
         print("Pinged your deployment. You successfully connected to MongoDB!")
         db=client['USER_1']
         table=db['Job_specific']
+        print("Database and collection created successfully.")
         return table
     except Exception as e:
         print(e)
+# create_a_job_database_specific_user = create_a_job_database_specific_user('mongodb+srv://sameerpandausa:5MC349oicChL7zXN@cluster0.ggine.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true')
