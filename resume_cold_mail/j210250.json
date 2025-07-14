@@ -1,0 +1,104 @@
+{
+    "area_of_expertise": [
+        "Backend",
+        "Data analysis",
+        "Microservices",
+        "Data Structure and algorithm",
+        "Cloud Computing",
+        "Model Building",
+        "System Designing",
+        "Object Oriented Programming(OOPS)",
+        "DataBase Management"
+    ],
+    "Name": "Sameer Kumar Panda",
+    "Phone_number": "+91 9102292779",
+    "Skills": [
+        "Java",
+        "Python",
+        "Azure",
+        "Django",
+        "Fast api",
+        "My Sql",
+        "NoSql (Mongo Db)",
+        "Linux",
+        "Git/Github",
+        "Flask",
+        "kite",
+        "Redis"
+    ],
+    "professional_experience": [
+        {
+            "company": "Tiger Analytics",
+            "position": "Associate Data Scientist",
+            "duration": "10/2023 - present",
+            "achievements": [
+                "Integrated Cloud Computing on Azure",
+                "Major Code Refactoring",
+                "Feature Expansion",
+                "CI/CD Pipeline Creation"
+            ],
+            "technologies": [
+                "Microsoft Azure",
+                "PySpark",
+                "MySQL",
+                "Python",
+                "Statistics",
+                "Machine Learning Algorithms"
+            ]
+        },
+        {
+            "company": "Polynomial.ai",
+            "position": "SDE Intern",
+            "duration": "02/2023 - 07/2023",
+            "achievements": [
+                "Worked on a real-time audio-to-text conversion system",
+                "Created automated test cases",
+                "Optimized the Entity Extracting model",
+                "Proposed and built the algorithm and architecture for an efficient recommendation engine",
+                "Collaborated with the largest client in the restaurant chain industry",
+                "Contributed to and increased the efficiency of a Query Parser and Content AI Bot"
+            ],
+            "technologies": [
+                "Amazon Aws Textract",
+                "Tensorflow",
+                "Mongodb",
+                "python",
+                "c++",
+                "Django",
+                "Flask",
+                "Fastapi",
+                "Rest Api",
+                "Redis"
+            ]
+        }
+    ],
+    "Achievements": [
+        "5 star performer in Tiger Analytics Machine Learning Engineering Program",
+        "Ranked 144 out of 8000 participants in the Codechef short challenge",
+        "Qualified for the Facebook Hackercup and achieved a ranking of 1585 out of 34845 participants",
+        "Earned a ranking of 1996 round-f and 2448 in round b in Google Kickstart",
+        "Ranked 63 out of 25000 participants in Codechef Snackdown round 1 and 1213 out of 40000 participants in the Codechef Snackdown qualification round",
+        "3.5 star in Leetcode and solved around 1000+ problems with 10 consistency badges"
+    ],
+    "Education": [
+        {
+            "institution": "IIIT BHUBANESWAR",
+            "degree": "Bachelor of Technology in Information Technology",
+            "duration": "Aug 2019 - Aug 2023",
+            "cgpa": "7.82/10"
+        },
+        {
+            "institution": "D.B.M.S English School",
+            "degree": "ISC 12th Board",
+            "duration": "Mar 2019",
+            "percentage": "84.6%"
+        },
+        {
+            "institution": "D.B.M.S English School",
+            "degree": "ICSE 10th Board",
+            "duration": "Mar 2017",
+            "percentage": "90.6%"
+        }
+    ],
+    "Years_of_experience": 2
+}
