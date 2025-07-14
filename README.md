@@ -23,7 +23,6 @@ The JOB.ai system is modular and highly automated. Below is a detailed breakdown
 - **Instahyre & Entire Web**
 
 
-https://github.com/user-attachments/assets/4dde59e0-efd1-46c7-800d-78bcc85878c4
 
 
 **Process:**
