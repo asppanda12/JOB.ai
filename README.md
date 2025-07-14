@@ -6,6 +6,10 @@ JOB.ai is an automated job aggregation and recommendation platform designed to s
 
 ---
 
+https://github.com/user-attachments/assets/2710f98f-7da0-4ffd-a5e9-6dcf949f2810
+
+
+
 ## Architecture & Workflow
 
 The JOB.ai system is modular and highly automated. Below is a detailed breakdown of each stage in the workflow:
@@ -17,6 +21,10 @@ The JOB.ai system is modular and highly automated. Below is a detailed breakdown
 - **Cuvete**
 - **Naukri**
 - **Instahyre & Entire Web**
+
+
+https://github.com/user-attachments/assets/4dde59e0-efd1-46c7-800d-78bcc85878c4
+
 
 **Process:**
 - Each source has its own scraping script (`start_scrapping.py`) that collects raw job data.
