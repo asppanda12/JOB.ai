@@ -55,6 +55,7 @@ class TelegramBot:
     def __init__(self, config: Config):
         self.config = config
         self.bot = Bot(token=config.token)
+    
         self.application = ApplicationBuilder().token(config.token).build()
         self.setup_handlers()
 
@@ -153,6 +154,7 @@ class TelegramBot:
 
     async def broadcast_message(self, chat_id: int, start_index: int):
         """Send job recommendations to user."""
+        print("Hello from broadcast_message")
         if start_index == 0:
             search_engine = JobSearchEngine(vector_store_path=str(self.config.vector_store_path))
             search_engine.query(chat_id)
@@ -298,6 +300,7 @@ class TelegramBot:
 def main():
     """Main entry point."""
     config = load_config()
+    # print(config)
     bot = TelegramBot(config)
     bot.run()
 

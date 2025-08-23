@@ -164,7 +164,7 @@ def scrape_page(driver):
 
     return job_listings
 def scrape_naukri(link):
-    proxies = load_proxies('proxy.txt')
+    proxies = load_proxies('E:/JOB.ai/JOB.ai/naukri/proxy.txt')
     jobs = []
     
     # Load existing job listings from the JSON file

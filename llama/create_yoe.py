@@ -19,27 +19,32 @@ def parse_job_data_llama(job_label):
     Returns:
     - tuple: (start_month, end_month) or ("unknown", "unknown")
     """
-
+    job_description = job_label.split("_")[-1] if "_" in job_label else ""
+    job_experience = job_label.split("_")[0] if "_" in job_label else job_label
     # Prompt to ensure consistent tuple output
     prompt_text = (
-        'You are given a job level or experience label (e.g., "IC2", "L4", "SDE2", "Junior", etc.).\n'
-        'Based only on this label and without making assumptions beyond what the label directly suggests, '
-        'return the estimated range of experience in months as a Python tuple: (start_month, end_month).\n'
-        'If the label is ambiguous or not clearly mapped to a duration, return ("unknown", "unknown").\n\n'
-        'Only return the tuple. Do not write code, explanations, or formatting.\n\n'
-        '1. Example: 2+ years development experience → (24, 500).\n'
-        '2. Example: 0-2 years development experience → (0, 24).\n'
-        '3. Example: 0-2+ years development experience → (0, 500).\n'
-        '4. Example: 5+ yrs experience → (60, 500).\n\n'
-        '5. Example: 2-3 years experience → (24, 36).\n\n'
-
-        f'Input:\n"Experience": "{job_label}"\n\nOutput:'
+        "You are an assistant that extracts estimated years of experience (YOE) from job postings.\n\n"
+    "Rules:\n"
+    "1. If an explicit job level or experience label is provided (e.g., 'IC2', 'L4', 'SDE2', 'Junior', "
+    "'2-3 years experience', etc.), use only that label to return the estimated range in months as a Python tuple.\n"
+    "   Example mappings:\n"
+    "   - '2+ years development experience' → (24, 500)\n"
+    "   - '0-2 years development experience' → (0, 24)\n"
+    "   - '0-2+ years development experience' → (0, 500)\n"
+    "   - '5+ yrs experience' → (60, 500)\n"
+    "   - '2-3 years experience' → (24, 36)\n\n"
+    "2. If no explicit experience label is provided, carefully read the job description and infer the likely range "
+    "based on context, role seniority, or keywords (e.g., 'entry-level' → (0, 24), 'senior engineer' → (60, 120), "
+    "'lead' → (96, 500), etc.).\n\n"
+    "3. If it is impossible to infer, return ('unknown', 'unknown').\n\n"
+    "Output only the tuple. Do not include explanations, text, or formatting.\n\n"
+    f"Input:\nExperience: \"{job_experience}\"\n\nJob Description: \"{job_description}\"\n\nOutput:"
     )
 
     # Setup LLM
     llm = ChatOpenAI(
         model="meta-llama/llama-3.1-8b-instruct",
-        openai_api_key="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",  # use env variable, not hardcoded
+        openai_api_key="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",  # use env variable, not hardcoded
         openai_api_base=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
     )
 

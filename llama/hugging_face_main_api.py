@@ -95,7 +95,7 @@ def parse_job_data_llama(job_data):
 
     llm = ChatOpenAI(
     model="meta-llama/llama-3.1-8b-instruct",
-    openai_api_key="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",
+    openai_api_key="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",
     openai_api_base=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
 )
 

@@ -79,11 +79,13 @@ class JobSearchEngine:
 
 
     def query(self, chat_id, k=500):
+        print(f"Querying for chat_id: {chat_id} with k={k}")
         data_base=create_a_database(os.getenv('MONGO_DB_URI'))
         document = data_base.find_one({'chat_id': chat_id})
         resume_data=document['resume_json']
         yoe_mera=document['years_of_experience']
         query_data = (" ").join(resume_data['area_of_expertise']) + " " + (" ").join(resume_data['Skills']) + " " + "Hyderabad"
+        print(f"Query data for chat_id {chat_id}: {query_data}")
         results = self.vector_store.similarity_search(query=query_data, k=k)
         filtered_results = []
         for document in results:

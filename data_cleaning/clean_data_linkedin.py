@@ -105,7 +105,7 @@ for job in unique_data[:]:  # Iterate over a copy of the list to modify it while
         job['Posted_date'] = datetime.now().strftime('%Y-%m-%d')
         job['Source'] = 'linkedin'
         # Use the parse_job_data_llama function to extract years of experience
-        experience = parse_job_data_llama(job['experience'])
+        experience = parse_job_data_llama((job.get('experience') or "") + "_" + (job.get('job_description') or ""))
         count += 1
         job['yoe'] = list(experience) if experience[0]!="unknown" else [0,60]
         print(count, job['experience'], job['yoe'])

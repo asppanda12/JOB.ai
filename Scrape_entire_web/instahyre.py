@@ -13,7 +13,7 @@ def scrape_instahyre_jobs():
     
     try:
         # Navigate to the initial page
-        url = "https://www.instahyre.com/search-jobs?companies=Zeta,PhonePe,Zomato,Tiger+Analytics,Porter,Zepto,Shiprocket,PhysicsWallah,Purplle,Xpressbees,Darwinbox,Livspace.com,Yubi,Arcesium,Codenatives,NoBroker,Acko,ShareChat,upGrad,Urban+Company,BharatPe,CarDekho,Meesho,Upstox,slice,Cult+Fit,CoinDCX,Droom+Technology,BrowserStack,Instamojo,DailyHunt,Cars24,Razorpay,FirstCry,Nykaa,Postman,Zenoti,Ola+Electric+Mobility,Bigbasket.com,Lenskart.com,Dream11,CitiusTech,Swiggy,Flipkart,InMobi,Astroyogi,AstroTalk,MakeMyTrip,Highradius,Pine+Labs,Delhivery,Druva&company_size=0&isLandingPage=true&job_functions=%2Fapi%2Fv1%2Fjob_category%2F1,%2Fapi%2Fv1%2Fjob_function%2F10,%2Fapi%2Fv1%2Fjob_function%2F17,%2Fapi%2Fv1%2Fjob_function%2F60,%2Fapi%2Fv1%2Fjob_function%2F44,%2Fapi%2Fv1%2Fjob_function%2F39,%2Fapi%2Fv1%2Fjob_function%2F9,%2Fapi%2Fv1%2Fjob_category%2F8,%2Fapi%2Fv1%2Fjob_function%2F8,%2Fapi%2Fv1%2Fjob_function%2F5,%2Fapi%2Fv1%2Fjob_function%2F7,%2Fapi%2Fv1%2Fjob_function%2F1,%2Fapi%2Fv1%2Fjob_function%2F3&job_type=0&search=true"
+        url = "https://www.instahyre.com/search-jobs?companies=Zeta,PhonePe,Zomato,Tiger+Analytics,Porter,Zepto,Shiprocket,PhysicsWallah,Purplle,Xpressbees,Darwinbox,Livspace.com,Yubi,Arcesium,Codenatives&company_size=0&isLandingPage=true&job_functions=%2Fapi%2Fv1%2Fjob_category%2F1,%2Fapi%2Fv1%2Fjob_function%2F10,%2Fapi%2Fv1%2Fjob_function%2F17&job_type=0&offset=0&search=true"
         driver.get(url)
         time.sleep(5)
         

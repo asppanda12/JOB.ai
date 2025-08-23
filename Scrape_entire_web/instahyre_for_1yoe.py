@@ -13,7 +13,7 @@ def scrape_instahyre_jobs():
     
     try:
         # Navigate to the initial page
-        url = "https://www.instahyre.com/search-jobs?company_size=0&isLandingPage=true&job_functions=%2Fapi%2Fv1%2Fjob_category%2F1,%2Fapi%2Fv1%2Fjob_function%2F10,%2Fapi%2Fv1%2Fjob_function%2F3,%2Fapi%2Fv1%2Fjob_function%2F60,%2Fapi%2Fv1%2Fjob_function%2F1,%2Fapi%2Fv1%2Fjob_function%2F76,%2Fapi%2Fv1%2Fjob_function%2F9,%2Fapi%2Fv1%2Fjob_function%2F39,%2Fapi%2Fv1%2Fjob_category%2F8,%2Fapi%2Fv1%2Fjob_function%2F17,%2Fapi%2Fv1%2Fjob_function%2F30,%2Fapi%2Fv1%2Fjob_function%2F8&job_type=0&search=true&years=1"
+        url = "https://www.instahyre.com/search-jobs?company_size=0&isLandingPage=true&job_functions=%2Fapi%2Fv1%2Fjob_category%2F1,%2Fapi%2Fv1%2Fjob_function%2F10,%2Fapi%2Fv1%2Fjob_function%2F3&job_type=0&offset=0&search=true&years=1"
         driver.get(url)
         time.sleep(5)
         

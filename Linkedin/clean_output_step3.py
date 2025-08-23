@@ -2,7 +2,7 @@ import json
 import pandas as pd
 
 # Path to your JSON file
-file_path = r"E:\JOB.ai\JOB.ai\Linkedin\_Software Engineer_India_linkedin_jobs.json"
+file_path = r"E:\JOB.ai\JOB.ai\Linkedin\Cleaned_json_data\merged_data.json"
 
 # Reading the JSON file with UTF-8 encoding
 with open(file_path, "r", encoding="utf-8") as file:
@@ -12,7 +12,7 @@ with open(file_path, "r", encoding="utf-8") as file:
 df = pd.DataFrame(Job_data)
 
 # Drop duplicates based on 'title', 'company', and 'location' columns
-df_no_duplicates = df.drop_duplicates(subset=['title', 'company', 'location'], keep='first')
+df_no_duplicates = df.drop_duplicates(["title", "company", "description","location"], keep='first')
 
 # Count the rows for each column after removing duplicates
 print("Row count after removing duplicates:", df_no_duplicates.count())

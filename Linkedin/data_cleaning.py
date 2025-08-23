@@ -20,14 +20,14 @@ def read_json_file(file_path):
     return data
 
 # Example usage
-file_path = r'E:\JOB.ai\JOB.ai\Linkedin\_Software Engineer_India_linkedin_jobs.json'
+file_path = r'All_Companies_Software Engineer_India_linkedin_jobs.json'
 data = read_json_file(file_path)
 
 # Print the data (optional)
 json_response = replace_asterisks(data)
 print(len(json_response))
 # Specify the file path where you want to save the cleaned data
-file_path = "cleaned_data.json"
+file_path = "cleaned_data_sde.json"
 
 # Write the cleaned data to the specified JSON file
 try:

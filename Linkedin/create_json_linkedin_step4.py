@@ -12,7 +12,7 @@ import logging
 
 # API = os.getenv('GROQ_API_KEY')
 
-linkedin = r"E:\JOB.ai\JOB.ai\Linkedin\cleaned_data.json"
+linkedin = r"cleaned_data.json"
 logging.basicConfig(filename='job_data_processor.log', level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s')
 
