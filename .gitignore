@@ -72,3 +72,15 @@ venv/
 
 .Job_venv/
 *.tmp
+# Upgrade additions
+.cache/
+data/
+vector_store/bm25.pkl
+.venv/
+proxy.txt
+proxy_auth.zip
+*.pkl
+!vector_store/index.pkl
+
+# Compiled caches were committed by mistake
+__pycache__/

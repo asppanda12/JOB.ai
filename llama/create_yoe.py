@@ -1,67 +1,34 @@
-import ast
-from dotenv import load_dotenv
-import os
-from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI
+"""Experience-label parsing.
 
-# Load environment variables
-load_dotenv()
-API = os.getenv('HUGGINGFACE_TOKEN')
+This used to send one request per job to ``meta-llama/llama-3.1-8b-instruct``
+through OpenRouter - with the API key hard-coded in the source - purely to turn
+strings like ``"2+ years"`` or ``"SDE2"`` into a numeric range. That is a
+network round trip for something a regex settles, so it now calls
+:func:`jobai.normalize.experience.parse_experience`.
 
-def parse_job_data_llama(job_label):
-    """
-    Given a job experience label, return the experience range in months as a tuple.
+The function keeps its old name and tuple return so
+``data_cleaning/clean_data_linkedin.py`` is unaffected. Note the unit change:
+the old prompt asked for **months** and returned ``(24, 500)`` for "2+ years",
+while the rest of the pipeline (the FAISS ``yoe`` metadata, the Telegram
+filter) has always worked in **years**. This returns years, which is what every
+consumer actually expected.
+"""
 
-    Parameters:
-    - job_label (str): The experience label, e.g., "IC2"
+from __future__ import annotations
 
-    Returns:
-    - tuple: (start_month, end_month) or ("unknown", "unknown")
-    """
+from typing import Tuple, Union
 
-    # Prompt to ensure consistent tuple output
-    prompt_text = (
-        'You are given a job level or experience label (e.g., "IC2", "L4", "SDE2", "Junior", etc.).\n'
-        'Based only on this label and without making assumptions beyond what the label directly suggests, '
-        'return the estimated range of experience in months as a Python tuple: (start_month, end_month).\n'
-        'If the label is ambiguous or not clearly mapped to a duration, return ("unknown", "unknown").\n\n'
-        'Only return the tuple. Do not write code, explanations, or formatting.\n\n'
-        '1. Example: 2+ years development experience → (24, 500).\n'
-        '2. Example: 0-2 years development experience → (0, 24).\n'
-        '3. Example: 0-2+ years development experience → (0, 500).\n'
-        '4. Example: 5+ yrs experience → (60, 500).\n\n'
-        '5. Example: 2-3 years experience → (24, 36).\n\n'
+from jobai.normalize.experience import parse_experience
 
-        f'Input:\n"Experience": "{job_label}"\n\nOutput:'
-    )
 
-    # Setup LLM
-    llm = ChatOpenAI(
-        model="meta-llama/llama-3.1-8b-instruct",
-        openai_api_key="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",  # use env variable, not hardcoded
-        openai_api_base=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-    )
-
-    # Build prompt and chain
-    prompt_template = PromptTemplate.from_template("{prompt}")
-    chain = prompt_template | llm | StrOutputParser()
-
-    # Get model response
-    response = chain.invoke({"prompt": prompt_text})
-
-    # Parse the tuple safely
-    try:
-        result = ast.literal_eval(response.strip())
-        if isinstance(result, tuple) and len(result) == 2:
-            return result
-        else:
-            return ("unknown", "unknown")
-    except Exception:
+def parse_job_data_llama(job_label: str) -> Tuple[Union[float, str], Union[float, str]]:
+    """``"2-5 Yrs"`` -> ``(2.0, 5.0)``; unrecognised -> ``("unknown", "unknown")``."""
+    low, high = parse_experience(job_label)
+    if low is None:
         return ("unknown", "unknown")
+    return (low, high)
 
-# Test the function
+
 if __name__ == "__main__":
-    job_label = "5+ years"
-    parsed_result = parse_job_data_llama(job_label)
-    print(parsed_result)
+    for label in ["2+ years", "0-2 years", "5+ yrs", "SDE2", "Senior", "Not disclosed"]:
+        print(f"{label!r} -> {parse_job_data_llama(label)}")

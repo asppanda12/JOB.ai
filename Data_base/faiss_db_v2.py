@@ -1,159 +1,155 @@
+"""FAISS-backed job search.
+
+``JobSearchEngine`` keeps its original constructor and its ``query(chat_id)``
+entry point, because ``telegram_bot.py`` calls exactly that. What changed is
+what happens underneath: instead of a bare ``similarity_search`` followed by a
+years-of-experience filter, ``query`` now runs the full hybrid funnel
+
+    FAISS + BM25 + graph -> RRF -> metadata filters -> cross-encoder -> scoring
+
+via :mod:`jobai.recommend`, and writes the results to the same MongoDB
+collection in the same shape as before.
+
+The vector store itself is untouched: same path, same ``BAAI/bge-large-en-v1.5``
+embeddings, same ``IndexFlatL2`` at 1024 dimensions, same LangChain docstore
+format. The index committed to this repository loads as-is.
+"""
+
+from __future__ import annotations
+
 import json
+import logging
 import math
-from uuid import uuid4
-import json
-import os
-import shutil
-
-import sys
-sys.path.append('E:/JOB.ai/JOB.ai')  
-import faiss
 from datetime import datetime
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.docstore.in_memory import InMemoryDocstore
-from langchain_community.vectorstores import FAISS
-from langchain_core.documents import Document
-from dotenv import load_dotenv
-from Data_base.mongodb import create_a_job_database,create_a_database,create_a_job_database_specific_user
-load_dotenv()
-from pymongo import MongoClient
-uri = os.getenv("MONGO_DB_URI")
+from typing import Any, Dict, List, Optional
+from uuid import uuid4
+
+from jobai.config import get_settings
+from jobai.retrieval.dense import DenseIndex
+from jobai.retrieval.pipeline import RetrievalPipeline
+
+logger = logging.getLogger(__name__)
+
+
 class JobSearchEngine:
-    def __init__(self, json_data=None, embeddings_model="BAAI/bge-large-en-v1.5", vector_store_path=None):
-        self.embeddings = HuggingFaceEmbeddings(model_name=embeddings_model,encode_kwargs={"normalize_embeddings": True})
-        
+    """Backwards-compatible facade over the hybrid retrieval pipeline."""
 
-        if vector_store_path:
-            # Load the vector store from disk if a path is provided
-            self.vector_store = self._load_vector_store(vector_store_path)
-        else:
-            # Initialize a new vector store and populate it with job data
-            self.vector_store = self._initialize_vector_store()
-            if json_data:
-                self.job_data = self._load_and_preprocess_job_data(json_data)
-                self._populate_vector_store()
+    def __init__(
+        self,
+        json_data: Optional[List[Dict[str, Any]]] = None,
+        embeddings_model: Optional[str] = None,
+        vector_store_path: Optional[str] = None,
+    ):
+        settings = get_settings()
+        self.settings = settings
+        self.embeddings_model = embeddings_model or settings.retrieval.embedding_model
+        self.index = DenseIndex(path=vector_store_path or settings.retrieval.vector_db_path)
+        self._pipeline: Optional[RetrievalPipeline] = None
 
-    def _initialize_vector_store(self):
-        index = faiss.IndexFlatL2(len(self.embeddings.embed_query("hello world")))
-        return FAISS(
-            embedding_function=self.embeddings,
-            index=index,
-            docstore=InMemoryDocstore(),
-            index_to_docstore_id={},
-        )
+        if json_data:
+            self.job_data = self._load_and_preprocess_job_data(json_data)
+            self._populate_vector_store()
 
-    def _load_and_preprocess_job_data(self, job_data):
-        # with open(job_data_path, "r") as file:
-        #     job_data = json.load(file)
+    # ------------------------------------------------------------- legacy API
 
+    @property
+    def vector_store(self):
+        """The underlying LangChain FAISS store (unchanged format)."""
+        return self.index.store
+
+    @property
+    def pipeline(self) -> RetrievalPipeline:
+        if self._pipeline is None:
+            self._pipeline = RetrievalPipeline(dense=self.index)
+        return self._pipeline
+
+    @staticmethod
+    def _load_and_preprocess_job_data(job_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Normalize ``yoe`` into the ``"min,max"`` string the metadata uses."""
         for job in job_data:
-            yoe = job['yoe']
+            yoe = job.get("yoe")
             if yoe is None or (isinstance(yoe, float) and math.isnan(yoe)):
-                job['yoe'] = "0,60"
+                job["yoe"] = "0,60"
             elif isinstance(yoe, (list, tuple)) and len(yoe) == 2:
-                job['yoe'] = ",".join(map(str, yoe))
-
+                job["yoe"] = ",".join(map(str, yoe))
         return job_data
 
-    def _populate_vector_store(self):
-        documents = []
-        for data in self.job_data:
-            document = Document(
-                page_content=data['text'],
-                metadata=data,
-                id=data['id'],
-            )
-            documents.append(document)
+    def _populate_vector_store(self) -> None:
+        """Index raw job dicts.
 
-        uuids = [str(uuid4()) for _ in range(len(documents))]
-        self.vector_store.add_documents(documents=documents, ids=uuids)
-        print(f"Added {len(documents)} documents to the vector store.")
+        Prefer ``jobai.index_builder.index_jobs``: it is incremental, whereas
+        this path re-embeds everything it is given. Kept for compatibility with
+        the original bulk-load script.
+        """
+        from jobai.schema import Job
 
-    def save_vector_store(self, save_path):
-        """Save the FAISS vector store to disk."""
-        self.vector_store.save_local(save_path)
+        jobs = [Job.from_legacy(record) for record in self.job_data]
+        texts, metadatas, ids = [], [], []
+        for job in jobs:
+            job = job.finalize()
+            if not job.normalized_text.strip():
+                continue
+            texts.append(job.normalized_text)
+            metadatas.append(job.to_legacy_metadata())
+            ids.append(job.job_id or str(uuid4()))
+        self.index.add(texts, metadatas, ids)
+        logger.info("Added %d documents to the vector store.", len(texts))
 
-    def _load_vector_store(self, load_path):
-        """Load the FAISS vector store from disk."""
-        return FAISS.load_local(load_path, self.embeddings, allow_dangerous_deserialization=True)
+    def save_vector_store(self, save_path: Optional[str] = None) -> None:
+        if save_path:
+            self.index.path = type(self.index.path)(save_path)
+        self.index.save()
+
+    def query(self, chat_id: Any, k: Optional[int] = None) -> List[Dict[str, Any]]:
+        """Recommend jobs for a registered user and persist them.
+
+        Same signature and same side effect as before - the results land in
+        ``USER_1.Job_specific`` under ``job_recommendation`` - but the ranking
+        now comes from the full hybrid funnel rather than raw vector distance.
+
+        The old implementation also crashed on ``filtered_results[0]`` whenever
+        a user had no matches; this returns an empty list instead.
+        """
+        from jobai.recommend import recommend_for_user
+
+        top_k = k or self.settings.retrieval.rerank_k
+        outcome = recommend_for_user(chat_id, top_k=top_k, explain=False, persist=True)
+        jobs = outcome["jobs"]
+        logger.info("Found %d results for chat_id %s", len(jobs), chat_id)
+        return jobs
+
+    # -------------------------------------------------------------- utilities
+
+    def save_results_to_json(self, results: List[Dict[str, Any]], output_path: str) -> None:
+        with open(output_path, "w", encoding="utf-8") as handle:
+            json.dump(results, handle, indent=4, default=json_serializable)
+
+    def save_results_to_mongo_db(self, chat_id: Any, results: List[Dict[str, Any]]) -> None:
+        from jobai.store import get_store
+
+        get_store().save_recommendations(chat_id, results)
+
+    def delete_results_for_chat_id(self, data_base, chat_id: Any) -> None:
+        result = data_base.delete_many({"chat_id": int(chat_id)})
+        logger.info("Deleted %d documents for chat_id %s", result.deleted_count, chat_id)
 
 
-    def query(self, chat_id, k=500):
-        data_base=create_a_database(os.getenv('MONGO_DB_URI'))
-        document = data_base.find_one({'chat_id': chat_id})
-        resume_data=document['resume_json']
-        yoe_mera=document['years_of_experience']
-        query_data = (" ").join(resume_data['area_of_expertise']) + " " + (" ").join(resume_data['Skills']) + " " + "Hyderabad"
-        results = self.vector_store.similarity_search(query=query_data, k=k)
-        filtered_results = []
-        for document in results:
-            metadata = document.metadata
-            yoe = metadata.get("yoe", None)
-            if yoe:
-                try:
-                    yoe_min, yoe_max = map(float, yoe.split(","))
-                    if yoe_min <= yoe_mera <= yoe_max:
-                        filtered_results.append({
-                            "page_content": document.page_content,
-                            "metadata": document.metadata,
-                        })
-                except ValueError:
-                    print("Error in parsing 'yoe' value")
-        print(f"Found {len(filtered_results)} results for chat_id: {chat_id}")
-        print(f"Saving results for chat_id: {filtered_results[0]}")
-        self.save_results_to_mongo_db(chat_id,filtered_results)
-        print(f"All datas are inserted for {chat_id}")
-    def delete_results_for_chat_id(self,data_base,chat_id):
-        result = data_base.delete_many({"chat_id": chat_id})  # Delete all matching documents
-        print(f"Deleted {result.deleted_count} documents for chat_id: {chat_id}")
-    def save_results_to_json(self, results, output_path):
-        with open(output_path, "w") as json_file:
-            json.dump(results, json_file, indent=4)
-    
-    def save_results_to_mongo_db(self, chat_id, results):
-        data_base = create_a_job_database_specific_user(os.getenv('MONGO_DB_URI'))
-        self.delete_results_for_chat_id(data_base,chat_id)
-        document = {
-            "chat_id": chat_id,
-            "job_recommendation": results
-        }
-
-        data_base.insert_one(document)  
 def json_serializable(obj):
     if isinstance(obj, datetime):
-        return obj.isoformat()  # Convert datetime to ISO 8601 format string
+        return obj.isoformat()
     raise TypeError(f"Type {type(obj)} not serializable")
 
-# Example usage
+
 if __name__ == "__main__":
-    db=create_a_job_database(uri)
-    data = list(db.find({}, {"_id": 0}))
-    json_data = data
-    
-    print(len(json_data))
-    print("going to search for vector")
-    # job_data_path = r"E:\JOB.ai\JOB.ai\combined_single_data\concatenated_jobs.json"
-    # resume_data_path = r"E:\JOB.ai\JOB.ai\resume_cold_mail\Ruddhis_job.json"
-    vector_store_path = r"E:\JOB.ai\JOB.ai\vector_store"  # Directory to save/load the vector store
-    # if os.path.exists(vector_store_path):
-    #     shutil.rmtree(vector_store_path)  # Delete the directory and all its contents
-    #     print(f"Deleted directory: {vector_store_path}")
-    # else:
-    #     print("Directory does not exist.")
-    # if os.path.exists(vector_store_path) and os.path.isdir(vector_store_path):
-    #     print("Vector store path exists. Proceeding with initialization.")
-    #     search_engine = JobSearchEngine(json_data=json_data, vector_store_path=vector_store_path)
-    # else:
-    #     print("Vector store path does not exist. Handle accordingly.")
-    #     # You can create it if needed:
-        
-    #     search_engine = JobSearchEngine(json_data=json_data)
-    # # # Initialize the search engine
+    # Prefer the CLI: `python -m jobai recommend --chat-id <id>`
+    import sys
 
-    # # # Save the vector store to disk (only needed once)
-    # search_engine.save_vector_store(vector_store_path)
-
-    # # Load the vector store from disk (for subsequent runs)
-    search_engine = JobSearchEngine(vector_store_path=vector_store_path)
-    results = search_engine.query(7748640302)
-    search_engine.save_results_to_json(results, "search_results_sameer.json")
+    logging.basicConfig(level=logging.INFO)
+    if len(sys.argv) < 2:
+        print(__doc__)
+        print("\nUsage: python -m Data_base.faiss_db_v2 <chat_id>")
+        raise SystemExit(2)
+    engine = JobSearchEngine()
+    for job in engine.query(sys.argv[1]):
+        metadata = job.get("metadata", {})
+        print(f"[{job.get('match_score'):.3f}] {metadata.get('job_title')} @ {metadata.get('company_name')}")

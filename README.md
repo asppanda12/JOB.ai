@@ -1,173 +1,297 @@
 # JOB.ai
 
-## Overview
+Local-first job discovery: multi-source ingestion, hybrid retrieval
+(dense + lexical + graph), cross-encoder reranking, and personalised
+recommendations reasoned about by a local Qwen 7B through Ollama.
 
-JOB.ai is an automated job aggregation and recommendation platform designed to streamline the job search and application process. It scrapes job listings from multiple sources, cleans and merges the data, builds a semantic vector database for efficient search, and interacts with users via a Telegram bot to deliver personalized job recommendations and application support.
-
----
-
-https://github.com/user-attachments/assets/2710f98f-7da0-4ffd-a5e9-6dcf949f2810
-
-
-
-## Architecture & Workflow
-
-The JOB.ai system is modular and highly automated. Below is a detailed breakdown of each stage in the workflow:
-
-### 1. Scraping Job Data (Parallel Execution)
-
-**Sources:**
-- **Linkedin**
-- **Cuvete**
-- **Naukri**
-- **Instahyre & Entire Web**
-
-
-
-
-**Process:**
-- Each source has its own scraping script (`start_scrapping.py`) that collects raw job data.
-- The raw data is converted to JSON format for consistency (`create_json_*.py`).
-- Data cleaning scripts (`data_cleaning/cleaned_data_*.py`) standardize and sanitize the job listings, removing duplicates and formatting fields.
-
-**Parallelization:**  
-All scrapers can be run simultaneously to maximize throughput and minimize latency.
+No external LLM API keys. Nothing leaves your machine except the job scraping
+itself.
 
 ---
 
-### 2. Data Combination
+## Architecture
 
-- The cleaned datasets from all sources are merged using `combined_single_data/master_data.py`.
-- This step ensures a unified schema and removes any remaining duplicates.
-- The master data file imports and utilizes helper scripts for efficient merging and transformation.
+```
+                         JOB SOURCES
+                              │
+             ┌────────────────┼────────────────┐
+             ↓                ↓                ↓
+         LinkedIn          Naukri       Cuvette / Instahyre / …
+             │                │                │
+             └────────────────┼────────────────┘
+                              ↓
+                   Common Job Schema  (jobai/schema.py)
+                              ↓
+              Normalize + Deduplicate  (jobai/normalize, jobai/dedup.py)
+                              ↓
+                   ┌──────────┴──────────┐
+                   ↓                     ↓
+               MongoDB                Indexing
+            (structured store)            │
+                            ┌─────────────┼─────────────┐
+                            ↓             ↓             ↓
+                         FAISS          BM25          Graph
+                        (dense)      (lexical)    (skills/roles)
+                            └─────────────┼─────────────┘
+                                          ↓
+                            Reciprocal Rank Fusion  +  metadata filters
+                                          ↓
+                                    Top 50–100
+                                          ↓
+                             Cross-encoder reranker
+                                          ↓
+                                    Top 10–20
+                                          ↓
+                          Transparent scoring (signals + weights)
+                                          ↓
+                                     Qwen 7B
+                             (explains; never re-ranks)
+                                          ↓
+                            Personalised recommendations
+                                          ↓
+                                     Telegram
+```
+
+### Why each stage exists
+
+| Stage | Why it is there |
+|---|---|
+| **FAISS** (dense) | Semantic recall: finds "LLM inference optimisation" for a query about "GenAI engineering". Blurry on exact tokens. |
+| **BM25** (lexical) | Exact tokens: `PyTorch`, `LangGraph`, `C++`, `Kafka`. A dense vector cannot reliably separate LangChain from LangGraph; BM25 can. |
+| **Graph** | Relational questions embeddings cannot answer: which jobs need skills *related* to mine, what am I missing, which companies keep hiring my stack. |
+| **Metadata filters** | Hard constraints: location, experience band, salary, recency, source. Applied after fusion, and relaxed rather than returning an empty list. |
+| **RRF** | The three retrievers produce incomparable numbers (cosine in `[0,1]`, unbounded Okapi, an overlap ratio). RRF fuses their *orderings*, which are comparable. |
+| **Reranker** | A cross-encoder reads query and job *together* and is far more accurate than any first-stage scorer — but costs a forward pass each, so it only sees the ~80 survivors. |
+| **Qwen 7B** | High-level reasoning **last**, on 10–20 jobs: why this fits, what is missing, how to prepare. It never sees 1,000 jobs and never decides the ranking. |
 
 ---
 
-### 3. Semantic Vector Database
+## Local setup
 
-- The merged dataset is indexed using FAISS (`Data_base/faiss_db_v2.py`), a high-performance vector database.
-- This enables fast, semantic search and matching of jobs to user profiles and queries.
+### 1. Python
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 2. Ollama + Qwen 7B (required)
+
+```bash
+# macOS:  brew install ollama       (or download from https://ollama.com)
+# Linux:  curl -fsSL https://ollama.com/install.sh | sh
+ollama serve &
+ollama pull qwen2.5:7b
+```
+
+Use a different model by setting `OLLAMA_MODEL`; nothing is hard-coded.
+
+### 3. MongoDB (required)
+
+```bash
+# macOS
+brew tap mongodb/brew && brew install mongodb-community
+brew services start mongodb-community
+
+# Docker
+docker run -d --name jobai-mongo -p 27017:27017 mongo:7
+```
+
+### 4. Neo4j (optional)
+
+Graph retrieval works without it — an equivalent in-process graph is built from
+the job store automatically. Neo4j simply makes it persistent and queryable.
+
+```bash
+docker run -d --name jobai-neo4j \
+  -p 7474:7474 -p 7687:7687 \
+  -e NEO4J_AUTH=neo4j/jobai-local-password \
+  neo4j:5
+
+# then in .env:
+#   GRAPH_DB_URI=bolt://localhost:7687
+#   GRAPH_DB_USER=neo4j
+#   GRAPH_DB_PASSWORD=jobai-local-password
+```
+
+### 5. Configure
+
+```bash
+cp .env.example .env    # every value has a working default
+```
+
+### 6. Verify
+
+```bash
+python -m jobai doctor
+```
+
+Reports Ollama, MongoDB, FAISS, the reranker and the graph, with an actionable
+hint for anything that is not ready.
 
 ---
 
-### 4. Telegram Bot Interaction
+## Usage
 
-- The Telegram bot (`telegram_bot/telegram_bot.py`) is the user-facing component.
-- **Registration:** Users provide their name, phone, email, years of experience, and upload their CV (PDF).
-- **Job Recommendations:** The bot sends jobs in batches, with a "Send More Jobs" button for pagination.
-- **Application Support:** For each job, users can request:
-  - Referral mail
-  - Cover letter
-  - Cold email template
-- **Data Storage:** All user data and job recommendations are stored in MongoDB for persistence and analytics.
+```bash
+# Ingest: scrape → normalize → dedup → MongoDB → FAISS → BM25 → graph
+python -m jobai ingest --sources linkedin naukri --limit 100
 
----
+# Normalize data you already have, without re-scraping
+python -m jobai migrate --source faiss     # from the committed FAISS index
+python -m jobai migrate --source mongo     # from USER_1.JOB_Data
 
-## Workflow Diagram
+# Rebuild BM25 + the graph from FAISS
+python -m jobai reindex
 
-```mermaid
-flowchart TD
-    subgraph Scraping
-        A1[Linkedin/start_scrapping.py]
-        A2[Linkedin/create_json_linkedin.py]
-        A3[data_cleaning/cleaned_data_linkedin.py]
+# Ad-hoc hybrid search
+python -m jobai search "GenAI Engineer" \
+  --skills Python PyTorch LangChain --locations Bengaluru --experience 2 --explain
 
-        B1[cuvete/start_scrapping.py]
-        B2[cuvete/create_json_cuvete.py]
-        B3[data_cleaning/cleaned_data_cuvete.py]
+# Recommend for a registered Telegram user
+python -m jobai recommend --chat-id 7748640302 --explain
 
-        C1[naukri/start_scrapping.py]
-        C2[naukri/create_json_naukri.py]
-        C3[data_cleaning/cleaned_data_naukri.py]
+# Run the bot
+python -m telegram_bot.telegram_bot
+```
 
-        D1[Scrape_entire_web/instahyre_1yoe.py]
-        D2[Scrape_entire_web/Instahyre_for_fresher.py]
-        D3[Scrape_entire_web/instahyre.py]
-        D4[data_cleaning/cleaned_data_for_instahyre.py]
-    end
+Per-source entry points still work and now take arguments instead of
+hard-coded paths:
 
-    subgraph Data Combination
-        E1[combined_single_data/master_data.py]
-    end
-
-    subgraph Vector DB
-        F1[Data_base/faiss_db_v2.py]
-    end
-
-    subgraph Telegram Bot
-        G1[telegram_bot/telegram_bot.py]
-        G2[User Registration]
-        G3[Job Recommendation]
-        G4[Referral/CL/Cold Email Generation]
-    end
-
-    %% Scraping flows
-    A1 --> A2 --> A3 --> E1
-    B1 --> B2 --> B3 --> E1
-    C1 --> C2 --> C3 --> E1
-    D1 --> D4 --> E1
-    D2 --> D4 --> E1
-    D3 --> D4 --> E1
-
-    %% Data Combination to Vector DB
-    E1 --> F1
-
-    %% Vector DB to Telegram Bot
-    F1 --> G1
-
-    %% Telegram Bot workflow
-    G1 --> G2
-    G2 --> G3
-    G3 --> G4
+```bash
+python -m Linkedin.start_scrapping --keywords "GenAI Engineer" --locations India --limit 50 --index
+python -m naukri.start_scrapping   --keywords "data scientist" --locations bangalore --limit 50
+python -m combined_single_data.master_data
 ```
 
 ---
 
-## Telegram Bot Features
+## Telegram bot
 
-- **User Registration:** Collects user details and CV for personalized recommendations.
-- **Job Recommendations:** Sends jobs in batches, supports pagination.
-- **Application Support:** Generates referral mails, cover letters, and cold emails tailored to each job.
-- **Persistence:** All user interactions and recommendations are stored in MongoDB.
+| Command | Does |
+|---|---|
+| `/start` | Register: name, phone, email, years of experience, CV (PDF) |
+| `/update` | Personalised recommendations, 10 per page, "Send More Jobs" |
+| `/search <role>` | Search a specific role through the same funnel |
+| `/gaps` | Skill-gap analysis across your recommendations |
+| `/help` | Command list |
 
----
-
-## Setup Instructions
-
-1. **Clone the repository** and navigate to the project directory.
-2. **Install dependencies**:
-    ```sh
-    pip install -r requirements.txt
-    ```
-3. **Set up environment variables** in `.env`:
-    ```
-    TOKEN=your_telegram_bot_token
-    MONGO_DB_URI=your_mongodb_uri
-    ```
-4. **Run the workflow steps** as described above.
+Each job carries **Referral**, **Cover Letter** and **Cold Email** buttons, plus
+a match score, the reasons it matched, and the skills you are missing.
 
 ---
 
-## File Structure
+## Testing
 
-- `Linkedin/`, `cuvete/`, `naukri/`, `Scrape_entire_web/`: Scrapers and raw data.
-- `data_cleaning/`: Data cleaning scripts.
-- `combined_single_data/`: Data merging scripts.
-- `Data_base/`: Database and vector store scripts.
-- `telegram_bot/`: Telegram bot source code.
-- `resume_cold_mail/`: Resume parsing and mail generation.
+```bash
+# Fast: unit tests only, no services needed
+pytest -m "not integration"
+
+# Full suite (needs Ollama + MongoDB + the FAISS index; skips what is absent)
+pytest
+
+# Targeted
+pytest tests/test_schema.py tests/test_normalize.py tests/test_dedup.py -q  # data layer
+pytest tests/test_retrieval.py -q                                          # BM25, graph, RRF, filters, scoring
+pytest tests/test_index_builder.py -q                                      # incremental indexing
+pytest tests/test_llm.py -q                                                # Ollama + "no external provider" guard
+pytest tests/test_ingest.py -q                                             # failure isolation, malformed input
+pytest tests/test_pipeline_e2e.py -q                                       # resume → retrieval → rerank → Qwen
+pytest -m network -q                                                       # live LinkedIn / Naukri scraping
+```
+
+Manual checks:
+
+```bash
+python -m jobai doctor                                    # Ollama, Mongo, FAISS, reranker, graph
+python -m Linkedin.start_scrapping --limit 3 -v           # LinkedIn live
+python -m naukri.start_scrapping --limit 3 -v             # Naukri live
+python -m jobai search "GenAI Engineer" --skills Python PyTorch   # retrieval + rerank
+python -m jobai ingest --sources linkedin --limit 5       # full ingestion
+```
 
 ---
 
-## Notes
+## Configuration
 
-- Ensure MongoDB is running and accessible.
-- The Telegram bot requires a valid bot token.
-- All scripts should be run in the specified order for correct data flow.
-- For production, consider using process managers (e.g., supervisord, systemd) and Docker for deployment.
+Everything lives in `.env` — see `.env.example` for the annotated list. The
+settings worth knowing:
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `OLLAMA_MODEL` | `qwen2.5:7b` | The one LLM, used by every feature |
+| `EMBEDDING_MODEL` | `BAAI/bge-large-en-v1.5` | **Do not change** without re-indexing: the committed FAISS vectors are 1024-d from this model |
+| `RERANKER_MODEL` | `cross-encoder/ms-marco-MiniLM-L-6-v2` | Second-stage cross-encoder |
+| `FUSION_K` / `RERANK_K` | `80` / `20` | The "top 50–100" and "top 10–20" funnel widths |
+| `WEIGHT_*` | see `.env.example` | Scoring weights; no magic numbers in code |
+| `FRESHNESS_HALF_LIFE_DAYS` | `21` | Recency decay. Old jobs are down-weighted, never deleted |
+| `GRAPH_ENABLED` | `1` | Graph arm; falls back in-process when Neo4j is absent |
 
 ---
 
-## License
+## Failure isolation
 
-See [LICENSE](LICENSE) for details.
+| If this fails | What still works |
+|---|---|
+| LinkedIn | Naukri and every other source ingest normally |
+| Naukri | LinkedIn and every other source ingest normally |
+| Neo4j | FAISS + BM25 + metadata retrieval, via the in-process graph |
+| Cross-encoder | The fused RRF ordering is used as-is |
+| Ollama | Retrieval, ranking and scoring all work; you get a clear, actionable error instead of reasoning |
+| MongoDB | Ingestion still updates the vector index |
+
+---
+
+## Migrating existing data
+
+Nothing is destructive, and no re-scrape is required.
+
+* **FAISS** — the committed `vector_store/` (3,298 vectors, `IndexFlatL2`, 1024-d)
+  loads unchanged. Same path, same embeddings, same LangChain docstore format.
+* **MongoDB** — the same databases and collections (`USER.JOB_USER`,
+  `USER_1.JOB_Data`, `USER_1.Job_specific`). Jobs are now **upserted** by
+  `job_id` rather than the collection being wiped on every run.
+* **Job metadata** — every legacy key (`job_title`, `company_name`, `job_link`,
+  `yoe`, `job_indx`, …) is still written, so pre-upgrade readers keep working.
+  Canonical fields (`job_id`, `skills_list`, `required_skills`,
+  `experience_min/max`, `content_hash`, `sources`) ride alongside.
+* **Registered users** — old `resume_json` profiles are read through a
+  compatibility path, so existing users need not re-upload a CV.
+
+To normalize existing rows into the canonical schema in place:
+
+```bash
+python -m jobai migrate --source faiss    # or --source mongo
+```
+
+This re-reads what is stored, normalizes and deduplicates it, upserts it, and
+re-embeds **only** the jobs whose content actually changed.
+
+---
+
+## Repository layout
+
+```
+jobai/                  the shared backend every interface calls
+  config.py             all configuration, read from the environment
+  schema.py             the canonical Job + legacy adapters
+  dedup.py              five-level deduplication
+  profile.py            structured user profiles, cached by resume hash
+  scoring.py            transparent match signals and weights
+  index_builder.py      incremental indexing
+  recommend.py          the recommendation service
+  cli.py                python -m jobai …
+  normalize/            skills, experience, canonical text
+  llm/                  the one Ollama client, prompts, and every LLM task
+  retrieval/            dense, lexical, graph, filters, fusion, rerank, pipeline
+  ingest/               source contract, browser plumbing, LinkedIn, Naukri, legacy
+  store/                MongoDB adapter
+
+Data_base/              legacy facades, now delegating to jobai/
+resume_cold_mail/       resume parsing and email generation (on Ollama)
+telegram_bot/           the bot
+Linkedin/ naukri/ cuvete/ wellfound/ Scrape_entire_web/   per-source entry points
+data_cleaning/ combined_single_data/                      cleaning and merge scripts
+tests/                  unit + integration suites
+vector_store/           the FAISS index (committed)
+```

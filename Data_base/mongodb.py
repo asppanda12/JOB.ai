@@ -1,42 +1,36 @@
+"""MongoDB access helpers.
 
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+The three factory functions below are the original public API and keep their
+exact names, signatures and return values (a ``pymongo`` collection), so every
+existing caller works unchanged. They now delegate to
+:class:`jobai.store.JobStore` so the whole application shares one connection
+pool instead of opening a new :class:`MongoClient` on every call.
+
+Two fixes came with the move:
+
+* ``tls=True`` is no longer forced on every connection. It is required by Atlas
+  but breaks a plain local ``mongod``, so it is now inferred from the URI.
+* failures raise instead of printing and returning ``None``; the old behaviour
+  turned an unreachable database into an ``AttributeError`` several frames later.
+"""
+
+from __future__ import annotations
+
+from typing import Optional
+
+from jobai.store import get_store
 
 
+def create_a_database(str_uri: Optional[str] = None):
+    """The user collection (``USER.JOB_USER``)."""
+    return get_store(str_uri).users
 
-def create_a_database(str_uri):
-    uri = str_uri
-    client = MongoClient(uri, server_api=ServerApi('1'))
-    try:
-        client.admin.command('ping')
-        print("Pinged your deployment. You successfully connected to MongoDB!")
-        db=client['USER']
-        table=db['JOB_USER']
-        return table
-    except Exception as e:
-        print(e)
-    
-def create_a_job_database(str_uri):
-    uri = str_uri
-    client = MongoClient(uri, server_api=ServerApi('1'),tls=True)
-    try:
-        client.admin.command('ping')
-        print("Pinged your deployment. You successfully connected to MongoDB!")
-        db=client['USER_1']
-        table=db['JOB_Data']
-        return table
-    except Exception as e:
-        print(e)
-def create_a_job_database_specific_user(str_uri):
-    uri = str_uri
-    client = MongoClient(uri, server_api=ServerApi('1'),tls=True)
-    try:
-        client.admin.command('ping')
-        print("Pinged your deployment. You successfully connected to MongoDB!")
-        db=client['USER_1']
-        table=db['Job_specific']
-        print("Database and collection created successfully.")
-        return table
-    except Exception as e:
-        print(e)
-# create_a_job_database_specific_user = create_a_job_database_specific_user('mongodb+srv://sameerpandausa:5MC349oicChL7zXN@cluster0.ggine.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true')
+
+def create_a_job_database(str_uri: Optional[str] = None):
+    """The canonical job collection (``USER_1.JOB_Data``)."""
+    return get_store(str_uri).jobs
+
+
+def create_a_job_database_specific_user(str_uri: Optional[str] = None):
+    """Per-user recommendations (``USER_1.Job_specific``)."""
+    return get_store(str_uri).recommendations

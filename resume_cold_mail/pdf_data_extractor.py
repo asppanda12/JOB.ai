@@ -1,112 +1,71 @@
-# ... existing imports ...
-import fitz  # PyMuPDF
-import sys
-sys.path.append('E:/JOB.ai/JOB.ai')  # Use forward slashes for path
-from genrativeai.response_llama import parse_job_data_llama, parse_job_data_gemini  # Note: genrative not generative
-import json
-from langchain_core.prompts import PromptTemplate
-from langchain_groq import ChatGroq
-from langchain_core.output_parsers import JsonOutputParser
-import json
-from dotenv import load_dotenv
-import os
-import pandas as pd  # Import pandas for Excel file creation
+"""Resume PDF -> structured profile.
 
-load_dotenv()
-API = os.getenv('GROQ_API_KEY')
+``extract_pdf_text(path)`` keeps its original name and return value (the parsed
+profile dict) because ``telegram_bot.py`` stores the result as ``resume_json``.
+
+Three things changed underneath:
+
+* the Groq ``llama-3.3-70b-versatile`` call is gone; parsing runs on local
+  Ollama through :mod:`jobai.llm`, so no external API key is needed;
+* the result is cached by a hash of the resume text, so re-registering or
+  re-running does not re-parse the same document;
+* it no longer writes every user's profile over a shared ``Ruddhis_job.json``
+  in the working directory.
+
+The returned dict is a superset of the old shape: the legacy ``Skills`` and
+``area_of_expertise`` keys are still present for existing consumers, alongside
+the richer canonical profile.
+"""
+
+from __future__ import annotations
+
+import logging
+from typing import Any, Dict
+
+from jobai.profile import build_profile, extract_pdf_text as _extract_text
+
+logger = logging.getLogger(__name__)
 
 
-def entity_search(job,API):
-    prompt = (
-    "Extract and format the following resume information into a JSON object with strict adherence to this schema:\n\n"
-    "{\n"
-    '    "area_of_expertise": [list of technical specializations],\n'
-    '    "Name": "Full Name",\n'
-    '    "Phone_number": "phone string with country code",\n'
-    '    "Skills": [list of technical skills/tools],\n'
-    '    "professional_experience": [\n'
-    '        {\n'
-    '            "company": "Company Name",\n'
-    '            "position": "Job Title",\n'
-    '            "duration": "MM/YYYY - MM/YYYY or present",\n'
-    '            "achievements": [list of bullet points],\n'
-    '            "technologies": [list of technologies used]\n'
-    '        }\n'
-    '    ],\n'
-    '    "Achievements": [list of career/academic achievements],\n'
-    '    "Education": [\n'
-    '        {\n'
-    '            "institution": "School Name",\n'
-    '            "degree": "Degree Name",\n'
-    '            "duration": "MM/YYYY - MM/YYYY",\n'
-    '            "cgpa/percentage": "score"\n'
-    '        }\n'
-    '    ],\n'
-    '    "Years_of_experience": total_years\n'
-    "}\n\n"
-    "Follow these rules strictly:\n"
-    "1. Maintain exact field names and JSON structure\n"
-    "2. Convert durations to years by calculating full months worked/12\n"
-    "3. For education dates without month, use format 'Mar YYYY'\n"
-    "4. Keep skill/technology lists lowercase unless proper nouns\n"
-    "5. Include all numerical values as strings\n"
-    "6. Preserve original achievement bullet points verbatim\n"
-    "7. Format phone numbers with country code\n"
-    "8. Omit null/empty fields\n\n"
-    "Input resume text:\n"
-    f"{job}\n\n"
-    "Return ONLY the JSON object with no additional text or formatting. "
-    "If any information is missing, omit the field or use 'N/A'."
-)
+def extract_text(pdf_path: str) -> str:
+    """Raw text of a PDF resume."""
+    return _extract_text(pdf_path)
 
-    # Create a prompt template
-    prompt_template = PromptTemplate.from_template("{prompt}")
 
-    # Initialize the LLM with the provided API key
-    llm = ChatGroq(
-        model_name="llama-3.3-70b-versatile",
-        temperature=0,
-        groq_api_key=API
-    )
+def entity_search(resume_text: str, api_key: Any = None) -> Dict[str, Any]:
+    """Resume text -> structured profile.
 
-    # Chain the prompt and LLM
-    chat = prompt_template | llm
+    ``api_key`` is accepted and ignored so old call sites keep working; the
+    local model needs no key.
+    """
+    if api_key:
+        logger.debug("Ignoring the api_key argument: JOB.ai runs on local Ollama.")
+    return _with_legacy_keys(build_profile(resume_text))
 
-    # Invoke the chat model with the formatted prompt
-    response = chat.invoke({"prompt": prompt})
 
-    # Parse the response content as JSON using JsonOutputParser
-    json_parser = JsonOutputParser()
-    parsed_response = json_parser.parse(response.content)
-    return parsed_response
-# New function to extract text from PDF using PyMuPDF
-def extract_pdf_text(pdf_path):
-    
-    try:
-        doc = fitz.open(pdf_path)
-        text = ""
-        for page in doc:
-            text += page.get_text()
-        doc.close()
-        if not text:
-            raise ValueError("No text extracted from the PDF.")
-        
-    except FileNotFoundError as e:
-        print("File not found:", e)
-    except ValueError as ve:
-        print("Value error:", ve)
-    except Exception as e:
-        print("An error occurred:", e)
+def extract_pdf_text(pdf_path: str) -> Dict[str, Any]:
+    """Read a resume PDF and return its structured profile (cached)."""
+    return _with_legacy_keys(build_profile(_extract_text(pdf_path)))
 
-    # Example usage
-    print(text)
-    ans=entity_search(text,API)
-    output_file = "Ruddhis_job.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(ans, f, indent=4, ensure_ascii=False)
-    return ans
+
+def _with_legacy_keys(profile: Dict[str, Any]) -> Dict[str, Any]:
+    """Add the old key spellings so pre-upgrade consumers keep working."""
+    enriched = dict(profile)
+    enriched.setdefault("Skills", profile.get("skills", []))
+    enriched.setdefault("area_of_expertise", profile.get("target_roles", []))
+    enriched.setdefault("Years_of_experience", profile.get("years_experience", 0))
+    enriched.setdefault("Name", profile.get("name"))
+    enriched.setdefault("Phone_number", profile.get("phone"))
+    enriched.setdefault("Education", profile.get("education", []))
+    enriched.setdefault("professional_experience", profile.get("experience", []))
+    return enriched
+
 
 if __name__ == "__main__":
-    pdf_path = r'E:\JOB.ai\JOB.ai\job_resume\ruddhi_7748640302.pdf'
-    pdf_text_1 = extract_pdf_text(pdf_path)
-    # print(pdf_text_1)
+    import json
+    import sys
+
+    if len(sys.argv) < 2:
+        print("Usage: python -m resume_cold_mail.pdf_data_extractor <resume.pdf>")
+        raise SystemExit(2)
+    print(json.dumps(extract_pdf_text(sys.argv[1]), indent=2, ensure_ascii=False))
