@@ -21,29 +21,82 @@ from jobai.schema import Job
 logger = logging.getLogger(__name__)
 
 
-def build_sources(names: Optional[Sequence[str]] = None) -> List[JobSource]:
-    """Construct the requested sources. Unknown names are reported, not fatal."""
-    from jobai.ingest.legacy import FaissArchiveSource, LegacyMongoSource, legacy_sources
+# Named groups, so a run can say "every ATS board" without listing six names.
+SOURCE_GROUPS: Dict[str, List[str]] = {
+    # Company career pages behind an applicant-tracking system. First-party
+    # data, structurally complete, stable ids - the highest-signal sources.
+    "ats": ["greenhouse", "lever", "ashby", "smartrecruiters", "workable", "recruitee"],
+    # Cross-company aggregator feeds. Broad and remote-heavy.
+    "boards": ["remoteok", "remotive", "arbeitnow", "himalayas", "jobicy", "weworkremotely"],
+    # The two DOM-scraped job portals.
+    "portals": ["linkedin", "naukri"],
+    # Everything that needs no browser: fast, and safe to run on a schedule.
+    "fast": [
+        "linkedin",
+        "greenhouse", "lever", "ashby", "smartrecruiters", "workable", "recruitee",
+        "remoteok", "remotive", "arbeitnow", "himalayas", "jobicy", "weworkremotely",
+    ],
+    "archive": ["mongo_archive", "faiss_archive"],
+}
+SOURCE_GROUPS["all"] = SOURCE_GROUPS["portals"] + SOURCE_GROUPS["ats"] + SOURCE_GROUPS["boards"]
+
+
+def available_sources() -> List[str]:
+    """Every source name that can be requested, sorted."""
+    return sorted(_builders())
+
+
+def _builders() -> Dict[str, Any]:
+    from jobai.ingest.ats import ATS_SOURCES
+    from jobai.ingest.boards import BOARD_SOURCES
+    from jobai.ingest.legacy import FaissArchiveSource, LegacyMongoSource
     from jobai.ingest.linkedin import LinkedInSource
     from jobai.ingest.naukri import NaukriSource
 
-    builders = {
+    builders: Dict[str, Any] = {
         "linkedin": LinkedInSource,
         "naukri": NaukriSource,
         "mongo_archive": LegacyMongoSource,
         "faiss_archive": FaissArchiveSource,
     }
+    builders.update(ATS_SOURCES)
+    builders.update(BOARD_SOURCES)
+    return builders
+
+
+def expand_groups(names: Sequence[str]) -> List[str]:
+    """Replace any group name with its members, preserving order and de-duping."""
+    expanded: List[str] = []
+    for name in names:
+        for resolved in SOURCE_GROUPS.get(name, [name]):
+            if resolved not in expanded:
+                expanded.append(resolved)
+    return expanded
+
+
+def build_sources(names: Optional[Sequence[str]] = None) -> List[JobSource]:
+    """Construct the requested sources. Unknown names are reported, not fatal."""
+    from jobai.ingest.legacy import legacy_sources
+
+    builders = _builders()
     if not names:
         names = ["linkedin", "naukri"]
 
     sources: List[JobSource] = []
-    for name in names:
+    for name in expand_groups(list(names)):
         if name == "legacy":
             sources.extend(legacy_sources())
         elif name in builders:
-            sources.append(builders[name]())
+            try:
+                sources.append(builders[name]())
+            except Exception as exc:
+                # A source that cannot even be constructed is skipped, never fatal.
+                logger.error("Could not construct source %r: %s", name, exc)
         else:
-            logger.warning("Unknown source %r; skipping.", name)
+            logger.warning(
+                "Unknown source %r; skipping. Available: %s",
+                name, ", ".join(available_sources()),
+            )
     return sources
 
 

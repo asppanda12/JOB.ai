@@ -42,7 +42,7 @@ SKILL_ALIASES: Dict[str, List[str]] = {
     "Qdrant": [],
     "ChromaDB": ["chroma", "chroma db"],
     "NLP": ["natural language processing"],
-    "Computer Vision": ["cv", "image processing", "vision"],
+    "Computer Vision": ["image processing", "computer-vision"],
     "Machine Learning": ["ml", "machine-learning"],
     "Deep Learning": ["dl", "deep-learning", "neural networks", "neural network"],
     "Generative AI": ["genai", "gen ai", "generative artificial intelligence"],
@@ -125,6 +125,16 @@ RELATED_SKILLS: Dict[str, List[str]] = {
     "Neo4j": ["GraphQL", "NoSQL", "Vector Database"],
     "Python": ["Pandas", "NumPy", "Machine Learning"],
     "Embeddings": ["Vector Database", "RAG", "NLP"],
+}
+
+# Surface forms that are real skill abbreviations but are also ordinary English,
+# so they may only be matched inside an explicit skill *tag*, never sniffed out
+# of free text. Without this, "send us your CV" became Computer Vision, "go
+# through the process" became Go, and "excel at collaboration" became Excel.
+AMBIGUOUS_IN_TEXT = {
+    "go", "r", "c", "ml", "dl", "tf", "np", "ts", "js", "py", "cv", "ai",
+    "excel", "vision", "research", "analytical", "training", "infrastructure",
+    "agile", "scrum", "git", "node", "spark", "storm", "pandas", "swift",
 }
 
 # Tokens that show up in skill lists but carry no signal.
@@ -253,7 +263,11 @@ def extract_skills_from_text(text: str, vocabulary: Iterable[str] | None = None)
     for canonical in candidates:
         surfaces = [canonical] + SKILL_ALIASES.get(canonical, [])
         for surface in surfaces:
-            pattern = r"(?<![a-z0-9])" + re.escape(surface.lower()) + r"(?![a-z0-9])"
+            lowered = surface.lower()
+            # Short or ordinary-English surfaces are too noisy to sniff from prose.
+            if lowered in AMBIGUOUS_IN_TEXT or len(lowered) < 3:
+                continue
+            pattern = r"(?<![a-z0-9])" + re.escape(lowered) + r"(?![a-z0-9])"
             if re.search(pattern, haystack):
                 found.append(canonical)
                 break

@@ -18,8 +18,13 @@ if TYPE_CHECKING:  # pragma: no cover
 _MAX_DESCRIPTION_CHARS = 4000
 
 
+# Non-breaking and other exotic spaces; see jobai.ingest.ats.strip_html.
+_UNICODE_SPACE = re.compile(r"[\u00a0\u1680\u2000-\u200a\u202f\u205f\u3000\u200b\ufeff]")
+
+
 def _clean(value: Any) -> str:
     text = re.sub(r"<[^>]+>", " ", str(value or ""))
+    text = _UNICODE_SPACE.sub(" ", text)
     text = re.sub(r"[ \t\r\f\v]+", " ", text)
     return re.sub(r"\n{2,}", "\n", text).strip()
 

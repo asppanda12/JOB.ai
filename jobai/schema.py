@@ -104,6 +104,16 @@ def _parse_date(value: Any) -> Optional[datetime]:
         return None
     if isinstance(value, datetime):
         return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+    # Several feeds (Himalayas, Arbeitnow, Lever) send a Unix epoch, in seconds
+    # or milliseconds depending on the source.
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        if value <= 0:
+            return None
+        seconds = value / 1000 if value > 1e11 else value
+        try:
+            return datetime.fromtimestamp(seconds, tz=timezone.utc)
+        except (OverflowError, OSError, ValueError):
+            return None
     text = str(value).strip()
     for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d", "%d-%m-%Y", "%d/%m/%Y"):
         try:

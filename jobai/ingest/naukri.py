@@ -20,6 +20,17 @@ Why this is more robust than the code it replaces:
   truncated at ~120 characters), gated by ``NAUKRI_FETCH_DETAILS``;
 * one bad card, one slow page or a captcha interstitial is recorded as a
   partial result; it never aborts the run or the other sources.
+
+Driven by Playwright rather than Selenium: auto-waiting removes the fixed
+``time.sleep`` guesses and the stale-element retries, and blocking images and
+fonts makes each results page markedly lighter.
+
+**Naukri requires a headed browser.** Every headless configuration - bundled
+Chromium and the real Chrome channel alike - is answered with HTTP 403, while
+the same request from a visible window returns 200. So this source opens a real
+window regardless of ``SCRAPER_HEADLESS``; set ``NAUKRI_HEADLESS=1`` to override
+that and accept the likely 403. We do not try to disguise the browser: a 403 is
+reported as "blocked", not worked around.
 """
 
 from __future__ import annotations
@@ -32,7 +43,17 @@ from datetime import datetime, timedelta, timezone
 from typing import Iterator, List, Optional
 
 from jobai.ingest.base import JobSource
-from jobai.ingest.browser import BrowserUnavailable, chrome, first_attr, first_text, scroll_page
+from jobai.ingest.playwright_browser import (
+    BrowserUnavailable,
+    attr_of,
+    autoscroll,
+    goto_status,
+    is_blocked,
+    playwright_page,
+    text_of,
+    texts_of,
+    wait_for_any,
+)
 from jobai.normalize.experience import parse_experience
 from jobai.normalize.skills import extract_skills_from_text, normalize_skills
 from jobai.schema import Job, canonical_url
@@ -76,6 +97,7 @@ class NaukriSource(JobSource):
         if fetch_details is None:
             fetch_details = os.getenv("NAUKRI_FETCH_DETAILS", "1").lower() in {"1", "true", "yes"}
         self.fetch_details = fetch_details
+        self.headless = os.getenv("NAUKRI_HEADLESS", "0").lower() in {"1", "true", "yes"}
         self._pages_fetched = 0
         self._partial = False
 
@@ -95,16 +117,13 @@ class NaukriSource(JobSource):
         seen: set[str] = set()
         emitted = 0
 
-        try:
-            driver_context = chrome(self.settings)
-        except BrowserUnavailable:
-            raise
-
-        with driver_context as driver:
+        # headless=False: see the module docstring. Naukri 403s every headless
+        # configuration, so opening a window is the only honest way in.
+        with playwright_page(self.settings, headless=self.headless) as page:
             for keyword in self.keywords:
                 for location in self.locations:
-                    for page in range(1, self.settings.max_pages + 1):
-                        cards = self._load_page(driver, keyword, location, page)
+                    for page_number in range(1, self.settings.max_pages + 1):
+                        cards = self._load_page(page, keyword, location, page_number)
                         if not cards:
                             break
                         for card in cards:
@@ -118,69 +137,53 @@ class NaukriSource(JobSource):
                                 continue
                             seen.add(job.source_job_id)
                             if self.fetch_details:
-                                self._add_detail(driver, job)
+                                self._add_detail(page, job)
                             yield job
                             emitted += 1
                             if emitted >= limit:
                                 logger.info("Naukri hit the %d-job limit.", limit)
                                 return
 
-    def _load_page(self, driver, keyword: str, location: str, page: int) -> List:
-        from selenium.webdriver.common.by import By
-
-        url = self.search_url(keyword, location, page)
+    def _load_page(self, page, keyword: str, location: str, page_number: int) -> List:
+        """Load one results page and return its job-card locators."""
+        url = self.search_url(keyword, location, page_number)
         self.throttle()
-        try:
-            driver.get(url)
-        except Exception as exc:
-            logger.warning("Naukri page load failed (%s): %s", url, exc)
+        ok, status = goto_status(page, url)
+        if not ok:
+            if status in (403, 429):
+                logger.warning(
+                    "Naukri refused the request (HTTP %s). It blocks headless browsers; "
+                    "run with NAUKRI_HEADLESS=0 (the default) and a desktop session.",
+                    status,
+                )
+            else:
+                logger.warning("Naukri page load failed (HTTP %s): %s", status, url)
             self._partial = True
             return []
 
-        if self._blocked(driver):
+        if is_blocked(page):
             logger.warning("Naukri served a captcha/verification page; stopping this query.")
             self._partial = True
             return []
 
-        # The results render client-side; wait for cards rather than a fixed sleep.
-        cards: List = []
-        deadline = time.monotonic() + self.settings.page_timeout
-        while time.monotonic() < deadline:
-            for selector in CARD_SELECTORS:
-                cards = driver.find_elements(By.CSS_SELECTOR, selector)
-                if cards:
-                    break
-            if cards:
-                break
-            time.sleep(0.5)
-
-        if not cards:
-            logger.info("No Naukri cards on page %d for %r; markup may have changed.", page, keyword)
+        # Auto-wait for whichever card container this deploy renders.
+        selector = wait_for_any(page, CARD_SELECTORS, timeout_ms=self.settings.page_timeout * 1000)
+        if selector is None:
+            logger.info("No Naukri cards on page %d for %r; markup may have changed.",
+                        page_number, keyword)
             return []
 
-        scroll_page(driver, rounds=3, pause=1.0)
-        for selector in CARD_SELECTORS:
-            found = driver.find_elements(By.CSS_SELECTOR, selector)
-            if found:
-                cards = found
-                break
+        autoscroll(page, rounds=3, pause_ms=800)
+        locator = page.locator(selector)
         self._pages_fetched += 1
-        return cards
-
-    @staticmethod
-    def _blocked(driver) -> bool:
-        try:
-            blob = (driver.title or "").lower() + driver.current_url.lower()
-        except Exception:
-            return False
-        return any(token in blob for token in ("captcha", "verify you are human", "access denied"))
+        return [locator.nth(i) for i in range(locator.count())]
 
     # --------------------------------------------------------------- parsing
 
     def _parse_card(self, card, keyword: str) -> Optional[Job]:
         source_job_id = (card.get_attribute("data-job-id") or "").strip()
-        title = first_text(card, TITLE_SELECTORS)
-        url = first_attr(card, TITLE_SELECTORS, "href")
+        title = text_of(card, TITLE_SELECTORS)
+        url = attr_of(card, TITLE_SELECTORS, "href")
         if not title or not url:
             return None
         if not source_job_id:
@@ -189,26 +192,26 @@ class NaukriSource(JobSource):
         if not source_job_id:
             return None
 
-        experience_raw = first_text(card, EXPERIENCE_SELECTORS)
-        location = first_text(card, LOCATION_SELECTORS)
-        salary = first_text(card, SALARY_SELECTORS)
-        snippet = first_text(card, SNIPPET_SELECTORS)
-        posted_raw = first_text(card, POSTED_SELECTORS)
-        tags = self._tags(card)
+        experience_raw = text_of(card, EXPERIENCE_SELECTORS)
+        location = text_of(card, LOCATION_SELECTORS)
+        salary = text_of(card, SALARY_SELECTORS)
+        snippet = text_of(card, SNIPPET_SELECTORS)
+        posted_raw = text_of(card, POSTED_SELECTORS)
+        tags = texts_of(card, TAG_SELECTORS)
 
         experience_min, experience_max = parse_experience(experience_raw)
         skills = normalize_skills(tags) or extract_skills_from_text(f"{title} {snippet}")
 
         return Job(
             title=title,
-            company=first_text(card, COMPANY_SELECTORS),
+            company=text_of(card, COMPANY_SELECTORS),
             location=location,
             description=snippet,
             source=self.name,
             source_job_id=source_job_id,
             source_url=canonical_url(url),
             application_url=canonical_url(url),
-            company_url=first_attr(card, COMPANY_SELECTORS, "href"),
+            company_url=attr_of(card, COMPANY_SELECTORS, "href"),
             skills=skills,
             experience_min=experience_min,
             experience_max=experience_max,
@@ -220,35 +223,25 @@ class NaukriSource(JobSource):
             raw_text=snippet,
         )
 
-    @staticmethod
-    def _tags(card) -> List[str]:
-        from selenium.webdriver.common.by import By
+    def _add_detail(self, page, job: Job) -> None:
+        """Open the job's own page in a second tab for the full description.
 
-        for selector in TAG_SELECTORS:
-            try:
-                elements = card.find_elements(By.CSS_SELECTOR, selector)
-            except Exception:
-                continue
-            values = [(e.text or "").strip() for e in elements]
-            values = [v for v in values if v]
-            if values:
-                return values
-        return []
-
-    def _add_detail(self, driver, job: Job) -> None:
-        """Open the job's own page for the full description.
-
-        Card snippets are truncated at ~120 characters, which is far too little
-        to embed or to extract skills from. A failure here leaves the snippet
-        in place rather than dropping the job.
+        Card snippets are truncated at ~120 characters, far too little to embed
+        or to extract skills from. A failure here leaves the snippet in place
+        rather than dropping the job.
         """
-        original = driver.current_window_handle
         self.throttle()
+        detail = None
         try:
-            driver.switch_to.new_window("tab")
-            driver.get(job.application_url)
-            time.sleep(1.5)
-            description = first_text(driver, DETAIL_SELECTORS)
+            detail = page.context.new_page()
+            ok, status = goto_status(detail, job.application_url)
+            if not ok:
+                logger.debug("Naukri detail %s returned HTTP %s", job.source_job_id, status)
+                self._partial = True
+                return
+            # Wait for the description container rather than guessing a sleep.
+            wait_for_any(detail, DETAIL_SELECTORS, timeout_ms=10000)
+            description = text_of(detail, DETAIL_SELECTORS)
             if description and len(description) > len(job.description):
                 job.description = description
                 job.raw_text = description
@@ -259,12 +252,11 @@ class NaukriSource(JobSource):
             logger.debug("Could not load Naukri detail for %s: %s", job.source_job_id, exc)
             self._partial = True
         finally:
-            try:
-                if driver.current_window_handle != original:
-                    driver.close()
-                driver.switch_to.window(original)
-            except Exception:
-                pass
+            if detail is not None:
+                try:
+                    detail.close()
+                except Exception:
+                    pass
 
 
 def _relative_date(text: str) -> Optional[datetime]:

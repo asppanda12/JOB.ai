@@ -16,7 +16,12 @@ itself.
                               │
              ┌────────────────┼────────────────┐
              ↓                ↓                ↓
-         LinkedIn          Naukri       Cuvette / Instahyre / …
+      Portals (2)       ATS boards (6)    Aggregators (6)
+     LinkedIn, Naukri   Greenhouse,       RemoteOK, Remotive,
+                        Lever, Ashby,     Arbeitnow, Himalayas,
+                        SmartRecruiters,  Jobicy, WeWorkRemotely
+                        Workable,
+                        Recruitee
              │                │                │
              └────────────────┼────────────────┘
                               ↓
@@ -66,6 +71,63 @@ itself.
 
 ---
 
+## Job sources
+
+Fourteen sources in three families. `python -m jobai sources` lists them all;
+any name below, or a group name, works with `ingest --sources`.
+
+| Group | Sources | Transport | Notes |
+|---|---|---|---|
+| `portals` | LinkedIn, Naukri | LinkedIn: HTTP guest endpoints. Naukri: **Playwright** | Naukri needs a headed browser (see below) |
+| `ats` | Greenhouse, Lever, Ashby, SmartRecruiters, Workable, Recruitee | HTTP (public JSON) | First-party company boards. Highest signal: complete text, real posting dates, stable ids |
+| `boards` | RemoteOK, Remotive, Arbeitnow, Himalayas, Jobicy, WeWorkRemotely | HTTP (public JSON/RSS) | Cross-company aggregators, remote-heavy |
+| `fast` | everything except Naukri | HTTP only | No browser needed; safe to run on a schedule |
+| `all` | all 14 | | |
+
+```bash
+python -m jobai sources                                   # list sources and groups
+python -m jobai ingest --sources ats --limit 100          # every ATS board
+python -m jobai ingest --sources fast --limit 50          # everything browser-free
+python -m jobai ingest --sources all --limit 25           # the lot
+python -m jobai ingest --sources greenhouse remoteok      # pick individually
+```
+
+### ATS boards are configuration, not code
+
+Each ATS platform is one adapter over a public endpoint keyed by company slug,
+so tracking a new company is an environment change:
+
+```bash
+ATS_GREENHOUSE=stripe,figma,databricks,anthropic,discord
+ATS_LEVER=palantir
+ATS_ASHBY=ramp,notion,linear
+ATS_SMARTRECRUITERS=Continental
+ATS_WORKABLE=scalable
+ATS_RECRUITEE=hygraph
+```
+
+Find a slug from the company's careers URL — `boards.greenhouse.io/stripe`
+gives `stripe`, `jobs.lever.co/palantir` gives `palantir`, and so on.
+
+### Why HTTP for these and Playwright for Naukri
+
+Playwright drives the sources whose data only exists after JavaScript renders
+a DOM. The ATS and aggregator sources publish documented JSON endpoints, so a
+browser would add a page load and a JS engine to fetch bytes already available
+— more cost and more to break, with nothing gained. Using the right transport
+per source is what keeps 12 of the 14 running with no browser at all.
+
+### Naukri needs a headed browser
+
+Naukri answers HTTP 403 to every headless configuration — Playwright's bundled
+Chromium and the real Chrome channel alike — while the same request from a
+visible window returns 200. So the Naukri source opens a real window
+regardless of `SCRAPER_HEADLESS`. Set `NAUKRI_HEADLESS=1` to force headless and
+accept the likely 403. Its JSON API is reCAPTCHA-gated and is deliberately not
+bypassed; a 403 is reported as *blocked*, not worked around.
+
+---
+
 ## Local setup
 
 ### 1. Python
@@ -73,6 +135,7 @@ itself.
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+playwright install chromium      # browser for the DOM-scraped sources
 ```
 
 ### 2. Ollama + Qwen 7B (required)

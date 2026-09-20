@@ -35,9 +35,14 @@ pymongo==4.10.1
 neo4j==5.27.0                    # optional: falls back to an in-process graph
 
 # --- ingestion ---
-selenium==4.25.0
+# Playwright drives every DOM-scraped source (Naukri today). After installing,
+# fetch the browser:  playwright install chromium
+playwright==1.49.1
 beautifulsoup4==4.12.3
 lxml==5.3.0
+# Selenium is retained only for the older per-source scripts under
+# Scrape_entire_web/ and cuvete/, which have not been migrated yet.
+selenium==4.25.0
 
 # --- interfaces ---
 python-telegram-bot==21.7

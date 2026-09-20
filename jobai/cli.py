@@ -109,6 +109,38 @@ def cmd_doctor(args: argparse.Namespace) -> int:
     return 1 if failures else 0
 
 
+def cmd_sources(args: argparse.Namespace) -> int:
+    """List every source and group that ``ingest --sources`` accepts."""
+    from jobai.ingest.runner import SOURCE_GROUPS, available_sources
+
+    descriptions = {
+        "linkedin": "LinkedIn public guest job search (HTTP)",
+        "naukri": "Naukri public search pages (Playwright, needs a headed browser)",
+        "greenhouse": "Greenhouse company boards (ATS_GREENHOUSE)",
+        "lever": "Lever company boards (ATS_LEVER)",
+        "ashby": "Ashby company boards (ATS_ASHBY)",
+        "smartrecruiters": "SmartRecruiters company boards (ATS_SMARTRECRUITERS)",
+        "workable": "Workable company boards (ATS_WORKABLE)",
+        "recruitee": "Recruitee company boards (ATS_RECRUITEE)",
+        "remoteok": "RemoteOK public feed",
+        "remotive": "Remotive public feed",
+        "arbeitnow": "Arbeitnow public feed",
+        "himalayas": "Himalayas public feed",
+        "jobicy": "Jobicy public feed",
+        "weworkremotely": "We Work Remotely RSS",
+        "mongo_archive": "Re-read jobs already in MongoDB (migration)",
+        "faiss_archive": "Re-read jobs already in the FAISS index (migration)",
+    }
+    print("Sources:")
+    for name in available_sources():
+        print(f"  {name:<18} {descriptions.get(name, '')}")
+    print("\nGroups:")
+    for group, members in SOURCE_GROUPS.items():
+        print(f"  {group:<18} {', '.join(members)}")
+    print("\nExample:  python -m jobai ingest --sources ats boards --limit 50")
+    return 0
+
+
 # --------------------------------------------------------------------- ingest
 
 
@@ -217,10 +249,13 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     subparsers.add_parser("doctor", help="check every local component").set_defaults(func=cmd_doctor)
+    subparsers.add_parser("sources", help="list every job source and group").set_defaults(func=cmd_sources)
 
     ingest_parser = subparsers.add_parser("ingest", help="scrape, normalize, dedup, store and index")
-    ingest_parser.add_argument("--sources", nargs="*", default=None,
-                               help="linkedin naukri legacy mongo_archive faiss_archive")
+    ingest_parser.add_argument(
+        "--sources", nargs="*", default=None,
+        help="source or group names; run `python -m jobai sources` to list them",
+    )
     ingest_parser.add_argument("--limit", type=int, default=None, help="max jobs per source")
     ingest_parser.add_argument("--semantic-dedup", action="store_true")
     ingest_parser.add_argument("--no-store", action="store_true", help="skip the MongoDB write")
