@@ -204,8 +204,8 @@ def explain_matches(profile: Dict[str, Any], scored_jobs: Sequence[Dict[str, Any
     }
     data = get_llm().json(
         prompts.MATCH_REASONING.format(
-            profile=json.dumps(slim_profile, ensure_ascii=False),
-            jobs=json.dumps(compact, ensure_ascii=False),
+            profile=json.dumps(slim_profile, ensure_ascii=False, default=str),
+            jobs=json.dumps(compact, ensure_ascii=False, default=str),
         ),
         system=prompts.SYSTEM_WRITER,
         max_tokens=2400,
@@ -238,15 +238,28 @@ def skill_gap(user_skills: Sequence[str], job_skills: Sequence[str]) -> Dict[str
 
 
 def _write(template: str, profile: Dict[str, Any], job: Dict[str, Any], max_tokens: int) -> str:
+    # default=str because a job read back from MongoDB carries a real
+    # ``datetime`` in Posted_date, and an ObjectId in _id, neither of which
+    # json.dumps can encode.
     return get_llm().complete(
         template.format(
-            profile=json.dumps(profile, ensure_ascii=False)[:8000],
-            job=json.dumps(job, ensure_ascii=False)[:6000],
+            profile=json.dumps(profile, ensure_ascii=False, default=str)[:8000],
+            job=json.dumps(_writable(job), ensure_ascii=False, default=str)[:6000],
         ),
         system=prompts.SYSTEM_WRITER,
         temperature=0.6,
         max_tokens=max_tokens,
     ).strip()
+
+
+# Fields that only add noise to a writing prompt, or that cannot be serialised.
+_WRITE_EXCLUDED = {"_id", "text", "normalized_text", "raw_text", "content_hash", "page_content"}
+
+
+def _writable(job: Dict[str, Any]) -> Dict[str, Any]:
+    """Trim a stored job down to what a writing prompt actually needs."""
+    source = job.get("metadata", job)
+    return {k: v for k, v in source.items() if k not in _WRITE_EXCLUDED}
 
 
 def write_cover_letter(profile: Dict[str, Any], job: Dict[str, Any]) -> str:

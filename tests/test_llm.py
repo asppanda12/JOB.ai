@@ -157,3 +157,33 @@ def test_resume_parsing_degrades_without_ollama(monkeypatch):
     monkeypatch.setattr(tasks, "get_llm", boom)
     profile = tasks.parse_resume("Experienced in Python, PyTorch and Kubernetes.")
     assert {"Python", "PyTorch", "Kubernetes"} <= set(profile["skills"])
+
+
+# ------------------------------------------- serialisation of stored records
+
+
+def test_writing_prompts_accept_mongo_native_types():
+    """A job read back from MongoDB carries a datetime and an ObjectId.
+
+    Both reached json.dumps unescaped before, so every Referral / Cover Letter /
+    Cold Email button raised TypeError on a job that came from the database.
+    """
+    from datetime import datetime, timezone
+
+    from jobai.llm.tasks import _writable
+
+    job = {
+        "job_title": "ML Engineer",
+        "Posted_date": datetime.now(timezone.utc),
+        "_id": object(),
+        "text": "a very long blob that a writing prompt does not need",
+    }
+    trimmed = _writable(job)
+    assert "_id" not in trimmed and "text" not in trimmed
+    json.dumps(trimmed, default=str)  # must not raise
+
+
+def test_writable_unwraps_a_stored_recommendation_entry():
+    from jobai.llm.tasks import _writable
+
+    assert _writable({"metadata": {"job_title": "X"}})["job_title"] == "X"
